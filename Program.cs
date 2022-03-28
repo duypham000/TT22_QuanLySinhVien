@@ -1,10 +1,7 @@
 ﻿using QuanLySinhVien.Models;
-using QuanLySinhVien.Views;
+using QuanLySinhVien.Views.DashbroadViews;
 using QuanLySinhVien.Views.LoginView;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLySinhVien
@@ -15,14 +12,18 @@ namespace QuanLySinhVien
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             InitWhenFristTime initWhenFristTime = new InitWhenFristTime();
             initWhenFristTime.InsertUserDemoData();
-            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new layout_Login());
+            if (Properties.Settings.Default.Authen)
+            {
+                Application.Run(new layout_MainScreen());
+            }
         }
     }
 }

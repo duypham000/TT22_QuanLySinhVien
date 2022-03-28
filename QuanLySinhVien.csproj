@@ -106,6 +106,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\DashbroadViews\layout_MainScreen.resx">
+      <DependentUpon>layout_MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginViews\layout_Login.resx">
       <DependentUpon>layout_Login.cs</DependentUpon>
     </EmbeddedResource>

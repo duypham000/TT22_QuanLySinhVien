@@ -53,8 +53,10 @@ namespace QuanLySinhVien.Views.LoginViews
             {
                 Properties.Settings.Default.Username = username;
                 savePassword();
+                Properties.Settings.Default.Authen = true;
                 Properties.Settings.Default.Save();
-                MessageBox.Show("Hello admin");
+                layout_Login.Close();
+                this.Close();
             }
             else
             {
@@ -74,6 +76,7 @@ namespace QuanLySinhVien.Views.LoginViews
             {
                 Properties.Settings.Default.Password = "";
             }
+            Properties.Settings.Default.Save();
         }
 
         private void loginError(object sender, EventArgs e)
