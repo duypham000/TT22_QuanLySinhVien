@@ -12,6 +12,7 @@ namespace QuanLySinhVien.Models.Model
         public Faculty()
         {
             Classes = new HashSet<Class>();
+            Subjects = new HashSet<Subject>();
         }
 
         public int ID { get; set; }
@@ -36,5 +37,8 @@ namespace QuanLySinhVien.Models.Model
         public virtual ICollection<Class> Classes { get; set; }
 
         public virtual Teacher Teacher { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Subject> Subjects { get; set; }
     }
 }

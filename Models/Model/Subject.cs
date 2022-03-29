@@ -6,30 +6,24 @@ namespace QuanLySinhVien.Models.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Student
+    public partial class Subject
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Student()
+        public Subject()
         {
-            Classes = new HashSet<Class>();
-            Classes1 = new HashSet<Class>();
-            Users = new HashSet<User>();
             SubjectScores = new HashSet<SubjectScore>();
         }
 
         [StringLength(50)]
         public string ID { get; set; }
 
-        public int? NumOfCredits { get; set; }
-
-        public int? TargetCredits { get; set; }
-
         [StringLength(50)]
-        public string Role { get; set; }
+        public string TeacherID { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string ClassID { get; set; }
+        public int? FacultyID { get; set; }
+
+        [StringLength(250)]
+        public string Name { get; set; }
 
         [StringLength(250)]
         public string CreatedBy { get; set; }
@@ -45,16 +39,9 @@ namespace QuanLySinhVien.Models.Model
         [StringLength(50)]
         public string Status { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Class> Classes { get; set; }
+        public virtual Faculty Faculty { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Class> Classes1 { get; set; }
-
-        public virtual Class Class { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
+        public virtual Teacher Teacher { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SubjectScore> SubjectScores { get; set; }

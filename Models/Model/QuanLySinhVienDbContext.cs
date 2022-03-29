@@ -16,7 +16,8 @@ namespace QuanLySinhVien.Models.Model
         public virtual DbSet<Faculty> Faculties { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Student> Students { get; set; }
-        public virtual DbSet<StudentScore> StudentScores { get; set; }
+        public virtual DbSet<Subject> Subjects { get; set; }
+        public virtual DbSet<SubjectScore> SubjectScores { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
@@ -101,19 +102,39 @@ namespace QuanLySinhVien.Models.Model
                 .HasForeignKey(e => e.InforID);
 
             modelBuilder.Entity<Student>()
-                .HasMany(e => e.StudentScores)
+                .HasMany(e => e.SubjectScores)
                 .WithRequired(e => e.Student)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<StudentScore>()
-                .Property(e => e.StudentID)
+            modelBuilder.Entity<Subject>()
+                .Property(e => e.ID)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<StudentScore>()
+            modelBuilder.Entity<Subject>()
+                .Property(e => e.TeacherID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Subject>()
                 .Property(e => e.CreatedBy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<StudentScore>()
+            modelBuilder.Entity<Subject>()
+                .Property(e => e.UpdatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<SubjectScore>()
+                .Property(e => e.StudentID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<SubjectScore>()
+                .Property(e => e.SubjectID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<SubjectScore>()
+                .Property(e => e.CreatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<SubjectScore>()
                 .Property(e => e.UpdatedBy)
                 .IsUnicode(false);
 
