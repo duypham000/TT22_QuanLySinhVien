@@ -11,6 +11,14 @@ namespace QuanLySinhVien.Views.DashbroadViews
             customizeDesing();
         }
 
+        private void exitAuthen(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Authen = false;
+            Properties.Settings.Default.Save();
+
+            this.Close();
+        }
+
         private void customizeDesing()
         {
             this.submenu_qlk.Visible = false;
@@ -46,21 +54,25 @@ namespace QuanLySinhVien.Views.DashbroadViews
 
         private void opt_qltk_Click(object sender, EventArgs e)
         {
+            this.frm_title.Text = "Quản lý tài khoản";
             showSubmenu(this.submenu_qltk);
         }
 
         private void otp_qlk_Click(object sender, EventArgs e)
         {
+            this.frm_title.Text = "Quản lý khoa";
             showSubmenu(this.submenu_qlk);
         }
 
         private void opt_qll_Click(object sender, EventArgs e)
         {
+            this.frm_title.Text = "Quản lý lớp";
             showSubmenu(this.submenu_qll);
         }
 
         private void opt_qlsv_Click(object sender, EventArgs e)
         {
+            this.frm_title.Text = "Quản lý sinh viên";
             showSubmenu(this.submenu_qlsv);
         }
     }

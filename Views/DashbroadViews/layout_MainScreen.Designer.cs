@@ -46,12 +46,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.opt_qltk = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.user_avt = new System.Windows.Forms.Button();
-            this.user_username = new System.Windows.Forms.Label();
-            this.frm_body = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.user_username = new System.Windows.Forms.Label();
+            this.user_avt = new System.Windows.Forms.Button();
+            this.frm_body = new System.Windows.Forms.Panel();
             this.header = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.frm_title = new System.Windows.Forms.Label();
+            this.link_logout = new System.Windows.Forms.LinkLabel();
             this.panel_sideMenu.SuspendLayout();
             this.submenu_qlsv.SuspendLayout();
             this.submenu_qll.SuspendLayout();
@@ -310,6 +311,7 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.link_logout);
             this.panelLogo.Controls.Add(this.linkLabel1);
             this.panelLogo.Controls.Add(this.user_username);
             this.panelLogo.Controls.Add(this.user_avt);
@@ -318,6 +320,28 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(246, 77);
             this.panelLogo.TabIndex = 0;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
+            this.linkLabel1.Location = new System.Drawing.Point(65, 46);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(98, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Chỉnh sửa thông tin";
+            // 
+            // user_username
+            // 
+            this.user_username.AutoSize = true;
+            this.user_username.BackColor = System.Drawing.Color.Transparent;
+            this.user_username.ForeColor = System.Drawing.Color.White;
+            this.user_username.Location = new System.Drawing.Point(65, 28);
+            this.user_username.Name = "user_username";
+            this.user_username.Size = new System.Drawing.Size(58, 13);
+            this.user_username.TabIndex = 1;
+            this.user_username.Text = "User name";
             // 
             // user_avt
             // 
@@ -333,17 +357,6 @@
             this.user_avt.TabIndex = 0;
             this.user_avt.UseVisualStyleBackColor = false;
             // 
-            // user_username
-            // 
-            this.user_username.AutoSize = true;
-            this.user_username.BackColor = System.Drawing.Color.Transparent;
-            this.user_username.ForeColor = System.Drawing.Color.White;
-            this.user_username.Location = new System.Drawing.Point(65, 28);
-            this.user_username.Name = "user_username";
-            this.user_username.Size = new System.Drawing.Size(58, 13);
-            this.user_username.TabIndex = 1;
-            this.user_username.Text = "User name";
-            // 
             // frm_body
             // 
             this.frm_body.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -355,40 +368,43 @@
             this.frm_body.Size = new System.Drawing.Size(911, 520);
             this.frm_body.TabIndex = 1;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
-            this.linkLabel1.Location = new System.Drawing.Point(65, 46);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(98, 13);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Chỉnh sửa thông tin";
-            // 
             // header
             // 
-            this.header.Controls.Add(this.label1);
+            this.header.Controls.Add(this.frm_title);
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(263, 0);
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(911, 41);
             this.header.TabIndex = 2;
             // 
-            // label1
+            // frm_title
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.frm_title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(911, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nunc aliquam ante sit amet ante";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.frm_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(35)))));
+            this.frm_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frm_title.ForeColor = System.Drawing.Color.White;
+            this.frm_title.Location = new System.Drawing.Point(0, 0);
+            this.frm_title.Name = "frm_title";
+            this.frm_title.Size = new System.Drawing.Size(911, 41);
+            this.frm_title.TabIndex = 0;
+            this.frm_title.Text = "Nunc aliquam ante sit amet ante";
+            this.frm_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // link_logout
+            // 
+            this.link_logout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.link_logout.AutoSize = true;
+            this.link_logout.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
+            this.link_logout.Location = new System.Drawing.Point(178, 46);
+            this.link_logout.Name = "link_logout";
+            this.link_logout.Size = new System.Drawing.Size(56, 13);
+            this.link_logout.TabIndex = 2;
+            this.link_logout.TabStop = true;
+            this.link_logout.Text = "Đăng xuất";
+            this.link_logout.Click += new System.EventHandler(this.exitAuthen);
             // 
             // layout_MainScreen
             // 
@@ -441,6 +457,7 @@
         private System.Windows.Forms.Panel frm_body;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel header;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label frm_title;
+        private System.Windows.Forms.LinkLabel link_logout;
     }
 }

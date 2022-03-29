@@ -19,10 +19,17 @@ namespace QuanLySinhVien
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new layout_Login());
             if (Properties.Settings.Default.Authen)
             {
                 Application.Run(new layout_MainScreen());
+            }
+            else
+            {
+                Application.Run(new layout_Login());
+                if (Properties.Settings.Default.Authen)
+                {
+                    Application.Run(new layout_MainScreen());
+                }
             }
         }
     }
