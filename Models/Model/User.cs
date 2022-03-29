@@ -8,18 +8,29 @@ namespace QuanLySinhVien.Models.Model
 
     public partial class User
     {
+        [Key]
+        [StringLength(250)]
+        public string Username { get; set; }
+
+        [StringLength(250)]
+        public string Name { get; set; }
+
         [StringLength(50)]
         public string InforID { get; set; }
 
         public int RoleID { get; set; }
 
-        [Key]
-        [StringLength(250)]
-        public string Username { get; set; }
-
         [Required]
         [StringLength(250)]
         public string Password { get; set; }
+
+        [StringLength(500)]
+        public string Address { get; set; }
+
+        [StringLength(50)]
+        public string Phone { get; set; }
+
+        public int? Age { get; set; }
 
         [StringLength(250)]
         public string Email { get; set; }

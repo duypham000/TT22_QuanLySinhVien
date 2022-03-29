@@ -14,24 +14,15 @@ namespace QuanLySinhVien.Models.Model
             Classes = new HashSet<Class>();
             Classes1 = new HashSet<Class>();
             Users = new HashSet<User>();
+            StudentScores = new HashSet<StudentScore>();
         }
 
         [StringLength(50)]
         public string ID { get; set; }
 
-        [Required]
-        [StringLength(250)]
-        public string Name { get; set; }
-
         public int? NumOfCredits { get; set; }
 
         public int? TargetCredits { get; set; }
-
-        public int? Age { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string Phone { get; set; }
 
         [StringLength(50)]
         public string Role { get; set; }
@@ -39,13 +30,6 @@ namespace QuanLySinhVien.Models.Model
         [Required]
         [StringLength(50)]
         public string ClassID { get; set; }
-
-        [StringLength(250)]
-        public string Email { get; set; }
-
-        [Required]
-        [StringLength(500)]
-        public string Address { get; set; }
 
         [StringLength(250)]
         public string CreatedBy { get; set; }
@@ -71,5 +55,8 @@ namespace QuanLySinhVien.Models.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> Users { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StudentScore> StudentScores { get; set; }
     }
 }

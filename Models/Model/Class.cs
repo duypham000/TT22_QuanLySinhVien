@@ -21,11 +21,13 @@ namespace QuanLySinhVien.Models.Model
         [StringLength(250)]
         public string Name { get; set; }
 
+        public int FacultyID { get; set; }
+
         public int? MaxStudent { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Leader { get; set; }
+        public string LeaderID { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -44,6 +46,8 @@ namespace QuanLySinhVien.Models.Model
         public int? UpdatedBy { get; set; }
 
         public DateTime? UpdatedDate { get; set; }
+
+        public virtual Faculty Faculty { get; set; }
 
         public virtual Student Student { get; set; }
 

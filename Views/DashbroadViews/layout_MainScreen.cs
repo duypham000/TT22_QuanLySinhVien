@@ -8,7 +8,10 @@ namespace QuanLySinhVien.Views.DashbroadViews
         public layout_MainScreen()
         {
             InitializeComponent();
+            this.user_username.Text = Properties.Settings.Default.Username;
             customizeDesing();
+
+
         }
 
         private void exitAuthen(object sender, EventArgs e)
@@ -21,18 +24,12 @@ namespace QuanLySinhVien.Views.DashbroadViews
 
         private void customizeDesing()
         {
-            this.submenu_qlk.Visible = false;
-            this.submenu_qll.Visible = false;
             this.submenu_qlsv.Visible = false;
             this.submenu_qltk.Visible = false;
         }
 
         private void hideSubmenu()
         {
-            if (this.submenu_qlk.Visible == true)
-                this.submenu_qlk.Visible = false;
-            if (this.submenu_qll.Visible == true)
-                this.submenu_qll.Visible = false;
             if (this.submenu_qlsv.Visible == true)
                 this.submenu_qlsv.Visible = false;
             if (this.submenu_qltk.Visible == true)
@@ -56,18 +53,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
         {
             this.frm_title.Text = "Quản lý tài khoản";
             showSubmenu(this.submenu_qltk);
-        }
-
-        private void otp_qlk_Click(object sender, EventArgs e)
-        {
-            this.frm_title.Text = "Quản lý khoa";
-            showSubmenu(this.submenu_qlk);
-        }
-
-        private void opt_qll_Click(object sender, EventArgs e)
-        {
-            this.frm_title.Text = "Quản lý lớp";
-            showSubmenu(this.submenu_qll);
         }
 
         private void opt_qlsv_Click(object sender, EventArgs e)

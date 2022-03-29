@@ -15,7 +15,7 @@ namespace QuanLySinhVien.Models.ModelServices
 
         public List<Teacher> GetAll()
         {
-            return dbContext.Teachers.OrderByDescending(x => x.Name).ToList();
+            return dbContext.Teachers.OrderByDescending(x => x.ID).ToList();
         }
 
         public void Add(Teacher teacher)

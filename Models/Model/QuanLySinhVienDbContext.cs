@@ -1,4 +1,7 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
+using System.Linq;
 
 namespace QuanLySinhVien.Models.Model
 {
@@ -10,8 +13,10 @@ namespace QuanLySinhVien.Models.Model
         }
 
         public virtual DbSet<Class> Classes { get; set; }
+        public virtual DbSet<Faculty> Faculties { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<StudentScore> StudentScores { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
@@ -22,7 +27,7 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Class>()
-                .Property(e => e.Leader)
+                .Property(e => e.LeaderID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Class>()
@@ -41,8 +46,20 @@ namespace QuanLySinhVien.Models.Model
 
             modelBuilder.Entity<Class>()
                 .HasMany(e => e.Teachers)
-                .WithRequired(e => e.Class)
-                .HasForeignKey(e => e.ClassID)
+                .WithOptional(e => e.Class)
+                .HasForeignKey(e => e.ClassID);
+
+            modelBuilder.Entity<Faculty>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Faculty>()
+                .Property(e => e.LeaderID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Faculty>()
+                .HasMany(e => e.Classes)
+                .WithRequired(e => e.Faculty)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Role>()
@@ -55,15 +72,7 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Student>()
-                .Property(e => e.Phone)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Student>()
                 .Property(e => e.ClassID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Student>()
-                .Property(e => e.Email)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Student>()
@@ -91,6 +100,23 @@ namespace QuanLySinhVien.Models.Model
                 .WithOptional(e => e.Student)
                 .HasForeignKey(e => e.InforID);
 
+            modelBuilder.Entity<Student>()
+                .HasMany(e => e.StudentScores)
+                .WithRequired(e => e.Student)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<StudentScore>()
+                .Property(e => e.StudentID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<StudentScore>()
+                .Property(e => e.CreatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<StudentScore>()
+                .Property(e => e.UpdatedBy)
+                .IsUnicode(false);
+
             modelBuilder.Entity<Teacher>()
                 .Property(e => e.ID)
                 .IsUnicode(false);
@@ -100,17 +126,15 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Teacher>()
-                .Property(e => e.Phone)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Teacher>()
-                .Property(e => e.Email)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Teacher>()
                 .HasMany(e => e.Classes)
                 .WithRequired(e => e.Teacher)
-                .HasForeignKey(e => e.Leader)
+                .HasForeignKey(e => e.LeaderID)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Teacher>()
+                .HasMany(e => e.Faculties)
+                .WithRequired(e => e.Teacher)
+                .HasForeignKey(e => e.LeaderID)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Teacher>()
@@ -119,11 +143,15 @@ namespace QuanLySinhVien.Models.Model
                 .HasForeignKey(e => e.InforID);
 
             modelBuilder.Entity<User>()
+                .Property(e => e.Username)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
                 .Property(e => e.InforID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .Property(e => e.Username)
+                .Property(e => e.Phone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
