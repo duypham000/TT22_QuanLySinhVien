@@ -45,13 +45,15 @@
             this.user_username = new System.Windows.Forms.Label();
             this.user_avt = new System.Windows.Forms.Button();
             this.frm_body = new System.Windows.Forms.Panel();
-            this.header = new System.Windows.Forms.Panel();
-            this.frm_title = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_sideMenu.SuspendLayout();
             this.submenu_qlsv.SuspendLayout();
             this.submenu_qltk.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            this.header.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_sideMenu
@@ -279,38 +281,43 @@
             // 
             // frm_body
             // 
-            this.frm_body.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.frm_body.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.frm_body.Location = new System.Drawing.Point(263, 41);
+            this.frm_body.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.frm_body.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.frm_body.Location = new System.Drawing.Point(0, 41);
             this.frm_body.Name = "frm_body";
             this.frm_body.Size = new System.Drawing.Size(911, 520);
             this.frm_body.TabIndex = 1;
             // 
-            // header
+            // panel1
             // 
-            this.header.Controls.Add(this.frm_title);
-            this.header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header.Location = new System.Drawing.Point(263, 0);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(911, 41);
-            this.header.TabIndex = 2;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(911, 41);
+            this.panel1.TabIndex = 0;
             // 
-            // frm_title
+            // panel2
             // 
-            this.frm_title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.frm_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.frm_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.frm_title.ForeColor = System.Drawing.Color.White;
-            this.frm_title.Location = new System.Drawing.Point(0, 0);
-            this.frm_title.Name = "frm_title";
-            this.frm_title.Size = new System.Drawing.Size(911, 41);
-            this.frm_title.TabIndex = 0;
-            this.frm_title.Text = "Nunc aliquam ante sit amet ante";
-            this.frm_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.frm_body);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(263, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(911, 561);
+            this.panel2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(911, 41);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Đây là nav bar nhưng chưa có ý tưởng";
             // 
             // layout_MainScreen
             // 
@@ -318,8 +325,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1174, 561);
-            this.Controls.Add(this.header);
-            this.Controls.Add(this.frm_body);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_sideMenu);
             this.MinimumSize = new System.Drawing.Size(1190, 600);
             this.Name = "layout_MainScreen";
@@ -331,7 +337,8 @@
             this.submenu_qltk.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            this.header.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -352,10 +359,11 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button user_avt;
         private System.Windows.Forms.Label user_username;
-        private System.Windows.Forms.Panel frm_body;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Panel header;
-        private System.Windows.Forms.Label frm_title;
         private System.Windows.Forms.LinkLabel link_logout;
+        public System.Windows.Forms.Panel frm_body;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -16,12 +16,13 @@ namespace QuanLySinhVien.Views.LoginView
         public layout_Login()
         {
             InitializeComponent();
+            this.BringToFront();
             show_LoginForm();
         }
 
         public void show_LoginForm()
         {
-            pnl_Login pnl_Login = new pnl_Login(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost=true, FormBorderStyle = FormBorderStyle.None, Opacity = 0.1};
+            pnl_Login pnl_Login = new pnl_Login(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost=true, FormBorderStyle = FormBorderStyle.None};
             this.pnl_body.Controls.Clear();
             this.pnl_body.Controls.Add(pnl_Login);
             pnl_Login.Show();
@@ -29,7 +30,7 @@ namespace QuanLySinhVien.Views.LoginView
 
         public void show_ForgotForm()
         {
-            pnl_ForgotPassword pnl_ForgotPassword = new pnl_ForgotPassword(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, FormBorderStyle = FormBorderStyle.None, Opacity = 0.1 };
+            pnl_ForgotPassword pnl_ForgotPassword = new pnl_ForgotPassword(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, FormBorderStyle = FormBorderStyle.None};
             this.pnl_body.Controls.Clear();
             this.pnl_body.Controls.Add(pnl_ForgotPassword);
 
