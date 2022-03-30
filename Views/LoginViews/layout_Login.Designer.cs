@@ -55,7 +55,6 @@
             this.MinimizeBox = false;
             this.Name = "layout_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.ResumeLayout(false);
 
         }

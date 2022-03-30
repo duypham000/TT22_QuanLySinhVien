@@ -9,12 +9,10 @@ namespace QuanLySinhVien.Views.DashbroadViews
         public layout_MainScreen()
         {
             InitializeComponent();
-            this.BringToFront();
             this.user_username.Text = Properties.Settings.Default.Username;
             customizeDesing();
             UserListView userListView = new UserListView();
             openChildForm(userListView);
-
         }
 
         private void exitAuthen(object sender, EventArgs e)
@@ -84,4 +82,3 @@ namespace QuanLySinhVien.Views.DashbroadViews
         }
     }
 }
-//23, 21, 32

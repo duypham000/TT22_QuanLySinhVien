@@ -318,6 +318,7 @@
             this.label1.Size = new System.Drawing.Size(911, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đây là nav bar nhưng chưa có ý tưởng";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // layout_MainScreen
             // 
@@ -331,7 +332,6 @@
             this.Name = "layout_MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chương trình quản lý sinh viên";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panel_sideMenu.ResumeLayout(false);
             this.submenu_qlsv.ResumeLayout(false);
             this.submenu_qltk.ResumeLayout(false);
