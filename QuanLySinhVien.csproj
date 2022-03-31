@@ -90,6 +90,12 @@
     <Compile Include="Models\Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\CommonViews\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CommonViews\RJTextBox.Designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DashbroadViews\layout_MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\CommonViews\RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\layout_MainScreen.resx">
       <DependentUpon>layout_MainScreen.cs</DependentUpon>
     </EmbeddedResource>

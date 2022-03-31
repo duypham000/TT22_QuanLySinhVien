@@ -46,14 +46,24 @@
             this.user_avt = new System.Windows.Forms.Button();
             this.frm_body = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.navBar = new System.Windows.Forms.Panel();
+            this.link_home = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel_sideMenu.SuspendLayout();
             this.submenu_qlsv.SuspendLayout();
             this.submenu_qltk.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.navBar.SuspendLayout();
+            this.link_home.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_sideMenu
@@ -283,20 +293,76 @@
             // 
             this.frm_body.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.frm_body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.frm_body.Location = new System.Drawing.Point(0, 41);
+            this.frm_body.Location = new System.Drawing.Point(0, 47);
             this.frm_body.Name = "frm_body";
-            this.frm_body.Size = new System.Drawing.Size(911, 520);
+            this.frm_body.Size = new System.Drawing.Size(911, 514);
             this.frm_body.TabIndex = 1;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel1.Controls.Add(this.navBar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(911, 41);
+            this.panel1.Size = new System.Drawing.Size(911, 47);
             this.panel1.TabIndex = 0;
+            // 
+            // navBar
+            // 
+            this.navBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.navBar.AutoSize = true;
+            this.navBar.Controls.Add(this.panel3);
+            this.navBar.Controls.Add(this.label2);
+            this.navBar.Controls.Add(this.link_home);
+            this.navBar.Location = new System.Drawing.Point(0, 9);
+            this.navBar.Margin = new System.Windows.Forms.Padding(0);
+            this.navBar.Name = "navBar";
+            this.navBar.Size = new System.Drawing.Size(911, 35);
+            this.navBar.TabIndex = 0;
+            // 
+            // link_home
+            // 
+            this.link_home.AutoSize = true;
+            this.link_home.BackColor = System.Drawing.Color.Transparent;
+            this.link_home.Controls.Add(this.iconButton1);
+            this.link_home.Controls.Add(this.label1);
+            this.link_home.Dock = System.Windows.Forms.DockStyle.Left;
+            this.link_home.ForeColor = System.Drawing.Color.White;
+            this.link_home.Location = new System.Drawing.Point(0, 0);
+            this.link_home.Name = "link_home";
+            this.link_home.Size = new System.Drawing.Size(87, 35);
+            this.link_home.TabIndex = 2;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.AutoSize = true;
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(36, 35);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 35);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Home";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
@@ -309,16 +375,60 @@
             this.panel2.Size = new System.Drawing.Size(911, 561);
             this.panel2.TabIndex = 2;
             // 
-            // label1
+            // label2
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(911, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Đây là nav bar nhưng chưa có ý tưởng";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(87, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 35);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "/";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel3
+            // 
+            this.panel3.AutoSize = true;
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.iconButton2);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(101, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(185, 35);
+            this.panel3.TabIndex = 4;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.AutoSize = true;
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 30;
+            this.iconButton2.Location = new System.Drawing.Point(0, 0);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(36, 35);
+            this.iconButton2.TabIndex = 0;
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(149, 35);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Danh sách tài khoản";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // layout_MainScreen
             // 
@@ -338,7 +448,14 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.navBar.ResumeLayout(false);
+            this.navBar.PerformLayout();
+            this.link_home.ResumeLayout(false);
+            this.link_home.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -364,6 +481,13 @@
         public System.Windows.Forms.Panel frm_body;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel navBar;
+        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel link_home;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Label label3;
     }
 }

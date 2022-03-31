@@ -1,7 +1,7 @@
-﻿using QuanLySinhVien.Controllers;
-using QuanLySinhVien.Models.Model;
+﻿using QuanLySinhVien.Models.Model;
 using QuanLySinhVien.Models.ModelServices;
 using QuanLySinhVien.Views.LoginView;
+using QuanLySinhVien.Controllers;
 using System;
 using System.Windows.Forms;
 

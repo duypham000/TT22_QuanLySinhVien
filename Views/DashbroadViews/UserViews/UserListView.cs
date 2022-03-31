@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLySinhVien.Views.CommonViews;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,18 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
             this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
             this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
+            this.userTable.Rows.Add("duyn", "Duy", "Super User", 20, "duypham0508@gmail.com", "Thanh Xuân - Hà Nội", "0123456789");
         }
+
     }
 }

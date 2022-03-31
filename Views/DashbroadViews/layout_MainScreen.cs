@@ -80,5 +80,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
             form.BringToFront();
             form.Show();
         }
+
     }
 }
