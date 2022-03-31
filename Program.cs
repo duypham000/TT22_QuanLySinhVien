@@ -23,12 +23,15 @@ namespace QuanLySinhVien
             {
                 Application.Run(new layout_MainScreen());
             }
-            else
+
+            if (!Properties.Settings.Default.Authen)
             {
+            login_frm:
                 Application.Run(new layout_Login());
                 if (Properties.Settings.Default.Authen)
                 {
                     Application.Run(new layout_MainScreen());
+                    if (!Properties.Settings.Default.Authen) goto login_frm;
                 }
             }
         }

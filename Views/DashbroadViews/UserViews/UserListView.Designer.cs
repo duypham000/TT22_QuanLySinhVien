@@ -59,13 +59,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rjTextBox1 = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rjTextBox1 = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
@@ -73,9 +72,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.demoInput.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,7 +82,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -97,7 +94,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 43);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(916, 438);
+            this.panel8.Size = new System.Drawing.Size(916, 481);
             this.panel8.TabIndex = 5;
             // 
             // userTable
@@ -108,7 +105,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.userTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.userTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.userTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.userTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
             this.userTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.userTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
@@ -155,7 +152,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.ShowCellToolTips = false;
             this.userTable.ShowEditingIcon = false;
             this.userTable.ShowRowErrors = false;
-            this.userTable.Size = new System.Drawing.Size(916, 438);
+            this.userTable.Size = new System.Drawing.Size(916, 481);
             this.userTable.TabIndex = 0;
             // 
             // username
@@ -211,6 +208,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -220,6 +218,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             // 
             // iconButton1
             // 
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -248,7 +247,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 481);
+            this.panel6.Location = new System.Drawing.Point(0, 524);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(916, 37);
             this.panel6.TabIndex = 3;
@@ -433,26 +432,49 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.button21.Text = "<<";
             this.button21.UseVisualStyleBackColor = false;
             // 
-            // panel4
+            // panel3
             // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 518);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(916, 43);
-            this.panel4.TabIndex = 1;
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panel3.Controls.Add(this.demoInput);
+            this.panel3.Controls.Add(this.iconButton1);
+            this.panel3.Location = new System.Drawing.Point(574, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(330, 32);
+            this.panel3.TabIndex = 3;
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
+            this.rjTextBox1.Size = new System.Drawing.Size(290, 31);
+            this.rjTextBox1.TabIndex = 0;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
             // 
             // panel5
             // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel5.Controls.Add(this.button12);
             this.panel5.Controls.Add(this.button11);
             this.panel5.Controls.Add(this.button10);
-            this.panel5.Location = new System.Drawing.Point(325, 4);
+            this.panel5.Location = new System.Drawing.Point(12, 5);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(265, 35);
-            this.panel5.TabIndex = 0;
+            this.panel5.TabIndex = 4;
             // 
             // button12
             // 
@@ -493,39 +515,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.button10.Text = "Thêm";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel3.Controls.Add(this.demoInput);
-            this.panel3.Controls.Add(this.iconButton1);
-            this.panel3.Location = new System.Drawing.Point(574, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(330, 32);
-            this.panel3.TabIndex = 3;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
-            this.rjTextBox1.Size = new System.Drawing.Size(290, 31);
-            this.rjTextBox1.TabIndex = 0;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
             // UserListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,9 +530,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.demoInput.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -558,11 +546,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private DataGridViewTextBoxColumn email;
         private DataGridViewTextBoxColumn address;
         private DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button13;
@@ -580,5 +563,9 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private CommonViews.RJTextBox rjTextBox1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
     }
 }
