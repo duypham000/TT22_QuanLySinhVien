@@ -32,9 +32,9 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.userTable = new System.Windows.Forms.DataGridView();
@@ -55,17 +55,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.inpt_search = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.btn_search = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.log = new System.Windows.Forms.Label();
             this.paginationBar = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.nav_toLast = new System.Windows.Forms.Button();
+            this.nav_toNext = new System.Windows.Forms.Button();
+            this.nav_display = new System.Windows.Forms.Button();
+            this.nav_toPre = new System.Windows.Forms.Button();
+            this.nav_toFirst = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
@@ -102,8 +97,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             // 
             this.userTable.AllowUserToAddRows = false;
             this.userTable.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.userTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.userTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.userTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.userTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.userTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
@@ -111,14 +106,14 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.userTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.userTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.userTable.ColumnHeadersHeight = 50;
             this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -129,14 +124,14 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.email,
             this.address,
             this.phone});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userTable.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userTable.DefaultCellStyle = dataGridViewCellStyle15;
             this.userTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userTable.EnableHeadersVisualStyles = false;
             this.userTable.GridColor = System.Drawing.Color.White;
@@ -240,7 +235,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.btn_delete.TabIndex = 2;
             this.btn_delete.Text = "Xóa";
             this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.test);
             // 
             // btn_update
             // 
@@ -267,7 +261,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.btn_add.TabIndex = 0;
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.test);
+            this.btn_add.Click += new System.EventHandler(this.addUser);
             // 
             // panel3
             // 
@@ -331,7 +325,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.log);
             this.panel6.Controls.Add(this.paginationBar);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 514);
@@ -339,195 +332,114 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel6.Size = new System.Drawing.Size(916, 47);
             this.panel6.TabIndex = 3;
             // 
-            // log
-            // 
-            this.log.AutoSize = true;
-            this.log.ForeColor = System.Drawing.Color.White;
-            this.log.Location = new System.Drawing.Point(57, 16);
-            this.log.Name = "log";
-            this.log.Size = new System.Drawing.Size(35, 13);
-            this.log.TabIndex = 3;
-            this.log.Text = "label1";
-            // 
             // paginationBar
             // 
             this.paginationBar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.paginationBar.Controls.Add(this.button13);
-            this.paginationBar.Controls.Add(this.button14);
-            this.paginationBar.Controls.Add(this.button15);
-            this.paginationBar.Controls.Add(this.button16);
-            this.paginationBar.Controls.Add(this.button17);
-            this.paginationBar.Controls.Add(this.button18);
-            this.paginationBar.Controls.Add(this.button19);
-            this.paginationBar.Controls.Add(this.button20);
-            this.paginationBar.Controls.Add(this.button21);
-            this.paginationBar.Location = new System.Drawing.Point(332, 9);
+            this.paginationBar.AutoSize = true;
+            this.paginationBar.Controls.Add(this.nav_toLast);
+            this.paginationBar.Controls.Add(this.nav_toNext);
+            this.paginationBar.Controls.Add(this.nav_display);
+            this.paginationBar.Controls.Add(this.nav_toPre);
+            this.paginationBar.Controls.Add(this.nav_toFirst);
+            this.paginationBar.Location = new System.Drawing.Point(373, 9);
             this.paginationBar.Margin = new System.Windows.Forms.Padding(0);
             this.paginationBar.Name = "paginationBar";
-            this.paginationBar.Size = new System.Drawing.Size(252, 28);
+            this.paginationBar.Size = new System.Drawing.Size(169, 28);
             this.paginationBar.TabIndex = 2;
             // 
-            // button13
+            // nav_toLast
             // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(224, 0);
-            this.button13.Margin = new System.Windows.Forms.Padding(0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(28, 28);
-            this.button13.TabIndex = 8;
-            this.button13.Text = ">>";
-            this.button13.UseVisualStyleBackColor = false;
+            this.nav_toLast.BackColor = System.Drawing.Color.Transparent;
+            this.nav_toLast.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nav_toLast.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav_toLast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_toLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_toLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nav_toLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav_toLast.ForeColor = System.Drawing.Color.White;
+            this.nav_toLast.Location = new System.Drawing.Point(140, 0);
+            this.nav_toLast.Margin = new System.Windows.Forms.Padding(0);
+            this.nav_toLast.Name = "nav_toLast";
+            this.nav_toLast.Size = new System.Drawing.Size(28, 28);
+            this.nav_toLast.TabIndex = 8;
+            this.nav_toLast.Text = ">>";
+            this.nav_toLast.UseVisualStyleBackColor = false;
+            this.nav_toLast.Click += new System.EventHandler(this.toLast);
             // 
-            // button14
+            // nav_toNext
             // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(196, 0);
-            this.button14.Margin = new System.Windows.Forms.Padding(0);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(28, 28);
-            this.button14.TabIndex = 7;
-            this.button14.Text = ">";
-            this.button14.UseVisualStyleBackColor = false;
+            this.nav_toNext.BackColor = System.Drawing.Color.Transparent;
+            this.nav_toNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nav_toNext.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav_toNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_toNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_toNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nav_toNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav_toNext.ForeColor = System.Drawing.Color.White;
+            this.nav_toNext.Location = new System.Drawing.Point(112, 0);
+            this.nav_toNext.Margin = new System.Windows.Forms.Padding(0);
+            this.nav_toNext.Name = "nav_toNext";
+            this.nav_toNext.Size = new System.Drawing.Size(28, 28);
+            this.nav_toNext.TabIndex = 7;
+            this.nav_toNext.Text = ">";
+            this.nav_toNext.UseVisualStyleBackColor = false;
+            this.nav_toNext.Click += new System.EventHandler(this.nextPage);
             // 
-            // button15
+            // nav_display
             // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.Transparent;
-            this.button15.Location = new System.Drawing.Point(168, 0);
-            this.button15.Margin = new System.Windows.Forms.Padding(0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(28, 28);
-            this.button15.TabIndex = 6;
-            this.button15.Text = "...";
-            this.button15.UseVisualStyleBackColor = false;
+            this.nav_display.BackColor = System.Drawing.Color.Transparent;
+            this.nav_display.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nav_display.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav_display.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_display.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nav_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav_display.ForeColor = System.Drawing.Color.White;
+            this.nav_display.Location = new System.Drawing.Point(56, 0);
+            this.nav_display.Margin = new System.Windows.Forms.Padding(0);
+            this.nav_display.Name = "nav_display";
+            this.nav_display.Size = new System.Drawing.Size(56, 28);
+            this.nav_display.TabIndex = 4;
+            this.nav_display.Text = "5/10";
+            this.nav_display.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // nav_toPre
             // 
-            this.button16.BackColor = System.Drawing.Color.Transparent;
-            this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(140, 0);
-            this.button16.Margin = new System.Windows.Forms.Padding(0);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(28, 28);
-            this.button16.TabIndex = 5;
-            this.button16.Text = "6";
-            this.button16.UseVisualStyleBackColor = false;
+            this.nav_toPre.BackColor = System.Drawing.Color.Transparent;
+            this.nav_toPre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nav_toPre.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav_toPre.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_toPre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_toPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nav_toPre.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav_toPre.ForeColor = System.Drawing.Color.White;
+            this.nav_toPre.Location = new System.Drawing.Point(28, 0);
+            this.nav_toPre.Margin = new System.Windows.Forms.Padding(0);
+            this.nav_toPre.Name = "nav_toPre";
+            this.nav_toPre.Size = new System.Drawing.Size(28, 28);
+            this.nav_toPre.TabIndex = 1;
+            this.nav_toPre.Text = "<";
+            this.nav_toPre.UseVisualStyleBackColor = false;
+            this.nav_toPre.Click += new System.EventHandler(this.prevPage);
             // 
-            // button17
+            // nav_toFirst
             // 
-            this.button17.BackColor = System.Drawing.Color.Transparent;
-            this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button17.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(112, 0);
-            this.button17.Margin = new System.Windows.Forms.Padding(0);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(28, 28);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "5";
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Transparent;
-            this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(84, 0);
-            this.button18.Margin = new System.Windows.Forms.Padding(0);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(28, 28);
-            this.button18.TabIndex = 3;
-            this.button18.Text = "4";
-            this.button18.UseVisualStyleBackColor = false;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.Transparent;
-            this.button19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.Transparent;
-            this.button19.Location = new System.Drawing.Point(56, 0);
-            this.button19.Margin = new System.Windows.Forms.Padding(0);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(28, 28);
-            this.button19.TabIndex = 2;
-            this.button19.Text = "...";
-            this.button19.UseVisualStyleBackColor = false;
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.Transparent;
-            this.button20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.White;
-            this.button20.Location = new System.Drawing.Point(28, 0);
-            this.button20.Margin = new System.Windows.Forms.Padding(0);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(28, 28);
-            this.button20.TabIndex = 1;
-            this.button20.Text = "<";
-            this.button20.UseVisualStyleBackColor = false;
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.Transparent;
-            this.button21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button21.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Location = new System.Drawing.Point(0, 0);
-            this.button21.Margin = new System.Windows.Forms.Padding(0);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(28, 28);
-            this.button21.TabIndex = 0;
-            this.button21.Text = "<<";
-            this.button21.UseVisualStyleBackColor = false;
+            this.nav_toFirst.BackColor = System.Drawing.Color.Transparent;
+            this.nav_toFirst.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nav_toFirst.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav_toFirst.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_toFirst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.nav_toFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nav_toFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav_toFirst.ForeColor = System.Drawing.Color.White;
+            this.nav_toFirst.Location = new System.Drawing.Point(0, 0);
+            this.nav_toFirst.Margin = new System.Windows.Forms.Padding(0);
+            this.nav_toFirst.Name = "nav_toFirst";
+            this.nav_toFirst.Size = new System.Drawing.Size(28, 28);
+            this.nav_toFirst.TabIndex = 0;
+            this.nav_toFirst.Text = "<<";
+            this.nav_toFirst.UseVisualStyleBackColor = false;
+            this.nav_toFirst.Click += new System.EventHandler(this.toFirst);
             // 
             // UserListView
             // 
@@ -557,15 +469,10 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private System.Windows.Forms.DataGridView userTable;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel paginationBar;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button nav_toNext;
+        private System.Windows.Forms.Button nav_display;
+        private System.Windows.Forms.Button nav_toPre;
+        private System.Windows.Forms.Button nav_toFirst;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel demoInput;
@@ -576,7 +483,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Label log;
         private DataGridViewTextBoxColumn username;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn role;
@@ -584,5 +490,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private DataGridViewTextBoxColumn email;
         private DataGridViewTextBoxColumn address;
         private DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.Button nav_toLast;
     }
 }

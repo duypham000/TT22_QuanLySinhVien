@@ -13,6 +13,11 @@ namespace QuanLySinhVien.Models.ModelServices
             dbContext = new QuanLySinhVienDbContext();
         }
 
+        public int Count()
+        {
+            return dbContext.Users.Count();
+        }
+
         public List<User> GetAllUsers()
         {
             return dbContext.Users.OrderByDescending(x => x.Username).ToList();
