@@ -46,10 +46,17 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.demoInput = new System.Windows.Forms.Panel();
+            this.inpt_search = new QuanLySinhVien.Views.CommonViews.RJTextBox();
+            this.btn_search = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.log = new System.Windows.Forms.Label();
+            this.paginationBar = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
@@ -59,21 +66,15 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rjTextBox1 = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.demoInput.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.paginationBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,7 +95,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 43);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(916, 481);
+            this.panel8.Size = new System.Drawing.Size(916, 471);
             this.panel8.TabIndex = 5;
             // 
             // userTable
@@ -152,47 +153,47 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.ShowCellToolTips = false;
             this.userTable.ShowEditingIcon = false;
             this.userTable.ShowRowErrors = false;
-            this.userTable.Size = new System.Drawing.Size(916, 481);
+            this.userTable.Size = new System.Drawing.Size(916, 471);
             this.userTable.TabIndex = 0;
             // 
             // username
             // 
-            this.username.FillWeight = 87.05584F;
+            this.username.FillWeight = 87F;
             this.username.HeaderText = "Username";
             this.username.Name = "username";
             this.username.ReadOnly = true;
             // 
             // name
             // 
-            this.name.FillWeight = 87.05584F;
+            this.name.FillWeight = 87F;
             this.name.HeaderText = "Tên người dùng";
             this.name.Name = "name";
             this.name.ReadOnly = true;
             // 
             // role
             // 
-            this.role.FillWeight = 87.05584F;
+            this.role.FillWeight = 87F;
             this.role.HeaderText = "Vai trò";
             this.role.Name = "role";
             this.role.ReadOnly = true;
             // 
             // age
             // 
-            this.age.FillWeight = 30F;
+            this.age.FillWeight = 87F;
             this.age.HeaderText = "Tuổi";
             this.age.Name = "age";
             this.age.ReadOnly = true;
             // 
             // email
             // 
-            this.email.FillWeight = 87.05584F;
+            this.email.FillWeight = 87F;
             this.email.HeaderText = "Email";
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
             // address
             // 
-            this.address.FillWeight = 87.05584F;
+            this.address.FillWeight = 87F;
             this.address.HeaderText = "Địa chỉ";
             this.address.Name = "address";
             this.address.ReadOnly = true;
@@ -200,7 +201,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             // phone
             // 
             this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.FillWeight = 87.05584F;
+            this.phone.FillWeight = 87F;
             this.phone.HeaderText = "Số điện thoại";
             this.phone.Name = "phone";
             this.phone.ReadOnly = true;
@@ -216,59 +217,155 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel2.Size = new System.Drawing.Size(916, 43);
             this.panel2.TabIndex = 4;
             // 
-            // iconButton1
+            // panel5
             // 
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.Location = new System.Drawing.Point(290, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(40, 32);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel5.Controls.Add(this.btn_delete);
+            this.panel5.Controls.Add(this.btn_update);
+            this.panel5.Controls.Add(this.btn_add);
+            this.panel5.Location = new System.Drawing.Point(12, 5);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(265, 35);
+            this.panel5.TabIndex = 4;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_delete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btn_delete.Location = new System.Drawing.Point(185, 0);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(80, 35);
+            this.btn_delete.TabIndex = 2;
+            this.btn_delete.Text = "Xóa";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.test);
+            // 
+            // btn_update
+            // 
+            this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_update.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_update.Location = new System.Drawing.Point(93, 0);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(80, 35);
+            this.btn_update.TabIndex = 1;
+            this.btn_update.Text = "Sửa";
+            this.btn_update.UseVisualStyleBackColor = true;
+            // 
+            // btn_add
+            // 
+            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_add.Location = new System.Drawing.Point(0, 0);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(80, 35);
+            this.btn_add.TabIndex = 0;
+            this.btn_add.Text = "Thêm";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.test);
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panel3.Controls.Add(this.demoInput);
+            this.panel3.Controls.Add(this.btn_search);
+            this.panel3.Location = new System.Drawing.Point(574, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(330, 32);
+            this.panel3.TabIndex = 3;
             // 
             // demoInput
             // 
-            this.demoInput.Controls.Add(this.rjTextBox1);
+            this.demoInput.Controls.Add(this.inpt_search);
             this.demoInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.demoInput.Location = new System.Drawing.Point(0, 0);
             this.demoInput.Name = "demoInput";
             this.demoInput.Size = new System.Drawing.Size(290, 32);
             this.demoInput.TabIndex = 1;
             // 
+            // inpt_search
+            // 
+            this.inpt_search.BackColor = System.Drawing.SystemColors.Window;
+            this.inpt_search.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_search.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_search.BorderRadius = 0;
+            this.inpt_search.BorderSize = 2;
+            this.inpt_search.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inpt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.inpt_search.Location = new System.Drawing.Point(0, 0);
+            this.inpt_search.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_search.Multiline = false;
+            this.inpt_search.Name = "inpt_search";
+            this.inpt_search.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_search.PasswordChar = false;
+            this.inpt_search.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_search.PlaceholderText = "Tìm kiếm";
+            this.inpt_search.Size = new System.Drawing.Size(290, 31);
+            this.inpt_search.TabIndex = 0;
+            this.inpt_search.Texts = "";
+            this.inpt_search.UnderlinedStyle = false;
+            // 
+            // btn_search
+            // 
+            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_search.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_search.FlatAppearance.BorderSize = 0;
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_search.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btn_search.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_search.IconSize = 35;
+            this.btn_search.Location = new System.Drawing.Point(290, 0);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(40, 32);
+            this.btn_search.TabIndex = 2;
+            this.btn_search.UseVisualStyleBackColor = true;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.log);
+            this.panel6.Controls.Add(this.paginationBar);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 524);
+            this.panel6.Location = new System.Drawing.Point(0, 514);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(916, 37);
+            this.panel6.Size = new System.Drawing.Size(916, 47);
             this.panel6.TabIndex = 3;
             // 
-            // panel7
+            // log
             // 
-            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel7.Controls.Add(this.button13);
-            this.panel7.Controls.Add(this.button14);
-            this.panel7.Controls.Add(this.button15);
-            this.panel7.Controls.Add(this.button16);
-            this.panel7.Controls.Add(this.button17);
-            this.panel7.Controls.Add(this.button18);
-            this.panel7.Controls.Add(this.button19);
-            this.panel7.Controls.Add(this.button20);
-            this.panel7.Controls.Add(this.button21);
-            this.panel7.Location = new System.Drawing.Point(332, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(252, 28);
-            this.panel7.TabIndex = 2;
+            this.log.AutoSize = true;
+            this.log.ForeColor = System.Drawing.Color.White;
+            this.log.Location = new System.Drawing.Point(57, 16);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(35, 13);
+            this.log.TabIndex = 3;
+            this.log.Text = "label1";
+            // 
+            // paginationBar
+            // 
+            this.paginationBar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.paginationBar.Controls.Add(this.button13);
+            this.paginationBar.Controls.Add(this.button14);
+            this.paginationBar.Controls.Add(this.button15);
+            this.paginationBar.Controls.Add(this.button16);
+            this.paginationBar.Controls.Add(this.button17);
+            this.paginationBar.Controls.Add(this.button18);
+            this.paginationBar.Controls.Add(this.button19);
+            this.paginationBar.Controls.Add(this.button20);
+            this.paginationBar.Controls.Add(this.button21);
+            this.paginationBar.Location = new System.Drawing.Point(332, 9);
+            this.paginationBar.Margin = new System.Windows.Forms.Padding(0);
+            this.paginationBar.Name = "paginationBar";
+            this.paginationBar.Size = new System.Drawing.Size(252, 28);
+            this.paginationBar.TabIndex = 2;
             // 
             // button13
             // 
@@ -432,89 +529,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.button21.Text = "<<";
             this.button21.UseVisualStyleBackColor = false;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel3.Controls.Add(this.demoInput);
-            this.panel3.Controls.Add(this.iconButton1);
-            this.panel3.Location = new System.Drawing.Point(574, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(330, 32);
-            this.panel3.TabIndex = 3;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
-            this.rjTextBox1.Size = new System.Drawing.Size(290, 31);
-            this.rjTextBox1.TabIndex = 0;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel5.Controls.Add(this.button12);
-            this.panel5.Controls.Add(this.button11);
-            this.panel5.Controls.Add(this.button10);
-            this.panel5.Location = new System.Drawing.Point(12, 5);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(265, 35);
-            this.panel5.TabIndex = 4;
-            // 
-            // button12
-            // 
-            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.button12.Location = new System.Drawing.Point(185, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(80, 35);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "Xóa";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button11.Location = new System.Drawing.Point(93, 0);
-            this.button11.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(80, 35);
-            this.button11.TabIndex = 1;
-            this.button11.Text = "Sửa";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(80, 35);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "Thêm";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
             // UserListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,15 +537,17 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.Controls.Add(this.panel1);
             this.Name = "UserListView";
             this.Text = "UserListView";
+            this.ClientSizeChanged += new System.EventHandler(this.onChangeSize);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.demoInput.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.paginationBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -539,15 +555,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView userTable;
-        private DataGridViewTextBoxColumn username;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn role;
-        private DataGridViewTextBoxColumn age;
-        private DataGridViewTextBoxColumn email;
-        private DataGridViewTextBoxColumn address;
-        private DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel paginationBar;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
@@ -560,12 +569,20 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel demoInput;
-        private CommonViews.RJTextBox rjTextBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private CommonViews.RJTextBox inpt_search;
+        private FontAwesome.Sharp.IconButton btn_search;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Label log;
+        private DataGridViewTextBoxColumn username;
+        private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn role;
+        private DataGridViewTextBoxColumn age;
+        private DataGridViewTextBoxColumn email;
+        private DataGridViewTextBoxColumn address;
+        private DataGridViewTextBoxColumn phone;
     }
 }

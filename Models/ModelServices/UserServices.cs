@@ -18,6 +18,11 @@ namespace QuanLySinhVien.Models.ModelServices
             return dbContext.Users.OrderByDescending(x => x.Username).ToList();
         }
 
+        public List<User> GetAllPaging(int page, int itemCount)
+        {
+            return dbContext.Users.OrderByDescending(x => x.Username).Skip((page - 1) * itemCount).Take(itemCount).ToList();
+        }
+
         public User GetByUsername(string username)
         {
             return dbContext.Users.SingleOrDefault(x => x.Username == username);

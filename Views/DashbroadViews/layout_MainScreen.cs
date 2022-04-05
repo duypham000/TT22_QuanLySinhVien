@@ -6,12 +6,14 @@ namespace QuanLySinhVien.Views.DashbroadViews
 {
     public partial class layout_MainScreen : Form
     {
+        Form childForm = null;
         public layout_MainScreen()
         {
             InitializeComponent();
             this.user_username.Text = Properties.Settings.Default.Username;
             customizeDesing();
-            UserListView userListView = new UserListView();
+            UserListView userListView = new UserListView(this);
+
             openChildForm(userListView);
         }
 
@@ -54,7 +56,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
         {
             //this.frm_title.Text = "Quản lý tài khoản";
             showSubmenu(this.submenu_qltk);
-            
         }
 
         private void opt_qlsv_Click(object sender, EventArgs e)
@@ -64,11 +65,12 @@ namespace QuanLySinhVien.Views.DashbroadViews
         }
 
         private Form activeForm = null;
+
         public void openChildForm(Form form)
         {
             if (activeForm != null)
             {
-                activeForm.Close();
+                this.frm_body.Controls.Clear();
             }
 
             activeForm = form;
@@ -77,9 +79,22 @@ namespace QuanLySinhVien.Views.DashbroadViews
             form.Dock = DockStyle.Fill;
             this.frm_body.Controls.Add(form);
             this.frm_body.Tag = form;
+            this.childForm = form;
+            form.FormClosing += new FormClosingEventHandler(this.navigate);
             form.BringToFront();
             form.Show();
         }
 
+
+        protected void navigate(object sender, FormClosingEventArgs e)
+        {
+            string navTo = childForm.Tag.ToString();
+
+            if (navTo.Equals("add-user"))
+            {
+                UserAdd userAdd = new UserAdd();
+                openChildForm(userAdd);
+            }
+        }
     }
 }
