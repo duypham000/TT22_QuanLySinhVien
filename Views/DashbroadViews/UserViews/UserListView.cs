@@ -9,6 +9,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
     public partial class UserListView : Form
     {
         private UserServices userServices = null;
+        private RoleServices roleServices = null;
         private int pageSize = 22;
         private int curPage = 1;
         private int totalPage = 1;
@@ -17,6 +18,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         {
             InitializeComponent();
             userServices = new UserServices();
+            roleServices = new RoleServices();
+
             fillToTable(this.curPage, this.pageSize);
         }
 
@@ -60,7 +63,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             List<User> users = userServices.GetAllPaging(page, size);
             foreach (var user in users)
             {
-                this.userTable.Rows.Add(user.Username, user.Name, user.RoleID, user.Age, user.Email, user.Address, user.Phone);
+                Role role = roleServices.GetByID(user.RoleID);
+                this.userTable.Rows.Add(user.Username, user.Name, role.Name, user.Age, user.Email, user.Address, user.Phone);
             }
         }
 

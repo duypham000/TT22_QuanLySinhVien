@@ -18,6 +18,11 @@ namespace QuanLySinhVien.Models.ModelServices
             return dbContext.Roles.OrderByDescending(r => r.Name).ToList();
         }
 
+        public Role GetByID(int id)
+        {
+            return dbContext.Roles.Single(x => x.ID == id);
+        }
+
         public void Add(Role role)
         {
             dbContext.Roles.Add(role);
