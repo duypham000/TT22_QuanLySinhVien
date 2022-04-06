@@ -106,17 +106,23 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         private void onChangeSize(object sender, EventArgs e)
         {
-            // 424 16
-            double currSize = this.userTable.Height, sSize = 424;
-            double size = ((currSize - sSize) / 16) + 22;
+            // 524 22
+            double currSize = this.userTable.Height, sSize = 524;
+            double size = ((currSize - sSize) / 22) + 20;
             this.pageSize = (int)size;
             fillToTable(this.curPage, (int)Math.Floor(size));
         }
 
-        private string getCurrentUsername()
+        private string[] getCurrentUsername()
         {
-            int index = this.userTable.SelectedRows[0].Index;
-            return this.userTable.Rows[index].Cells[0].Value.ToString();
+            int total = this.userTable.SelectedRows.Count;
+            string[] res = new string[total];
+            for (int i = 0; i < total; i++)
+            {
+                int index = this.userTable.SelectedRows[i].Index;
+                res[i] = this.userTable.Rows[index].Cells[0].Value.ToString();
+            }
+            return res;
         }
 
         private void addUser(object sender, EventArgs e)
@@ -127,15 +133,18 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         private void removeUser(object sender, EventArgs e)
         {
-            string message = "Bạn có chắc chắn muốn xóa " + getCurrentUsername() + "?";
-            string title = "Xóa user";
+            string message = "Bạn có chắc chắn muốn xóa các mục đã chọn?";
+            string title = "Xóa users";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show(message, title, buttons);
 
             if (result == DialogResult.Yes)
             {
-                userServices.DeleteByUsername(getCurrentUsername());
-                fillToTable(curPage, this.pageSize);
+                foreach (var username in getCurrentUsername())
+                {
+                    userServices.DeleteByUsername(username);
+                    fillToTable(curPage, this.pageSize);
+                }
             }
         }
 

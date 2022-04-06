@@ -25,7 +25,7 @@ namespace QuanLySinhVien.Models.ModelServices
 
         public List<User> GetAllPaging(int page, int itemCount)
         {
-            return dbContext.Users.OrderByDescending(x => x.Username).Skip((page - 1) * itemCount).Take(itemCount).ToList();
+            return dbContext.Users.OrderBy(x => x.Username).Skip((page - 1) * itemCount).Take(itemCount).ToList();
         }
 
         public User GetByUsername(string username)
@@ -63,7 +63,7 @@ namespace QuanLySinhVien.Models.ModelServices
         public void DeleteByUsername(string username)
         {
             User user = new User();
-            user = dbContext.Users.Single(x => x.Username == username);
+            user = dbContext.Users.SingleOrDefault(x => x.Username == username);
             dbContext.Users.Remove(user);
             dbContext.SaveChanges();
         }
