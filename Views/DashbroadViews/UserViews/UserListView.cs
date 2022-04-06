@@ -124,5 +124,25 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.Tag = "add-user";
             this.Close();
         }
+
+        private void removeUser(object sender, EventArgs e)
+        {
+            string message = "Bạn có chắc chắn muốn xóa " + getCurrentUsername() + "?";
+            string title = "Xóa user";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+
+            if (result == DialogResult.Yes)
+            {
+                userServices.DeleteByUsername(getCurrentUsername());
+                fillToTable(curPage, this.pageSize);
+            }
+        }
+
+        private void updateUser(object sender, EventArgs e)
+        {
+            this.Tag = "update-user/" + getCurrentUsername();
+            this.Close();
+        }
     }
 }

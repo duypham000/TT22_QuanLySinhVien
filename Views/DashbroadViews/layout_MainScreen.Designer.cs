@@ -47,23 +47,28 @@
             this.frm_body = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.navBar = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.link_home = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel_sideMenu.SuspendLayout();
             this.submenu_qlsv.SuspendLayout();
             this.submenu_qltk.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.navBar.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.link_home.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_sideMenu
@@ -312,6 +317,8 @@
             // 
             this.navBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.navBar.AutoSize = true;
+            this.navBar.Controls.Add(this.panel4);
+            this.navBar.Controls.Add(this.label4);
             this.navBar.Controls.Add(this.panel3);
             this.navBar.Controls.Add(this.label2);
             this.navBar.Controls.Add(this.link_home);
@@ -321,12 +328,69 @@
             this.navBar.Size = new System.Drawing.Size(911, 35);
             this.navBar.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.AutoSize = true;
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.iconButton2);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(101, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(185, 35);
+            this.panel3.TabIndex = 4;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.AutoSize = true;
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 30;
+            this.iconButton2.Location = new System.Drawing.Point(0, 0);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(36, 35);
+            this.iconButton2.TabIndex = 0;
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(149, 35);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Quản lý danh sách tài khoản";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(87, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 35);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "/";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // link_home
             // 
             this.link_home.AutoSize = true;
             this.link_home.BackColor = System.Drawing.Color.Transparent;
             this.link_home.Controls.Add(this.iconButton1);
             this.link_home.Controls.Add(this.label1);
+            this.link_home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.link_home.Dock = System.Windows.Forms.DockStyle.Left;
             this.link_home.ForeColor = System.Drawing.Color.White;
             this.link_home.Location = new System.Drawing.Point(0, 0);
@@ -375,60 +439,61 @@
             this.panel2.Size = new System.Drawing.Size(911, 561);
             this.panel2.TabIndex = 2;
             // 
-            // label2
+            // label4
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(87, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 35);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "/";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(286, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 35);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "/";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel3
+            // panel4
             // 
-            this.panel3.AutoSize = true;
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.iconButton2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(101, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(185, 35);
-            this.panel3.TabIndex = 4;
+            this.panel4.AutoSize = true;
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.iconButton3);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.ForeColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(300, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(185, 35);
+            this.panel4.TabIndex = 6;
             // 
-            // iconButton2
+            // iconButton3
             // 
-            this.iconButton2.AutoSize = true;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.List;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 30;
-            this.iconButton2.Location = new System.Drawing.Point(0, 0);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(36, 35);
-            this.iconButton2.TabIndex = 0;
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton3.AutoSize = true;
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 30;
+            this.iconButton3.Location = new System.Drawing.Point(0, 0);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(36, 35);
+            this.iconButton3.TabIndex = 0;
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton3.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // label5
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 35);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Danh sách tài khoản";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(36, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 35);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Danh sách tài khoản";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // layout_MainScreen
             // 
@@ -451,11 +516,13 @@
             this.panel1.PerformLayout();
             this.navBar.ResumeLayout(false);
             this.navBar.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.link_home.ResumeLayout(false);
             this.link_home.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -489,5 +556,9 @@
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

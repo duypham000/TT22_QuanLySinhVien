@@ -59,5 +59,13 @@ namespace QuanLySinhVien.Models.ModelServices
             dbContext.Users.Remove(user);
             dbContext.SaveChanges();
         }
+
+        public void DeleteByUsername(string username)
+        {
+            User user = new User();
+            user = dbContext.Users.Single(x => x.Username == username);
+            dbContext.Users.Remove(user);
+            dbContext.SaveChanges();
+        }
     }
 }

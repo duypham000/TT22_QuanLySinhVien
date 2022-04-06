@@ -85,15 +85,18 @@ namespace QuanLySinhVien.Views.DashbroadViews
             form.Show();
         }
 
-
         protected void navigate(object sender, FormClosingEventArgs e)
         {
             string navTo = childForm.Tag.ToString();
-
-            if (navTo.Equals("add-user"))
+            string[] nav =  navTo.Split('/');
+            if (nav[0].Equals("add-user"))
             {
                 UserAdd userAdd = new UserAdd();
                 openChildForm(userAdd);
+            }
+            else if (nav[0].Equals("update-user"))
+            {
+
             }
         }
     }
