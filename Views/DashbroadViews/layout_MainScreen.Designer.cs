@@ -286,6 +286,8 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
@@ -298,10 +300,11 @@
             // 
             // user_username
             // 
+            this.user_username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.user_username.AutoSize = true;
             this.user_username.BackColor = System.Drawing.Color.Transparent;
             this.user_username.ForeColor = System.Drawing.Color.White;
-            this.user_username.Location = new System.Drawing.Point(65, 28);
+            this.user_username.Location = new System.Drawing.Point(64, 19);
             this.user_username.Name = "user_username";
             this.user_username.Size = new System.Drawing.Size(87, 20);
             this.user_username.TabIndex = 1;
@@ -516,6 +519,9 @@
             this.ClientSize = new System.Drawing.Size(1174, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_sideMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1190, 600);
             this.MinimumSize = new System.Drawing.Size(1190, 600);
             this.Name = "layout_MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
