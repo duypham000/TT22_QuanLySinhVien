@@ -30,7 +30,15 @@
         {
             this.panel_sideMenu = new System.Windows.Forms.Panel();
             this.submenu_qlsv = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.opt_qlsv = new System.Windows.Forms.Button();
+            this.opt_qll = new System.Windows.Forms.Button();
+            this.otp_qlk = new System.Windows.Forms.Button();
             this.submenu_qltk = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.opt_qltk = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.link_logout = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -40,25 +48,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.navBar = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.link_home = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.otp_qlk = new System.Windows.Forms.Button();
-            this.opt_qll = new System.Windows.Forms.Button();
-            this.opt_qlsv = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.opt_qltk = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel_sideMenu.SuspendLayout();
             this.submenu_qlsv.SuspendLayout();
             this.submenu_qltk.SuspendLayout();
@@ -66,8 +66,11 @@
             this.panel1.SuspendLayout();
             this.navBar.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.link_home.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +103,95 @@
             this.submenu_qlsv.Size = new System.Drawing.Size(263, 80);
             this.submenu_qlsv.TabIndex = 9;
             // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(0, 40);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(263, 40);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Danh sách điểm sinh viên";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(0, 0);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(263, 40);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Danh sách sinh viên";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // opt_qlsv
+            // 
+            this.opt_qlsv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.opt_qlsv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opt_qlsv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.opt_qlsv.FlatAppearance.BorderSize = 0;
+            this.opt_qlsv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opt_qlsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opt_qlsv.ForeColor = System.Drawing.Color.White;
+            this.opt_qlsv.Location = new System.Drawing.Point(0, 305);
+            this.opt_qlsv.Name = "opt_qlsv";
+            this.opt_qlsv.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.opt_qlsv.Size = new System.Drawing.Size(263, 45);
+            this.opt_qlsv.TabIndex = 8;
+            this.opt_qlsv.Text = "Quản lý sinh viên";
+            this.opt_qlsv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opt_qlsv.UseVisualStyleBackColor = false;
+            this.opt_qlsv.Click += new System.EventHandler(this.opt_qlsv_Click);
+            // 
+            // opt_qll
+            // 
+            this.opt_qll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.opt_qll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opt_qll.Dock = System.Windows.Forms.DockStyle.Top;
+            this.opt_qll.FlatAppearance.BorderSize = 0;
+            this.opt_qll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opt_qll.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opt_qll.ForeColor = System.Drawing.Color.White;
+            this.opt_qll.Location = new System.Drawing.Point(0, 260);
+            this.opt_qll.Name = "opt_qll";
+            this.opt_qll.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.opt_qll.Size = new System.Drawing.Size(263, 45);
+            this.opt_qll.TabIndex = 6;
+            this.opt_qll.Text = "Quản lý lớp";
+            this.opt_qll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opt_qll.UseVisualStyleBackColor = false;
+            // 
+            // otp_qlk
+            // 
+            this.otp_qlk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.otp_qlk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.otp_qlk.Dock = System.Windows.Forms.DockStyle.Top;
+            this.otp_qlk.FlatAppearance.BorderSize = 0;
+            this.otp_qlk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.otp_qlk.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otp_qlk.ForeColor = System.Drawing.Color.White;
+            this.otp_qlk.Location = new System.Drawing.Point(0, 215);
+            this.otp_qlk.Name = "otp_qlk";
+            this.otp_qlk.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.otp_qlk.Size = new System.Drawing.Size(263, 45);
+            this.otp_qlk.TabIndex = 3;
+            this.otp_qlk.Text = "Quản lý khoa";
+            this.otp_qlk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.otp_qlk.UseVisualStyleBackColor = false;
+            // 
             // submenu_qltk
             // 
             this.submenu_qltk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -110,6 +202,59 @@
             this.submenu_qltk.Name = "submenu_qltk";
             this.submenu_qltk.Size = new System.Drawing.Size(263, 80);
             this.submenu_qltk.TabIndex = 2;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 40);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(263, 40);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Danh sách chức vụ";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(263, 40);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Danh sách tài khoản";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // opt_qltk
+            // 
+            this.opt_qltk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.opt_qltk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opt_qltk.Dock = System.Windows.Forms.DockStyle.Top;
+            this.opt_qltk.FlatAppearance.BorderSize = 0;
+            this.opt_qltk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opt_qltk.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opt_qltk.ForeColor = System.Drawing.Color.White;
+            this.opt_qltk.Location = new System.Drawing.Point(0, 90);
+            this.opt_qltk.Name = "opt_qltk";
+            this.opt_qltk.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.opt_qltk.Size = new System.Drawing.Size(263, 45);
+            this.opt_qltk.TabIndex = 1;
+            this.opt_qltk.Text = "Quản lý danh sách tài khoản";
+            this.opt_qltk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opt_qltk.UseVisualStyleBackColor = false;
+            this.opt_qltk.Click += new System.EventHandler(this.opt_qltk_Click);
             // 
             // panelLogo
             // 
@@ -178,6 +323,7 @@
             // 
             // frm_body
             // 
+            this.frm_body.AutoScroll = true;
             this.frm_body.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.frm_body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.frm_body.Location = new System.Drawing.Point(0, 47);
@@ -207,49 +353,44 @@
             this.navBar.Location = new System.Drawing.Point(0, 9);
             this.navBar.Margin = new System.Windows.Forms.Padding(0);
             this.navBar.Name = "navBar";
-            this.navBar.Size = new System.Drawing.Size(911, 35);
+            this.navBar.Size = new System.Drawing.Size(911, 37);
             this.navBar.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.AutoSize = true;
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.iconButton3);
+            this.panel4.Controls.Add(this.iconPictureBox1);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(300, 0);
+            this.panel4.Location = new System.Drawing.Point(308, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(185, 35);
+            this.panel4.Size = new System.Drawing.Size(191, 37);
             this.panel4.TabIndex = 6;
             // 
-            // iconButton3
+            // iconPictureBox1
             // 
-            this.iconButton3.AutoSize = true;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.List;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(0, 0);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(36, 35);
-            this.iconButton3.TabIndex = 0;
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 37;
+            this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(42, 37);
+            this.iconPictureBox1.TabIndex = 7;
+            this.iconPictureBox1.TabStop = false;
             // 
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Right;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 0);
+            this.label5.Location = new System.Drawing.Point(42, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 35);
+            this.label5.Size = new System.Drawing.Size(149, 37);
             this.label5.TabIndex = 2;
             this.label5.Text = "Danh sách tài khoản";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -259,9 +400,9 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(286, 0);
+            this.label4.Location = new System.Drawing.Point(294, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 35);
+            this.label4.Size = new System.Drawing.Size(14, 37);
             this.label4.TabIndex = 5;
             this.label4.Text = "/";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,42 +411,37 @@
             // 
             this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.iconButton2);
+            this.panel3.Controls.Add(this.iconPictureBox2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(101, 0);
+            this.panel3.Location = new System.Drawing.Point(102, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(185, 35);
+            this.panel3.Size = new System.Drawing.Size(192, 37);
             this.panel3.TabIndex = 4;
             // 
-            // iconButton2
+            // iconPictureBox2
             // 
-            this.iconButton2.AutoSize = true;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 30;
-            this.iconButton2.Location = new System.Drawing.Point(0, 0);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(36, 35);
-            this.iconButton2.TabIndex = 0;
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 37;
+            this.iconPictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(43, 37);
+            this.iconPictureBox2.TabIndex = 1;
+            this.iconPictureBox2.TabStop = false;
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 0);
+            this.label3.Location = new System.Drawing.Point(43, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 35);
+            this.label3.Size = new System.Drawing.Size(149, 37);
             this.label3.TabIndex = 2;
             this.label3.Text = "Quản lý danh sách tài khoản";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -315,9 +451,9 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(87, 0);
+            this.label2.Location = new System.Drawing.Point(88, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 35);
+            this.label2.Size = new System.Drawing.Size(14, 37);
             this.label2.TabIndex = 3;
             this.label2.Text = "/";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,42 +462,37 @@
             // 
             this.link_home.AutoSize = true;
             this.link_home.BackColor = System.Drawing.Color.Transparent;
-            this.link_home.Controls.Add(this.iconButton1);
+            this.link_home.Controls.Add(this.iconPictureBox3);
             this.link_home.Controls.Add(this.label1);
             this.link_home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.link_home.Dock = System.Windows.Forms.DockStyle.Left;
             this.link_home.ForeColor = System.Drawing.Color.White;
             this.link_home.Location = new System.Drawing.Point(0, 0);
             this.link_home.Name = "link_home";
-            this.link_home.Size = new System.Drawing.Size(87, 35);
+            this.link_home.Size = new System.Drawing.Size(88, 37);
             this.link_home.TabIndex = 2;
             // 
-            // iconButton1
+            // iconPictureBox3
             // 
-            this.iconButton1.AutoSize = true;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(36, 35);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconPictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 37;
+            this.iconPictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(37, 37);
+            this.iconPictureBox3.TabIndex = 3;
+            this.iconPictureBox3.TabStop = false;
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 0);
+            this.label1.Location = new System.Drawing.Point(37, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 35);
+            this.label1.Size = new System.Drawing.Size(51, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Home";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -376,148 +507,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(911, 561);
             this.panel2.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(263, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Danh sách tài khoản";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 40);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(263, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Danh sách chức vụ";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // otp_qlk
-            // 
-            this.otp_qlk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(10)))), ((int)(((byte)(44)))));
-            this.otp_qlk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.otp_qlk.Dock = System.Windows.Forms.DockStyle.Top;
-            this.otp_qlk.FlatAppearance.BorderSize = 0;
-            this.otp_qlk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.otp_qlk.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otp_qlk.ForeColor = System.Drawing.Color.White;
-            this.otp_qlk.Location = new System.Drawing.Point(0, 215);
-            this.otp_qlk.Name = "otp_qlk";
-            this.otp_qlk.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.otp_qlk.Size = new System.Drawing.Size(263, 45);
-            this.otp_qlk.TabIndex = 3;
-            this.otp_qlk.Text = "Quản lý khoa";
-            this.otp_qlk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.otp_qlk.UseVisualStyleBackColor = false;
-            // 
-            // opt_qll
-            // 
-            this.opt_qll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(10)))), ((int)(((byte)(44)))));
-            this.opt_qll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.opt_qll.Dock = System.Windows.Forms.DockStyle.Top;
-            this.opt_qll.FlatAppearance.BorderSize = 0;
-            this.opt_qll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.opt_qll.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opt_qll.ForeColor = System.Drawing.Color.White;
-            this.opt_qll.Location = new System.Drawing.Point(0, 260);
-            this.opt_qll.Name = "opt_qll";
-            this.opt_qll.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.opt_qll.Size = new System.Drawing.Size(263, 45);
-            this.opt_qll.TabIndex = 6;
-            this.opt_qll.Text = "Quản lý lớp";
-            this.opt_qll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.opt_qll.UseVisualStyleBackColor = false;
-            // 
-            // opt_qlsv
-            // 
-            this.opt_qlsv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(10)))), ((int)(((byte)(44)))));
-            this.opt_qlsv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.opt_qlsv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.opt_qlsv.FlatAppearance.BorderSize = 0;
-            this.opt_qlsv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.opt_qlsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opt_qlsv.ForeColor = System.Drawing.Color.White;
-            this.opt_qlsv.Location = new System.Drawing.Point(0, 305);
-            this.opt_qlsv.Name = "opt_qlsv";
-            this.opt_qlsv.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.opt_qlsv.Size = new System.Drawing.Size(263, 45);
-            this.opt_qlsv.TabIndex = 8;
-            this.opt_qlsv.Text = "Quản lý sinh viên";
-            this.opt_qlsv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.opt_qlsv.UseVisualStyleBackColor = false;
-            this.opt_qlsv.Click += new System.EventHandler(this.opt_qlsv_Click);
-            // 
-            // button6
-            // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(263, 40);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Danh sách sinh viên";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // opt_qltk
-            // 
-            this.opt_qltk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(10)))), ((int)(((byte)(44)))));
-            this.opt_qltk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.opt_qltk.Dock = System.Windows.Forms.DockStyle.Top;
-            this.opt_qltk.FlatAppearance.BorderSize = 0;
-            this.opt_qltk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.opt_qltk.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opt_qltk.ForeColor = System.Drawing.Color.White;
-            this.opt_qltk.Location = new System.Drawing.Point(0, 90);
-            this.opt_qltk.Name = "opt_qltk";
-            this.opt_qltk.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.opt_qltk.Size = new System.Drawing.Size(263, 45);
-            this.opt_qltk.TabIndex = 1;
-            this.opt_qltk.Text = "Quản lý danh sách tài khoản";
-            this.opt_qltk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.opt_qltk.UseVisualStyleBackColor = false;
-            this.opt_qltk.Click += new System.EventHandler(this.opt_qltk_Click);
-            // 
-            // button5
-            // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 40);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(263, 40);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Danh sách điểm sinh viên";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // layout_MainScreen
             // 
@@ -541,11 +530,11 @@
             this.navBar.ResumeLayout(false);
             this.navBar.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.link_home.ResumeLayout(false);
-            this.link_home.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -565,15 +554,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel navBar;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel link_home;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
@@ -584,5 +570,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button opt_qltk;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
     }
 }

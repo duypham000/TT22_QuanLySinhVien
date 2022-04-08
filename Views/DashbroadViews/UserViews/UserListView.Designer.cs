@@ -32,27 +32,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.userTable = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.demoInput = new System.Windows.Forms.Panel();
-            this.btn_search = new FontAwesome.Sharp.IconButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.paginationBar = new System.Windows.Forms.Panel();
-            this.nav_toLast = new System.Windows.Forms.Button();
-            this.nav_toNext = new System.Windows.Forms.Button();
-            this.nav_display = new System.Windows.Forms.Button();
-            this.nav_toPre = new System.Windows.Forms.Button();
-            this.nav_toFirst = new System.Windows.Forms.Button();
             this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,16 +45,30 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inpt_search = new QuanLySinhVien.Views.CommonViews.RJTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.paginationBar = new System.Windows.Forms.Panel();
+            this.nav_toLast = new System.Windows.Forms.Button();
+            this.nav_toNext = new System.Windows.Forms.Button();
+            this.nav_display = new System.Windows.Forms.Button();
+            this.nav_toPre = new System.Windows.Forms.Button();
+            this.nav_toFirst = new System.Windows.Forms.Button();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.rjTextBox1 = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.demoInput.SuspendLayout();
             this.panel6.SuspendLayout();
             this.paginationBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,8 +97,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             // 
             this.userTable.AllowUserToAddRows = false;
             this.userTable.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.userTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.userTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.userTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.userTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.userTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
@@ -107,14 +106,14 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.userTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.userTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.userTable.ColumnHeadersHeight = 50;
             this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -125,14 +124,14 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.email,
             this.address,
             this.phone});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userTable.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userTable.DefaultCellStyle = dataGridViewCellStyle6;
             this.userTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userTable.EnableHeadersVisualStyles = false;
             this.userTable.GridColor = System.Drawing.Color.White;
@@ -151,6 +150,61 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.ShowRowErrors = false;
             this.userTable.Size = new System.Drawing.Size(916, 471);
             this.userTable.TabIndex = 0;
+            // 
+            // username
+            // 
+            this.username.HeaderText = "Username";
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            this.username.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // name
+            // 
+            this.name.FillWeight = 130F;
+            this.name.HeaderText = "Tên người dùng";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // role
+            // 
+            this.role.HeaderText = "Vai trò";
+            this.role.Name = "role";
+            this.role.ReadOnly = true;
+            this.role.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // age
+            // 
+            this.age.FillWeight = 40F;
+            this.age.HeaderText = "Tuổi";
+            this.age.Name = "age";
+            this.age.ReadOnly = true;
+            this.age.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // email
+            // 
+            this.email.FillWeight = 130F;
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // address
+            // 
+            this.address.FillWeight = 130F;
+            this.address.HeaderText = "Địa chỉ";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            this.address.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // phone
+            // 
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phone.FillWeight = 87F;
+            this.phone.HeaderText = "Số điện thoại";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            this.phone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // panel2
             // 
@@ -221,40 +275,14 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel3.Controls.Add(this.demoInput);
-            this.panel3.Controls.Add(this.btn_search);
-            this.panel3.Location = new System.Drawing.Point(574, 5);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.rjTextBox1);
+            this.panel3.Controls.Add(this.iconPictureBox1);
+            this.panel3.Location = new System.Drawing.Point(592, 8);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(330, 32);
+            this.panel3.Size = new System.Drawing.Size(324, 32);
             this.panel3.TabIndex = 3;
-            // 
-            // demoInput
-            // 
-            this.demoInput.Controls.Add(this.inpt_search);
-            this.demoInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.demoInput.Location = new System.Drawing.Point(0, 0);
-            this.demoInput.Name = "demoInput";
-            this.demoInput.Size = new System.Drawing.Size(290, 32);
-            this.demoInput.TabIndex = 1;
-            // 
-            // btn_search
-            // 
-            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_search.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_search.FlatAppearance.BorderSize = 0;
-            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_search.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btn_search.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_search.IconSize = 35;
-            this.btn_search.Location = new System.Drawing.Point(290, 0);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(40, 32);
-            this.btn_search.TabIndex = 2;
-            this.btn_search.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -375,83 +403,42 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.nav_toFirst.UseVisualStyleBackColor = false;
             this.nav_toFirst.Click += new System.EventHandler(this.toFirst);
             // 
-            // username
+            // iconPictureBox1
             // 
-            this.username.HeaderText = "Username";
-            this.username.Name = "username";
-            this.username.ReadOnly = true;
-            this.username.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(287, 0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(37, 32);
+            this.iconPictureBox1.TabIndex = 3;
+            this.iconPictureBox1.TabStop = false;
             // 
-            // name
+            // rjTextBox1
             // 
-            this.name.FillWeight = 130F;
-            this.name.HeaderText = "Tên người dùng";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // role
-            // 
-            this.role.HeaderText = "Vai trò";
-            this.role.Name = "role";
-            this.role.ReadOnly = true;
-            this.role.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // age
-            // 
-            this.age.FillWeight = 40F;
-            this.age.HeaderText = "Tuổi";
-            this.age.Name = "age";
-            this.age.ReadOnly = true;
-            this.age.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // email
-            // 
-            this.email.FillWeight = 130F;
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // address
-            // 
-            this.address.FillWeight = 130F;
-            this.address.HeaderText = "Địa chỉ";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.FillWeight = 87F;
-            this.phone.HeaderText = "Số điện thoại";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            this.phone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // inpt_search
-            // 
-            this.inpt_search.BackColor = System.Drawing.SystemColors.Window;
-            this.inpt_search.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_search.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_search.BorderRadius = 0;
-            this.inpt_search.BorderSize = 2;
-            this.inpt_search.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inpt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.inpt_search.Location = new System.Drawing.Point(0, 0);
-            this.inpt_search.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_search.Multiline = false;
-            this.inpt_search.Name = "inpt_search";
-            this.inpt_search.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_search.PasswordChar = false;
-            this.inpt_search.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_search.PlaceholderText = "Tìm kiếm";
-            this.inpt_search.Size = new System.Drawing.Size(290, 35);
-            this.inpt_search.TabIndex = 0;
-            this.inpt_search.Texts = "";
-            this.inpt_search.UnderlinedStyle = false;
+            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox1.BorderRadius = 10;
+            this.rjTextBox1.BorderSize = 1;
+            this.rjTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.White;
+            this.rjTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.White;
+            this.rjTextBox1.PlaceholderText = "";
+            this.rjTextBox1.Size = new System.Drawing.Size(287, 31);
+            this.rjTextBox1.TabIndex = 4;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
             // 
             // UserListView
             // 
@@ -468,10 +455,10 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.demoInput.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.paginationBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,9 +474,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private System.Windows.Forms.Button nav_toFirst;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel demoInput;
-        private CommonViews.RJTextBox inpt_search;
-        private FontAwesome.Sharp.IconButton btn_search;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_delete;
@@ -503,5 +487,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private DataGridViewTextBoxColumn email;
         private DataGridViewTextBoxColumn address;
         private DataGridViewTextBoxColumn phone;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private CommonViews.RJTextBox rjTextBox1;
     }
 }
