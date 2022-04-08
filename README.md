@@ -8,5 +8,5 @@ mở App.config ra, tìm đến dòng:
 thay 05082002 bằng mật khẩu của sa
 nếu vẫn lỗi thì thay 
 ```
-data source=./EXPRESS
+data source=.\SQLEXPRESS
 ```
