@@ -6,3 +6,7 @@ mở App.config ra, tìm đến dòng:
 </connectionStrings>
 ```
 thay 05082002 bằng mật khẩu của sa
+nếu vẫn lỗi thì thay 
+```
+data source=./EXPRESS
+```
