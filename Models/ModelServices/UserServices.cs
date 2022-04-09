@@ -33,9 +33,9 @@ namespace QuanLySinhVien.Models.ModelServices
             return dbContext.Users.SingleOrDefault(x => x.Username == username);
         }
 
-        public bool Update(User user)
+        public bool Update(User user, string username)
         {
-            var oldUser = dbContext.Users.Find(user.Username);
+            var oldUser = dbContext.Users.Find(username);
             if (oldUser == null)
             {
                 return false;

@@ -150,7 +150,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            this.Tag = "update-user/" + getCurrentUsername();
+            this.Tag = "update-user/" + getCurrentUsername()[0];
             this.Close();
         }
     }

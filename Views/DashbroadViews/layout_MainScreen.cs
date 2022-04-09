@@ -96,7 +96,8 @@ namespace QuanLySinhVien.Views.DashbroadViews
             }
             else if (nav[0].Equals("update-user"))
             {
-
+                UserUpdate userUpdate = new UserUpdate(nav[1]);
+                openChildForm(userUpdate);
             }
             else if (nav[0].Equals("list-user"))
             {

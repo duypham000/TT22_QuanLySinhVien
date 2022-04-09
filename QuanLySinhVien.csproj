@@ -105,6 +105,12 @@
     <Compile Include="Views\DashbroadViews\layout_MainScreen.Designer.cs">
       <DependentUpon>layout_MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DashbroadViews\UserViews\UserUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\UserViews\UserUpdate.Designer.cs">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DashbroadViews\UserViews\UserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\layout_MainScreen.resx">
       <DependentUpon>layout_MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\UserViews\UserUpdate.resx">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\UserViews\UserAdd.resx">
       <DependentUpon>UserAdd.cs</DependentUpon>

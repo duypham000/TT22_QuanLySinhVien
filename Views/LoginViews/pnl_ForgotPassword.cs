@@ -85,7 +85,7 @@ namespace QuanLySinhVien.Views.LoginViews
                     if (username.Equals(this.curent_usename))
                     {
                         user.Password = newPassword;
-                        userServices.Update(user);
+                        userServices.Update(user, username);
                         MessageBox.Show("Mật khẩu của " + username + " đã được thay đổi, vui lòng đăng nhập!");
                         goBack(null, null);
                     }
