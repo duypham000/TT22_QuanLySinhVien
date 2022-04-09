@@ -39,11 +39,13 @@ namespace QuanLySinhVien.Models.Model
 
         public bool Status { get; set; }
 
-        public int? CreatedBy { get; set; }
+        [StringLength(250)]
+        public string CreatedBy { get; set; }
 
         public DateTime? CreatedDate { get; set; }
 
-        public int? UpdatedBy { get; set; }
+        [StringLength(250)]
+        public string UpdatedBy { get; set; }
 
         public DateTime? UpdatedDate { get; set; }
 

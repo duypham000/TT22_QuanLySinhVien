@@ -14,7 +14,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private int curPage = 1;
         private int totalPage = 1;
 
-        public UserListView(Form form)
+        public UserListView()
         {
             InitializeComponent();
             userServices = new UserServices();

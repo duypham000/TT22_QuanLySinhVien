@@ -12,7 +12,7 @@ namespace QuanLySinhVien.Views.DashbroadViews
             InitializeComponent();
             this.user_username.Text = Properties.Settings.Default.Username;
             customizeDesing();
-            UserListView userListView = new UserListView(this);
+            UserListView userListView = new UserListView();
 
             openChildForm(userListView);
         }
@@ -98,6 +98,16 @@ namespace QuanLySinhVien.Views.DashbroadViews
             {
 
             }
+            else if (nav[0].Equals("list-user"))
+            {
+                UserListView userListView = new UserListView();
+                openChildForm(userListView);
+            }
+        }
+
+        private void link_home_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

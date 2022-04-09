@@ -40,6 +40,14 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Class>()
+                .Property(e => e.CreatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Class>()
+                .Property(e => e.UpdatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Class>()
                 .HasMany(e => e.Students)
                 .WithRequired(e => e.Class)
                 .HasForeignKey(e => e.ClassID)
@@ -59,9 +67,25 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Faculty>()
+                .Property(e => e.CreatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Faculty>()
+                .Property(e => e.UpdatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Faculty>()
                 .HasMany(e => e.Classes)
                 .WithRequired(e => e.Faculty)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Role>()
+                .Property(e => e.CreatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Role>()
+                .Property(e => e.UpdatedBy)
+                .IsUnicode(false);
 
             modelBuilder.Entity<Role>()
                 .HasMany(e => e.Users)
@@ -147,6 +171,14 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Teacher>()
+                .Property(e => e.CreatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Teacher>()
+                .Property(e => e.UpdatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Teacher>()
                 .HasMany(e => e.Classes)
                 .WithRequired(e => e.Teacher)
                 .HasForeignKey(e => e.LeaderID)
@@ -177,6 +209,14 @@ namespace QuanLySinhVien.Models.Model
 
             modelBuilder.Entity<User>()
                 .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.CreatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.UpdatedBy)
                 .IsUnicode(false);
         }
     }

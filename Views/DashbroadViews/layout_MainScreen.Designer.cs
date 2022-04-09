@@ -474,6 +474,7 @@
             this.link_home.Name = "link_home";
             this.link_home.Size = new System.Drawing.Size(88, 37);
             this.link_home.TabIndex = 2;
+            this.link_home.Click += new System.EventHandler(this.link_home_Click);
             // 
             // iconPictureBox3
             // 
