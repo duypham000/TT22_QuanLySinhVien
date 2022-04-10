@@ -13,7 +13,6 @@ namespace QuanLySinhVien.Models.Model
         {
             Classes = new HashSet<Class>();
             Faculties = new HashSet<Faculty>();
-            Subjects = new HashSet<Subject>();
             Users = new HashSet<User>();
         }
 
@@ -44,9 +43,6 @@ namespace QuanLySinhVien.Models.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Faculty> Faculties { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Subject> Subjects { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> Users { get; set; }

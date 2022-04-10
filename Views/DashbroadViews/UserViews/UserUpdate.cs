@@ -12,7 +12,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private UserServices userServices = null;
         private RoleServices roleServices = null;
         private List<Role> roles = null;
-        string username = null;
+        private string username = null;
 
         public UserUpdate(string username)
         {
@@ -43,7 +43,10 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.inpt_name.Texts = user.Name;
             this.inpt_address.Texts = user.Address;
             this.inpt_phone.Texts = user.Phone;
-            this.inpt_age.Value = (decimal)user.Age;
+            if (user.Age != null)
+            {
+                this.inpt_age.Value = (decimal)user.Age;
+            }
         }
 
         private void changeStyle()

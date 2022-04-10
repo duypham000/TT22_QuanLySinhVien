@@ -14,7 +14,8 @@ namespace QuanLySinhVien.Models.Model
             Users = new HashSet<User>();
         }
 
-        public int ID { get; set; }
+        [StringLength(50)]
+        public string ID { get; set; }
 
         [Required]
         [StringLength(250)]

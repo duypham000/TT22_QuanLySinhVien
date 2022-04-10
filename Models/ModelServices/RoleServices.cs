@@ -18,7 +18,7 @@ namespace QuanLySinhVien.Models.ModelServices
             return dbContext.Roles.OrderByDescending(r => r.Name).ToList();
         }
 
-        public Role GetByID(int id)
+        public Role GetByID(string id)
         {
             return dbContext.Roles.Single(x => x.ID == id);
         }

@@ -16,8 +16,6 @@ namespace QuanLySinhVien.Models.Model
         public virtual DbSet<Faculty> Faculties { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Student> Students { get; set; }
-        public virtual DbSet<Subject> Subjects { get; set; }
-        public virtual DbSet<SubjectScore> SubjectScores { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
@@ -28,15 +26,15 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Class>()
+                .Property(e => e.FacultyID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Class>()
                 .Property(e => e.LeaderID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Class>()
                 .Property(e => e.MonitorID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Class>()
-                .Property(e => e.ViceID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Class>()
@@ -59,6 +57,10 @@ namespace QuanLySinhVien.Models.Model
                 .HasForeignKey(e => e.ClassID);
 
             modelBuilder.Entity<Faculty>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Faculty>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
 
@@ -78,6 +80,10 @@ namespace QuanLySinhVien.Models.Model
                 .HasMany(e => e.Classes)
                 .WithRequired(e => e.Faculty)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Role>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
 
             modelBuilder.Entity<Role>()
                 .Property(e => e.CreatedBy)
@@ -115,52 +121,9 @@ namespace QuanLySinhVien.Models.Model
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Student>()
-                .HasMany(e => e.Classes1)
-                .WithRequired(e => e.Student1)
-                .HasForeignKey(e => e.ViceID)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Student>()
                 .HasMany(e => e.Users)
                 .WithOptional(e => e.Student)
                 .HasForeignKey(e => e.InforID);
-
-            modelBuilder.Entity<Student>()
-                .HasMany(e => e.SubjectScores)
-                .WithRequired(e => e.Student)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Subject>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Subject>()
-                .Property(e => e.TeacherID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Subject>()
-                .Property(e => e.CreatedBy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Subject>()
-                .Property(e => e.UpdatedBy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<SubjectScore>()
-                .Property(e => e.StudentID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<SubjectScore>()
-                .Property(e => e.SubjectID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<SubjectScore>()
-                .Property(e => e.CreatedBy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<SubjectScore>()
-                .Property(e => e.UpdatedBy)
-                .IsUnicode(false);
 
             modelBuilder.Entity<Teacher>()
                 .Property(e => e.ID)
@@ -201,6 +164,10 @@ namespace QuanLySinhVien.Models.Model
 
             modelBuilder.Entity<User>()
                 .Property(e => e.InforID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.RoleID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()

@@ -21,7 +21,9 @@ namespace QuanLySinhVien.Models.Model
         [StringLength(250)]
         public string Name { get; set; }
 
-        public int FacultyID { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string FacultyID { get; set; }
 
         public int? MaxStudent { get; set; }
 
@@ -32,10 +34,6 @@ namespace QuanLySinhVien.Models.Model
         [Required]
         [StringLength(50)]
         public string MonitorID { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string ViceID { get; set; }
 
         public bool Status { get; set; }
 
@@ -52,8 +50,6 @@ namespace QuanLySinhVien.Models.Model
         public virtual Faculty Faculty { get; set; }
 
         public virtual Student Student { get; set; }
-
-        public virtual Student Student1 { get; set; }
 
         public virtual Teacher Teacher { get; set; }
 

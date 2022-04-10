@@ -37,7 +37,7 @@
             this.otp_qlk = new System.Windows.Forms.Button();
             this.submenu_qltk = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_userlist = new System.Windows.Forms.Button();
             this.opt_qltk = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.link_logout = new System.Windows.Forms.LinkLabel();
@@ -47,17 +47,17 @@
             this.frm_body = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.navBar = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.link_home = new System.Windows.Forms.Panel();
+            this.nav3 = new System.Windows.Forms.Panel();
+            this.nav3_icon = new FontAwesome.Sharp.IconPictureBox();
+            this.nav3_txt = new System.Windows.Forms.Label();
+            this.nav23 = new System.Windows.Forms.Label();
+            this.nav2 = new System.Windows.Forms.Panel();
+            this.nav2_icon = new FontAwesome.Sharp.IconPictureBox();
+            this.nav2_txt = new System.Windows.Forms.Label();
+            this.nav12 = new System.Windows.Forms.Label();
+            this.nav1 = new System.Windows.Forms.Panel();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.nav1_txt = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_sideMenu.SuspendLayout();
             this.submenu_qlsv.SuspendLayout();
@@ -65,11 +65,11 @@
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.navBar.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            this.link_home.SuspendLayout();
+            this.nav3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nav3_icon)).BeginInit();
+            this.nav2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nav2_icon)).BeginInit();
+            this.nav1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -196,7 +196,7 @@
             // 
             this.submenu_qltk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.submenu_qltk.Controls.Add(this.button3);
-            this.submenu_qltk.Controls.Add(this.button2);
+            this.submenu_qltk.Controls.Add(this.btn_userlist);
             this.submenu_qltk.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenu_qltk.Location = new System.Drawing.Point(0, 135);
             this.submenu_qltk.Name = "submenu_qltk";
@@ -220,22 +220,23 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_userlist
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(263, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Danh sách tài khoản";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_userlist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_userlist.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_userlist.FlatAppearance.BorderSize = 0;
+            this.btn_userlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_userlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_userlist.ForeColor = System.Drawing.Color.White;
+            this.btn_userlist.Location = new System.Drawing.Point(0, 0);
+            this.btn_userlist.Name = "btn_userlist";
+            this.btn_userlist.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_userlist.Size = new System.Drawing.Size(263, 40);
+            this.btn_userlist.TabIndex = 0;
+            this.btn_userlist.Text = "Danh sách tài khoản";
+            this.btn_userlist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_userlist.UseVisualStyleBackColor = true;
+            this.btn_userlist.Click += new System.EventHandler(this.userList_Show);
             // 
             // opt_qltk
             // 
@@ -348,133 +349,134 @@
             // 
             this.navBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.navBar.AutoSize = true;
-            this.navBar.Controls.Add(this.panel4);
-            this.navBar.Controls.Add(this.label4);
-            this.navBar.Controls.Add(this.panel3);
-            this.navBar.Controls.Add(this.label2);
-            this.navBar.Controls.Add(this.link_home);
+            this.navBar.Controls.Add(this.nav3);
+            this.navBar.Controls.Add(this.nav23);
+            this.navBar.Controls.Add(this.nav2);
+            this.navBar.Controls.Add(this.nav12);
+            this.navBar.Controls.Add(this.nav1);
             this.navBar.Location = new System.Drawing.Point(0, 9);
             this.navBar.Margin = new System.Windows.Forms.Padding(0);
             this.navBar.Name = "navBar";
-            this.navBar.Size = new System.Drawing.Size(911, 37);
+            this.navBar.Size = new System.Drawing.Size(911, 38);
             this.navBar.TabIndex = 0;
             // 
-            // panel4
+            // nav3
             // 
-            this.panel4.AutoSize = true;
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.iconPictureBox1);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(308, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(191, 37);
-            this.panel4.TabIndex = 6;
+            this.nav3.AutoSize = true;
+            this.nav3.BackColor = System.Drawing.Color.Transparent;
+            this.nav3.Controls.Add(this.nav3_icon);
+            this.nav3.Controls.Add(this.nav3_txt);
+            this.nav3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nav3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav3.ForeColor = System.Drawing.Color.White;
+            this.nav3.Location = new System.Drawing.Point(376, 0);
+            this.nav3.Name = "nav3";
+            this.nav3.Size = new System.Drawing.Size(191, 38);
+            this.nav3.TabIndex = 6;
             // 
-            // iconPictureBox1
+            // nav3_icon
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.List;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 37;
-            this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(42, 37);
-            this.iconPictureBox1.TabIndex = 7;
-            this.iconPictureBox1.TabStop = false;
+            this.nav3_icon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.nav3_icon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.nav3_icon.IconColor = System.Drawing.Color.White;
+            this.nav3_icon.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.nav3_icon.IconSize = 38;
+            this.nav3_icon.Location = new System.Drawing.Point(0, 0);
+            this.nav3_icon.Name = "nav3_icon";
+            this.nav3_icon.Size = new System.Drawing.Size(42, 38);
+            this.nav3_icon.TabIndex = 7;
+            this.nav3_icon.TabStop = false;
             // 
-            // label5
+            // nav3_txt
             // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 37);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Danh sách tài khoản";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nav3_txt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nav3_txt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nav3_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav3_txt.Location = new System.Drawing.Point(42, 0);
+            this.nav3_txt.Name = "nav3_txt";
+            this.nav3_txt.Size = new System.Drawing.Size(149, 38);
+            this.nav3_txt.TabIndex = 2;
+            this.nav3_txt.Text = "Danh sách tài khoản";
+            this.nav3_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // nav23
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(294, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 37);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "/";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nav23.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav23.ForeColor = System.Drawing.Color.White;
+            this.nav23.Location = new System.Drawing.Point(362, 0);
+            this.nav23.Name = "nav23";
+            this.nav23.Size = new System.Drawing.Size(14, 38);
+            this.nav23.TabIndex = 5;
+            this.nav23.Text = "/";
+            this.nav23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel3
+            // nav2
             // 
-            this.panel3.AutoSize = true;
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.iconPictureBox2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(102, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(192, 37);
-            this.panel3.TabIndex = 4;
+            this.nav2.AutoSize = true;
+            this.nav2.BackColor = System.Drawing.Color.Transparent;
+            this.nav2.Controls.Add(this.nav2_icon);
+            this.nav2.Controls.Add(this.nav2_txt);
+            this.nav2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nav2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav2.ForeColor = System.Drawing.Color.White;
+            this.nav2.Location = new System.Drawing.Point(102, 0);
+            this.nav2.Name = "nav2";
+            this.nav2.Size = new System.Drawing.Size(260, 38);
+            this.nav2.TabIndex = 4;
             // 
-            // iconPictureBox2
+            // nav2_icon
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 37;
-            this.iconPictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(43, 37);
-            this.iconPictureBox2.TabIndex = 1;
-            this.iconPictureBox2.TabStop = false;
+            this.nav2_icon.BackColor = System.Drawing.Color.Transparent;
+            this.nav2_icon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+            this.nav2_icon.IconColor = System.Drawing.Color.White;
+            this.nav2_icon.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.nav2_icon.IconSize = 38;
+            this.nav2_icon.Location = new System.Drawing.Point(0, 0);
+            this.nav2_icon.Name = "nav2_icon";
+            this.nav2_icon.Size = new System.Drawing.Size(43, 38);
+            this.nav2_icon.TabIndex = 1;
+            this.nav2_icon.TabStop = false;
             // 
-            // label3
+            // nav2_txt
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 37);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Quản lý danh sách tài khoản";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nav2_txt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nav2_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav2_txt.Location = new System.Drawing.Point(43, 0);
+            this.nav2_txt.Name = "nav2_txt";
+            this.nav2_txt.Size = new System.Drawing.Size(217, 38);
+            this.nav2_txt.TabIndex = 2;
+            this.nav2_txt.Text = "Quản lý danh sách tài khoản";
+            this.nav2_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // nav12
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(88, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 37);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "/";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nav12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav12.ForeColor = System.Drawing.Color.White;
+            this.nav12.Location = new System.Drawing.Point(88, 0);
+            this.nav12.Name = "nav12";
+            this.nav12.Size = new System.Drawing.Size(14, 38);
+            this.nav12.TabIndex = 3;
+            this.nav12.Text = "/";
+            this.nav12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // link_home
+            // nav1
             // 
-            this.link_home.AutoSize = true;
-            this.link_home.BackColor = System.Drawing.Color.Transparent;
-            this.link_home.Controls.Add(this.iconPictureBox3);
-            this.link_home.Controls.Add(this.label1);
-            this.link_home.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.link_home.Dock = System.Windows.Forms.DockStyle.Left;
-            this.link_home.ForeColor = System.Drawing.Color.White;
-            this.link_home.Location = new System.Drawing.Point(0, 0);
-            this.link_home.Name = "link_home";
-            this.link_home.Size = new System.Drawing.Size(88, 37);
-            this.link_home.TabIndex = 2;
-            this.link_home.Click += new System.EventHandler(this.link_home_Click);
+            this.nav1.AutoSize = true;
+            this.nav1.BackColor = System.Drawing.Color.Transparent;
+            this.nav1.Controls.Add(this.iconPictureBox3);
+            this.nav1.Controls.Add(this.nav1_txt);
+            this.nav1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nav1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nav1.ForeColor = System.Drawing.Color.White;
+            this.nav1.Location = new System.Drawing.Point(0, 0);
+            this.nav1.Name = "nav1";
+            this.nav1.Size = new System.Drawing.Size(88, 38);
+            this.nav1.TabIndex = 2;
+            this.nav1.Click += new System.EventHandler(this.link_home_Click);
             // 
             // iconPictureBox3
             // 
@@ -486,20 +488,20 @@
             this.iconPictureBox3.IconSize = 37;
             this.iconPictureBox3.Location = new System.Drawing.Point(0, 0);
             this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(37, 37);
+            this.iconPictureBox3.Size = new System.Drawing.Size(37, 38);
             this.iconPictureBox3.TabIndex = 3;
             this.iconPictureBox3.TabStop = false;
             // 
-            // label1
+            // nav1_txt
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 37);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Home";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nav1_txt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nav1_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nav1_txt.Location = new System.Drawing.Point(37, 0);
+            this.nav1_txt.Name = "nav1_txt";
+            this.nav1_txt.Size = new System.Drawing.Size(51, 38);
+            this.nav1_txt.TabIndex = 2;
+            this.nav1_txt.Text = "Home";
+            this.nav1_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
@@ -520,13 +522,12 @@
             this.ClientSize = new System.Drawing.Size(1174, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_sideMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1190, 600);
+            this.MaximumSize = new System.Drawing.Size(1940, 800);
             this.MinimumSize = new System.Drawing.Size(1190, 600);
             this.Name = "layout_MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chương trình quản lý sinh viên";
+            this.ClientSizeChanged += new System.EventHandler(this.layout_MainScreen_ClientSizeChanged);
             this.panel_sideMenu.ResumeLayout(false);
             this.submenu_qlsv.ResumeLayout(false);
             this.submenu_qltk.ResumeLayout(false);
@@ -536,11 +537,11 @@
             this.panel1.PerformLayout();
             this.navBar.ResumeLayout(false);
             this.navBar.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            this.link_home.ResumeLayout(false);
+            this.nav3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nav3_icon)).EndInit();
+            this.nav2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nav2_icon)).EndInit();
+            this.nav1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -561,24 +562,24 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel navBar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel link_home;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label nav1_txt;
+        private System.Windows.Forms.Panel nav1;
+        private System.Windows.Forms.Label nav12;
+        private System.Windows.Forms.Panel nav2;
+        private System.Windows.Forms.Label nav2_txt;
+        private System.Windows.Forms.Panel nav3;
+        private System.Windows.Forms.Label nav3_txt;
+        private System.Windows.Forms.Label nav23;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button opt_qlsv;
         private System.Windows.Forms.Button opt_qll;
         private System.Windows.Forms.Button otp_qlk;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_userlist;
         private System.Windows.Forms.Button opt_qltk;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox nav3_icon;
+        private FontAwesome.Sharp.IconPictureBox nav2_icon;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
     }
 }

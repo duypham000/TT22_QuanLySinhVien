@@ -24,21 +24,21 @@ namespace QuanLySinhVien.Models
             if (dbContext.Roles.Count() < 1)
             {
                 Role role = new Role();
-                role.Name = "Admin";
+                role.Name = "Quản trị viên";
                 role.Description = "Super User";
                 role.Status = true;
-                role.ID = 1;
+                role.ID = "admin";
 
                 roleServices.Add(role);
             }
             if (dbContext.Users.Count() < 1)
             {
                 User user = new User();
-                user.Username = "admin";
+                user.Username = "Duyn";
                 user.Email = "duypham05082002@gmail.com";
                 user.Password = "0508";
                 user.Status = true;
-                user.RoleID = 1;
+                user.RoleID = "admin";
 
                 userServices.Add(user);
             }

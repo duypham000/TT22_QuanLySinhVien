@@ -1,6 +1,7 @@
 ﻿using QuanLySinhVien.Models.Model;
 using QuanLySinhVien.Models.ModelServices;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -10,15 +11,18 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
     {
         private UserServices userServices = null;
         private RoleServices roleServices = null;
+        List<User> users = null;
         private int pageSize = 22;
         private int curPage = 1;
         private int totalPage = 1;
+        private bool isSearched = false;
 
         public UserListView()
         {
             InitializeComponent();
-            userServices = new UserServices();
-            roleServices = new RoleServices();
+            this.userServices = new UserServices();
+            this.roleServices = new RoleServices();
+            this.users = userServices.GetAllUsers();
 
             fillToTable(this.curPage, this.pageSize);
         }
@@ -59,8 +63,61 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             {
                 this.curPage = this.totalPage;
             }
+            
+            List<User> listUsers = this.users;
+            if (users.Count > size)
+            {
+                listUsers = this.users.GetRange((page - 1) * size, size);
+            }
 
-            List<User> users = userServices.GetAllPaging(page, size);
+            foreach (var user in listUsers)
+            {
+                Role role = roleServices.GetByID(user.RoleID);
+                this.userTable.Rows.Add(user.Username, user.Name, role.Name, user.Age, user.Email, user.Address, user.Phone);
+            }
+        }
+
+
+        private void cusFillToTable(int page, int size, List<User> usersList)
+        {
+            isSearched = true;
+            this.userTable.Rows.Clear();
+
+            // đoạn này cần chuyển sang double để không bị tự làm tròn xuống
+            this.curPage = 1;
+            double userCount = usersList.Count;
+            double pagSz = pageSize;
+            double total = userCount / pagSz;
+            int totalpage = (int)Math.Ceiling(total);
+            this.nav_display.Text = curPage + "/" + totalpage;
+            this.totalPage = totalpage;
+
+            if (this.curPage == 1)
+            {
+                this.nav_toFirst.Enabled = false;
+                this.nav_toPre.Enabled = false;
+            }
+            else
+            {
+                this.nav_toFirst.Enabled = true;
+                this.nav_toPre.Enabled = true;
+            }
+            if (this.curPage == totalPage)
+            {
+                this.nav_toLast.Enabled = false;
+                this.nav_toNext.Enabled = false;
+            }
+            else
+            {
+                this.nav_toLast.Enabled = true;
+                this.nav_toNext.Enabled = true;
+            }
+            if (this.curPage > totalPage)
+            {
+                this.curPage = this.totalPage;
+            }
+
+            List<User> users = usersList.GetRange((page-1)*size, size);
             foreach (var user in users)
             {
                 Role role = roleServices.GetByID(user.RoleID);
@@ -73,6 +130,10 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             if (this.curPage < this.totalPage)
             {
                 this.curPage++;
+                if (isSearched)
+                {
+                    findAndDisplay(null, null);
+                }else
                 fillToTable(this.curPage, this.pageSize);
             }
         }
@@ -82,7 +143,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             if (this.curPage > 1)
             {
                 this.curPage--;
-                fillToTable(this.curPage, this.pageSize);
+                if (isSearched)
+                {
+                    findAndDisplay(null, null);
+                }
+                else
+                    fillToTable(this.curPage, this.pageSize);
             }
         }
 
@@ -91,7 +157,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             if (this.curPage > 1)
             {
                 this.curPage = 1;
-                fillToTable(this.curPage, this.pageSize);
+                if (isSearched)
+                {
+                    findAndDisplay(null, null);
+                }
+                else
+                    fillToTable(this.curPage, this.pageSize);
             }
         }
 
@@ -100,7 +171,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             if (this.curPage < this.totalPage)
             {
                 this.curPage = this.totalPage;
-                fillToTable(this.curPage, this.pageSize);
+                if (isSearched)
+                {
+                    findAndDisplay(null, null);
+                }
+                else
+                    fillToTable(this.curPage, this.pageSize);
             }
         }
 
@@ -150,8 +226,22 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            this.Tag = "update-user/" + getCurrentUsername()[0];
-            this.Close();
+            if (getCurrentUsername().Length < 2)
+            {
+                this.Tag = "update-user/" + getCurrentUsername()[0];
+                this.Close();
+            }
+        }
+
+        private void findAndDisplay(object sender, EventArgs e)
+        {
+            List<User> res = new List<User>();
+
+            foreach (var user in users)
+            {
+            }
+
+            cusFillToTable(1, pageSize, res);
         }
     }
 }

@@ -18,7 +18,9 @@ namespace QuanLySinhVien.Models.Model
         [StringLength(50)]
         public string InforID { get; set; }
 
-        public int RoleID { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string RoleID { get; set; }
 
         [Required]
         [StringLength(250)]
@@ -32,6 +34,7 @@ namespace QuanLySinhVien.Models.Model
 
         public int? Age { get; set; }
 
+        [Required]
         [StringLength(250)]
         public string Email { get; set; }
 
