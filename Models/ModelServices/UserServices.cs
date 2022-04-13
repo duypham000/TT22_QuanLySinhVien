@@ -20,7 +20,7 @@ namespace QuanLySinhVien.Models.ModelServices
 
         public List<User> GetAllUsers()
         {
-            return dbContext.Users.OrderByDescending(x => x.Username).ToList();
+            return dbContext.Users.OrderBy(x => x.Username).ToList();
         }
 
         public List<User> GetAllPaging(int page, int itemCount)

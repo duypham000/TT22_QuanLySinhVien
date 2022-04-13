@@ -86,7 +86,7 @@ namespace QuanLySinhVien.Views.DashbroadViews
         protected void navigate(object sender, FormClosingEventArgs e)
         {
             string navTo = this.activeForm.Tag.ToString();
-            string[] nav =  navTo.Split('/');
+            string[] nav = navTo.Split('/');
             if (nav[0].Equals("add-user"))
             {
                 UserAdd userAdd = new UserAdd();
@@ -114,7 +114,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
 
         private void link_home_Click(object sender, EventArgs e)
         {
-
         }
 
         private void userList_Show(object sender, EventArgs e)

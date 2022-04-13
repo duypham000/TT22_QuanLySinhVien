@@ -525,13 +525,13 @@
             this.label1.Text = "Thông tin cơ bản";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // UserUpdate
+            // StudentUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 561);
             this.Controls.Add(this.panel1);
-            this.Name = "UserUpdate";
+            this.Name = "StudentUpdate";
             this.Text = "UserAdd";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

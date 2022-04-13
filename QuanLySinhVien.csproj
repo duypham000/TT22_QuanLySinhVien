@@ -102,12 +102,6 @@
     <Compile Include="Views\DashbroadViews\layout_MainScreen.Designer.cs">
       <DependentUpon>layout_MainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashbroadViews\UserViews\UserUpdate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\DashbroadViews\UserViews\UserUpdate.Designer.cs">
-      <DependentUpon>UserUpdate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\DashbroadViews\UserViews\UserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +113,12 @@
     </Compile>
     <Compile Include="Views\DashbroadViews\UserViews\UserListView.Designer.cs">
       <DependentUpon>UserListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\UserViews\UserUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\UserViews\UserUpdate.Designer.cs">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginViews\layout_Login.cs">
       <SubType>Form</SubType>
@@ -154,14 +154,14 @@
     <EmbeddedResource Include="Views\DashbroadViews\layout_MainScreen.resx">
       <DependentUpon>layout_MainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashbroadViews\UserViews\UserUpdate.resx">
-      <DependentUpon>UserUpdate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\UserViews\UserAdd.resx">
       <DependentUpon>UserAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\UserViews\UserListView.resx">
       <DependentUpon>UserListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\UserViews\UserUpdate.resx">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginViews\layout_Login.resx">
       <DependentUpon>layout_Login.cs</DependentUpon>
@@ -186,7 +186,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\DashbroadViews\StudentVews\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\Login_background.png" />
   </ItemGroup>

@@ -54,8 +54,7 @@ namespace QuanLySinhVien.Controllers
             return otp;
         }
 
-        // Damereau-Levenshein Distance algorithm
-        public static int Compare(string s, string t)
+        public static int CompareString(string s, string t)
         {
             if (string.IsNullOrEmpty(s))
             {

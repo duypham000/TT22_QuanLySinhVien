@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             this.panel_sideMenu = new System.Windows.Forms.Panel();
-            this.submenu_qlsv = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.opt_qlsv = new System.Windows.Forms.Button();
             this.opt_qll = new System.Windows.Forms.Button();
             this.otp_qlk = new System.Windows.Forms.Button();
             this.submenu_qltk = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.btn_userlist = new System.Windows.Forms.Button();
             this.opt_qltk = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -59,8 +55,11 @@
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.nav1_txt = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.submenu_qlsv = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel_sideMenu.SuspendLayout();
-            this.submenu_qlsv.SuspendLayout();
             this.submenu_qltk.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -72,6 +71,7 @@
             this.nav1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
+            this.submenu_qlsv.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_sideMenu
@@ -91,51 +91,6 @@
             this.panel_sideMenu.Name = "panel_sideMenu";
             this.panel_sideMenu.Size = new System.Drawing.Size(263, 561);
             this.panel_sideMenu.TabIndex = 0;
-            // 
-            // submenu_qlsv
-            // 
-            this.submenu_qlsv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.submenu_qlsv.Controls.Add(this.button5);
-            this.submenu_qlsv.Controls.Add(this.button6);
-            this.submenu_qlsv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_qlsv.Location = new System.Drawing.Point(0, 350);
-            this.submenu_qlsv.Name = "submenu_qlsv";
-            this.submenu_qlsv.Size = new System.Drawing.Size(263, 80);
-            this.submenu_qlsv.TabIndex = 9;
-            // 
-            // button5
-            // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 40);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(263, 40);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Danh sách điểm sinh viên";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(263, 40);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Danh sách sinh viên";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // opt_qlsv
             // 
@@ -202,23 +157,6 @@
             this.submenu_qltk.Name = "submenu_qltk";
             this.submenu_qltk.Size = new System.Drawing.Size(263, 80);
             this.submenu_qltk.TabIndex = 2;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 40);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(263, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Danh sách chức vụ";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // btn_userlist
             // 
@@ -514,6 +452,68 @@
             this.panel2.Size = new System.Drawing.Size(911, 561);
             this.panel2.TabIndex = 2;
             // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 40);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(263, 40);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Danh sách chức vụ";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // submenu_qlsv
+            // 
+            this.submenu_qlsv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.submenu_qlsv.Controls.Add(this.button1);
+            this.submenu_qlsv.Controls.Add(this.button2);
+            this.submenu_qlsv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.submenu_qlsv.Location = new System.Drawing.Point(0, 350);
+            this.submenu_qlsv.Name = "submenu_qlsv";
+            this.submenu_qlsv.Size = new System.Drawing.Size(263, 80);
+            this.submenu_qlsv.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 40);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(263, 40);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Danh sách chức vụ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(263, 40);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Danh sách tài khoản";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // layout_MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,10 +526,9 @@
             this.MinimumSize = new System.Drawing.Size(1190, 600);
             this.Name = "layout_MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chương trình quản lý sinh viên";
+            this.Text = " ";
             this.ClientSizeChanged += new System.EventHandler(this.layout_MainScreen_ClientSizeChanged);
             this.panel_sideMenu.ResumeLayout(false);
-            this.submenu_qlsv.ResumeLayout(false);
             this.submenu_qltk.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
@@ -544,6 +543,7 @@
             this.nav1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.submenu_qlsv.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -553,7 +553,6 @@
         private System.Windows.Forms.Panel panel_sideMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel submenu_qltk;
-        private System.Windows.Forms.Panel submenu_qlsv;
         private System.Windows.Forms.Button user_avt;
         private System.Windows.Forms.Label user_username;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -570,16 +569,17 @@
         private System.Windows.Forms.Panel nav3;
         private System.Windows.Forms.Label nav3_txt;
         private System.Windows.Forms.Label nav23;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button opt_qlsv;
         private System.Windows.Forms.Button opt_qll;
         private System.Windows.Forms.Button otp_qlk;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_userlist;
         private System.Windows.Forms.Button opt_qltk;
         private FontAwesome.Sharp.IconPictureBox nav3_icon;
         private FontAwesome.Sharp.IconPictureBox nav2_icon;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel submenu_qlsv;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
