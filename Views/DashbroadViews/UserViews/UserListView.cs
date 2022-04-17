@@ -14,7 +14,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private int pageSize = 11;
         private int curPage = 1;
         private int totalPage = 1;
-        private bool isSearched = false;
+        private string searchType = null;
+        private string[] searchOption = { "username", "email" };
 
         public UserListView()
         {
@@ -22,6 +23,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userServices = new UserServices();
             this.roleServices = new RoleServices();
             this.users = userServices.GetAllUsers();
+            this.searchType = "username";
+            this.type_search.SelectedIndex = 0;
 
             fillToTable(this.curPage, this.pageSize, this.users);
         }
@@ -40,10 +43,9 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             {
                 this.curPage = totalpage;
             }
-            
+
             this.nav_display.Text = curPage + "/" + totalpage;
             this.totalPage = totalpage;
-
 
             if (this.curPage == 1)
             {
@@ -84,7 +86,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             {
                 listUsers = usersList;
             }
-            // 0 1 2 3 4 5 6
             foreach (var user in listUsers)
             {
                 Role role = roleServices.GetByID(user.RoleID);
@@ -132,9 +133,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         private void onChangeSize(object sender, EventArgs e)
         {
-            // 524 22
-            double currSize = this.userTable.Height - 50;
-            double size = currSize / 35;
+            double currSize = this.userTable.Height - this.userTable.ColumnHeadersHeight;
+            double size = currSize / this.userTable.RowTemplate.Height;
             this.pageSize = (int)Math.Floor(size);
             fillToTable(this.curPage, this.pageSize, this.users);
         }
@@ -192,27 +192,43 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         private void findAndDisplay(object sender, EventArgs e)
         {
+            if (this.searchType.Equals("username")) ;
             this.users = userServices.GetAllUsers();
             List<User> res = new List<User>();
             var searchValue = this.inpt_search.Text;
-            foreach (var user in users)
-            {
-                if (user.Username.Contains(searchValue))
+            if (this.searchType.Equals("username")) {
+                foreach (var user in users)
                 {
-                    res.Add(user);
+                    if (user.Username.Contains(searchValue))
+                    {
+                        res.Add(user);
+                    }
+                }
+            }else if (this.searchType.Equals("email"))
+            {
+                foreach (var user in users)
+                {
+                    if (user.Email.Contains(searchValue))
+                    {
+                        res.Add(user);
+                    }
                 }
             }
-
             this.users.Clear();
             this.users = res;
             this.curPage = 1;
             fillToTable(this.curPage, this.pageSize, res);
-            isSearched = true;
         }
 
-        private void UserListView_KeyDown(object sender, KeyEventArgs e)
+        private void type_search_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int index = this.type_search.SelectedIndex;
+            searchType = searchOption[index];
+        }
 
+        private void inpt_search_KeyDown(object sender, KeyEventArgs e)
+        {
+            findAndDisplay(null, null);
         }
     }
 }

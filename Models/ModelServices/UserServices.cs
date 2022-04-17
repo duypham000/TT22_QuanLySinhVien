@@ -42,7 +42,8 @@ namespace QuanLySinhVien.Models.ModelServices
             }
             else
             {
-                oldUser = user;
+                dbContext.Users.Remove(oldUser);
+                dbContext.Users.Add(user);
                 dbContext.SaveChanges();
                 return true;
             }

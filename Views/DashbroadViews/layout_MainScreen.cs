@@ -1,4 +1,5 @@
-﻿using QuanLySinhVien.Views.DashbroadViews.UserViews;
+﻿using QuanLySinhVien.Views.DashbroadViews.StudentViews;
+using QuanLySinhVien.Views.DashbroadViews.UserViews;
 using System;
 using System.Windows.Forms;
 
@@ -26,14 +27,13 @@ namespace QuanLySinhVien.Views.DashbroadViews
 
         private void customizeDesing()
         {
-            this.submenu_qlsv.Visible = false;
             this.submenu_qltk.Visible = false;
         }
 
         private void hideSubmenu()
         {
-            if (this.submenu_qlsv.Visible == true)
-                this.submenu_qlsv.Visible = false;
+            //if (this.submenu_qlsv.Visible == true)
+            //    this.submenu_qlsv.Visible = false;
             if (this.submenu_qltk.Visible == true)
                 this.submenu_qltk.Visible = false;
         }
@@ -60,7 +60,11 @@ namespace QuanLySinhVien.Views.DashbroadViews
         private void opt_qlsv_Click(object sender, EventArgs e)
         {
             //this.frm_title.Text = "Quản lý sinh viên";
-            showSubmenu(this.submenu_qlsv);
+            //showSubmenu(this.submenu_qlsv);
+
+            StudentListView studentListView = new StudentListView();
+            openChildForm(studentListView);
+
         }
 
         private Form activeForm = null;
@@ -90,17 +94,39 @@ namespace QuanLySinhVien.Views.DashbroadViews
             if (nav[0].Equals("add-user"))
             {
                 UserAdd userAdd = new UserAdd();
+                changeNav("user-add");
                 openChildForm(userAdd);
             }
             else if (nav[0].Equals("update-user"))
             {
                 UserUpdate userUpdate = new UserUpdate(nav[1]);
+                changeNav("user-update");
                 openChildForm(userUpdate);
             }
             else if (nav[0].Equals("list-user"))
             {
                 UserListView userListView = new UserListView();
+                changeNav("user-list");
                 openChildForm(userListView);
+            }else if (nav[0].Equals("list-student"))
+            {
+                StudentListView studentListView = new StudentListView();
+                openChildForm(studentListView);
+            }
+            else if (nav[0].Equals("update-student"))
+            {
+                StudentUpdateView studentUpdateView = new StudentUpdateView(nav[1]);
+                openChildForm(studentUpdateView);
+            }
+            else if (nav[0].Equals("add-student"))
+            {
+                StudentAdd studentAdd = new StudentAdd();
+                openChildForm(studentAdd);
+            }
+            else if (nav[0].Equals("list-student"))
+            {
+                StudentListView studentListView = new StudentListView();
+                openChildForm(studentListView);
             }
         }
 
@@ -120,18 +146,67 @@ namespace QuanLySinhVien.Views.DashbroadViews
         {
             UserListView user = new UserListView();
             openChildForm(user);
+            changeNav("user-list");
+        }
 
-            this.nav2.Show();
-            this.nav12.Show();
-            this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
-            this.nav2_txt.Text = "Quản lý danh sách tài khoản";
-            this.nav2_txt.Width = 202;
+        private void changeNav(string nav)
+        {
+            if (nav.Equals("user-list"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+                this.nav2_txt.Text = "Quản lý danh sách tài khoản";
+                this.nav2_txt.Width = 202;
 
-            this.nav3.Show();
-            this.nav23.Show();
-            this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
-            this.nav3_txt.Text = "Danh sách tài khoản";
-            this.nav3_txt.Width = 149;
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Danh sách tài khoản";
+                this.nav3_txt.Width = 149;
+            }
+            else if(nav.Equals("user-add"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.Plus;
+                this.nav2_txt.Text = "Thêm tài khoản";
+                this.nav2_txt.Width = 115;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Danh sách tài khoản";
+                this.nav3_txt.Width = 149;
+            }
+            else if (nav.Equals("user-update"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.Pen;
+                this.nav2_txt.Text = "Cập nhật tài khoản";
+                this.nav2_txt.Width = 149;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Danh sách tài khoản";
+                this.nav3_txt.Width = 149;
+            }
+            else if (nav.Equals("student-update"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.Pen;
+                this.nav2_txt.Text = "Cập nhật sinh viên";
+                this.nav2_txt.Width = 115;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Danh sách sinh viên";
+                this.nav3_txt.Width = 149;
+            }
         }
 
         private void layout_MainScreen_ClientSizeChanged(object sender, EventArgs e)

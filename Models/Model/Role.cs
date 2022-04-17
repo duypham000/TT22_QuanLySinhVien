@@ -17,7 +17,6 @@ namespace QuanLySinhVien.Models.Model
         [StringLength(50)]
         public string ID { get; set; }
 
-        [Required]
         [StringLength(250)]
         public string Name { get; set; }
 

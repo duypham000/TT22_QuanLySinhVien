@@ -12,16 +12,17 @@ namespace QuanLySinhVien.Models.Model
         public Student()
         {
             Classes = new HashSet<Class>();
-            Users = new HashSet<User>();
         }
 
         [StringLength(50)]
         public string ID { get; set; }
 
         [StringLength(250)]
+        public string UserID { get; set; }
+
+        [StringLength(250)]
         public string ClassRole { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string ClassID { get; set; }
 
@@ -44,7 +45,6 @@ namespace QuanLySinhVien.Models.Model
 
         public virtual Class Class { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -137,6 +137,7 @@
             this.inpt_phone.TabIndex = 8;
             this.inpt_phone.Texts = "";
             this.inpt_phone.UnderlinedStyle = false;
+            this.inpt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inpt_phone_KeyPress);
             // 
             // label9
             // 
@@ -525,13 +526,13 @@
             this.label1.Text = "Thông tin cơ bản";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // StudentUpdate
+            // UserUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 561);
             this.Controls.Add(this.panel1);
-            this.Name = "StudentUpdate";
+            this.Name = "UserUpdate";
             this.Text = "UserAdd";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

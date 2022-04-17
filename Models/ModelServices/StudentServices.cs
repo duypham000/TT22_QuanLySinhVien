@@ -24,12 +24,18 @@ namespace QuanLySinhVien.Models.ModelServices
             dbContext.SaveChanges();
         }
 
-        public bool Update(Student student)
+        public Student GetByID(string id)
         {
-            var oldStudent = dbContext.Students.Find(student.ID);
+            return dbContext.Students.Find(id);
+        }
+
+        public bool Update(Student student, string id)
+        {
+            var oldStudent = dbContext.Students.Find(id);
             if (oldStudent != null)
             {
-                oldStudent = student;
+                dbContext.Students.Remove(oldStudent);
+                dbContext.Students.Add(student);
                 dbContext.SaveChanges();
                 return true;
             }
@@ -45,6 +51,14 @@ namespace QuanLySinhVien.Models.ModelServices
                 return true;
             }
             return false;
+        }
+
+        public void DeleteByID(string id)
+        {
+            Student student = dbContext.Students.Single(x=>x.ID == id);
+
+            dbContext.Students.Remove(student);
+            dbContext.SaveChanges();
         }
     }
 }

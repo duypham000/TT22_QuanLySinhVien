@@ -1,10 +1,8 @@
-﻿using System.Drawing;
-using System.Web.UI.WebControls;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
-namespace QuanLySinhVien.Views.DashbroadViews.UserViews
+namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
 {
-    partial class UserListView
+    partial class StudentListView
     {
         /// <summary>
         /// Required designer variable.
@@ -37,13 +35,11 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.userTable = new System.Windows.Forms.DataGridView();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentTable = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -64,7 +60,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.nav_toFirst = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTable)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,7 +83,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.userTable);
+            this.panel8.Controls.Add(this.studentTable);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel8.Location = new System.Drawing.Point(0, 53);
@@ -95,19 +91,19 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel8.Size = new System.Drawing.Size(916, 461);
             this.panel8.TabIndex = 5;
             // 
-            // userTable
+            // studentTable
             // 
-            this.userTable.AllowUserToAddRows = false;
-            this.userTable.AllowUserToDeleteRows = false;
-            this.userTable.AllowUserToResizeRows = false;
+            this.studentTable.AllowUserToAddRows = false;
+            this.studentTable.AllowUserToDeleteRows = false;
+            this.studentTable.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.userTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.userTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.userTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.userTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.userTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.userTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.studentTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.studentTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.studentTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.studentTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.studentTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.studentTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,18 +111,16 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.userTable.ColumnHeadersHeight = 50;
-            this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.username,
+            this.studentTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.studentTable.ColumnHeadersHeight = 50;
+            this.studentTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.studentTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.name,
             this.role,
-            this.age,
-            this.email,
-            this.address,
+            this.clas,
             this.phone});
-            this.userTable.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.studentTable.Cursor = System.Windows.Forms.Cursors.Arrow;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,85 +128,62 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userTable.DefaultCellStyle = dataGridViewCellStyle3;
-            this.userTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userTable.EnableHeadersVisualStyles = false;
-            this.userTable.GridColor = System.Drawing.Color.White;
-            this.userTable.Location = new System.Drawing.Point(0, 0);
-            this.userTable.Margin = new System.Windows.Forms.Padding(0);
-            this.userTable.Name = "userTable";
-            this.userTable.ReadOnly = true;
-            this.userTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.userTable.RowHeadersWidth = 15;
-            this.userTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.userTable.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            this.userTable.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userTable.RowTemplate.Height = 35;
-            this.userTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.userTable.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.userTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.userTable.ShowCellErrors = false;
-            this.userTable.ShowCellToolTips = false;
-            this.userTable.ShowEditingIcon = false;
-            this.userTable.ShowRowErrors = false;
-            this.userTable.Size = new System.Drawing.Size(916, 461);
-            this.userTable.TabIndex = 0;
-            this.userTable.DoubleClick += new System.EventHandler(this.updateUser);
+            this.studentTable.DefaultCellStyle = dataGridViewCellStyle3;
+            this.studentTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentTable.EnableHeadersVisualStyles = false;
+            this.studentTable.GridColor = System.Drawing.Color.White;
+            this.studentTable.Location = new System.Drawing.Point(0, 0);
+            this.studentTable.Margin = new System.Windows.Forms.Padding(0);
+            this.studentTable.Name = "studentTable";
+            this.studentTable.ReadOnly = true;
+            this.studentTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.studentTable.RowHeadersWidth = 15;
+            this.studentTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.studentTable.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.studentTable.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentTable.RowTemplate.Height = 35;
+            this.studentTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentTable.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.studentTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.studentTable.ShowCellErrors = false;
+            this.studentTable.ShowCellToolTips = false;
+            this.studentTable.ShowEditingIcon = false;
+            this.studentTable.ShowRowErrors = false;
+            this.studentTable.Size = new System.Drawing.Size(916, 461);
+            this.studentTable.TabIndex = 0;
+            this.studentTable.DoubleClick += new System.EventHandler(this.updateStudent);
             // 
-            // username
+            // ID
             // 
-            this.username.HeaderText = "Username";
-            this.username.Name = "username";
-            this.username.ReadOnly = true;
-            this.username.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.ID.HeaderText = "Mã sinh viên";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // name
             // 
-            this.name.FillWeight = 130F;
-            this.name.HeaderText = "Tên người dùng";
+            this.name.HeaderText = "Tên sinh viên";
             this.name.Name = "name";
             this.name.ReadOnly = true;
-            this.name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // role
             // 
-            this.role.HeaderText = "Vai trò";
+            this.role.HeaderText = "Chức vụ";
             this.role.Name = "role";
             this.role.ReadOnly = true;
-            this.role.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // age
+            // clas
             // 
-            this.age.FillWeight = 40F;
-            this.age.HeaderText = "Tuổi";
-            this.age.Name = "age";
-            this.age.ReadOnly = true;
-            this.age.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // email
-            // 
-            this.email.FillWeight = 130F;
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // address
-            // 
-            this.address.FillWeight = 130F;
-            this.address.HeaderText = "Địa chỉ";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.clas.FillWeight = 50F;
+            this.clas.HeaderText = "Lớp";
+            this.clas.Name = "clas";
+            this.clas.ReadOnly = true;
             // 
             // phone
             // 
             this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.FillWeight = 87F;
-            this.phone.HeaderText = "Số điện thoại";
+            this.phone.HeaderText = "Số điện ";
             this.phone.Name = "phone";
             this.phone.ReadOnly = true;
-            this.phone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // panel2
             // 
@@ -249,7 +220,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.btn_delete.TabIndex = 2;
             this.btn_delete.Text = "Xóa";
             this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.removeUser);
+            this.btn_delete.Click += new System.EventHandler(this.removeStudent);
             // 
             // btn_update
             // 
@@ -264,7 +235,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.btn_update.TabIndex = 1;
             this.btn_update.Text = "Sửa";
             this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.updateUser);
+            this.btn_update.Click += new System.EventHandler(this.updateStudent);
             // 
             // btn_add
             // 
@@ -279,7 +250,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.btn_add.TabIndex = 0;
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.addUser);
+            this.btn_add.Click += new System.EventHandler(this.addStudent);
             // 
             // panel3
             // 
@@ -322,8 +293,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.type_search.HoverState.Parent = this.type_search;
             this.type_search.ItemHeight = 30;
             this.type_search.Items.AddRange(new object[] {
-            "username",
-            "email"});
+            "id",
+            "name"});
             this.type_search.ItemsAppearance.Parent = this.type_search;
             this.type_search.Location = new System.Drawing.Point(84, 0);
             this.type_search.Name = "type_search";
@@ -479,17 +450,17 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.nav_toFirst.UseVisualStyleBackColor = false;
             this.nav_toFirst.Click += new System.EventHandler(this.toFirst);
             // 
-            // UserListView
+            // StudentListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 561);
             this.Controls.Add(this.panel1);
-            this.Name = "UserListView";
+            this.Name = "StudentListView";
             this.ClientSizeChanged += new System.EventHandler(this.onChangeSize);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTable)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -504,7 +475,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView userTable;
+        private System.Windows.Forms.DataGridView studentTable;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel paginationBar;
         private System.Windows.Forms.Button nav_toNext;
@@ -520,15 +491,13 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button nav_toLast;
         private FontAwesome.Sharp.IconPictureBox btn_search;
-        private DataGridViewTextBoxColumn username;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn role;
-        private DataGridViewTextBoxColumn age;
-        private DataGridViewTextBoxColumn email;
-        private DataGridViewTextBoxColumn address;
-        private DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.TextBox inpt_search;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox type_search;
         private System.Windows.Forms.Label label1;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn role;
+        private DataGridViewTextBoxColumn clas;
+        private DataGridViewTextBoxColumn phone;
     }
 }

@@ -47,9 +47,8 @@ namespace QuanLySinhVien.Models.Model
 
             modelBuilder.Entity<Class>()
                 .HasMany(e => e.Students)
-                .WithRequired(e => e.Class)
-                .HasForeignKey(e => e.ClassID)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.Class)
+                .HasForeignKey(e => e.ClassID);
 
             modelBuilder.Entity<Class>()
                 .HasMany(e => e.Teachers)
@@ -76,11 +75,6 @@ namespace QuanLySinhVien.Models.Model
                 .Property(e => e.UpdatedBy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Faculty>()
-                .HasMany(e => e.Classes)
-                .WithRequired(e => e.Faculty)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Role>()
                 .Property(e => e.ID)
                 .IsUnicode(false);
@@ -103,6 +97,10 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Student>()
+                .Property(e => e.UserID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Student>()
                 .Property(e => e.ClassID)
                 .IsUnicode(false);
 
@@ -116,20 +114,18 @@ namespace QuanLySinhVien.Models.Model
 
             modelBuilder.Entity<Student>()
                 .HasMany(e => e.Classes)
-                .WithRequired(e => e.Student)
-                .HasForeignKey(e => e.MonitorID)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Student>()
-                .HasMany(e => e.Users)
                 .WithOptional(e => e.Student)
-                .HasForeignKey(e => e.InforID);
+                .HasForeignKey(e => e.MonitorID);
 
             modelBuilder.Entity<Teacher>()
                 .Property(e => e.ID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Teacher>()
+                .Property(e => e.UserID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Teacher>()
                 .Property(e => e.ClassID)
                 .IsUnicode(false);
 
@@ -143,27 +139,16 @@ namespace QuanLySinhVien.Models.Model
 
             modelBuilder.Entity<Teacher>()
                 .HasMany(e => e.Classes)
-                .WithRequired(e => e.Teacher)
-                .HasForeignKey(e => e.LeaderID)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.Teacher)
+                .HasForeignKey(e => e.LeaderID);
 
             modelBuilder.Entity<Teacher>()
                 .HasMany(e => e.Faculties)
-                .WithRequired(e => e.Teacher)
-                .HasForeignKey(e => e.LeaderID)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Teacher>()
-                .HasMany(e => e.Users)
                 .WithOptional(e => e.Teacher)
-                .HasForeignKey(e => e.InforID);
+                .HasForeignKey(e => e.LeaderID);
 
             modelBuilder.Entity<User>()
                 .Property(e => e.Username)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<User>()
-                .Property(e => e.InforID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
@@ -185,6 +170,16 @@ namespace QuanLySinhVien.Models.Model
             modelBuilder.Entity<User>()
                 .Property(e => e.UpdatedBy)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Students)
+                .WithOptional(e => e.User)
+                .HasForeignKey(e => e.UserID);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Teachers)
+                .WithOptional(e => e.User)
+                .HasForeignKey(e => e.UserID);
         }
     }
 }

@@ -106,5 +106,13 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         {
             backToList();
         }
+
+        private void inpt_phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '+'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

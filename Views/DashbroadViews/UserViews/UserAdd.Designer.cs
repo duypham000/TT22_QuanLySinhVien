@@ -137,6 +137,7 @@
             this.inpt_phone.TabIndex = 8;
             this.inpt_phone.Texts = "";
             this.inpt_phone.UnderlinedStyle = false;
+            this.inpt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inpt_phone_KeyPress);
             // 
             // label9
             // 
