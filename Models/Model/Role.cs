@@ -33,8 +33,6 @@ namespace QuanLySinhVien.Models.Model
 
         public DateTime? UpdatedDate { get; set; }
 
-        public bool Status { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> Users { get; set; }
     }

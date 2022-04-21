@@ -2,45 +2,48 @@
 using QuanLySinhVien.Models.ModelServices;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
+namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
 {
-    public partial class StudentListView : Form
+    public partial class FacultyListView : Form
     {
-        private UserServices userServices = null;
-        private ClassServices classServices = null;
-        private StudentServices studentServices = null;
-
-        private List<Student> students = null;
-
+        private FacultyServices facultyServices = null;
+        private TeacherServices teacherServices = null;
+        private List<Teacher> teachers = null;
+        private List<Faculty> faculties = null;
         private int pageSize = 11;
         private int curPage = 1;
         private int totalPage = 1;
         private string searchType = null;
-        private string[] searchOption = { "id", "name", "class" };
+        private string[] searchOption = { "id", "name", "leader" };
 
-        public StudentListView()
+        public FacultyListView()
         {
             InitializeComponent();
-            this.userServices = new UserServices();
-            this.classServices = new ClassServices();
-            this.studentServices = new StudentServices();
-
-            this.students = studentServices.GetAll();
+            this.facultyServices = new FacultyServices();
+            this.teacherServices = new TeacherServices();
+            this.teachers = teacherServices.GetAll();
+            this.faculties = facultyServices.GetAll();
 
             this.searchType = "id";
             this.type_search.SelectedIndex = 0;
 
-            fillToTable(this.curPage, this.pageSize, this.students);
+            fillToTable(this.curPage, this.pageSize, this.faculties);
         }
 
-        private void fillToTable(int page, int size, List<Student> listStudent)
+        private void fillToTable(int page, int size, List<Faculty> faculityList)
         {
-            this.studentTable.Rows.Clear();
+            this.classTable.Rows.Clear();
 
             // đoạn này cần chuyển sang double để không bị tự làm tròn xuống
-            double userCount = students.Count;
+            double userCount = faculityList.Count;
             double pagSz = pageSize;
             double total = userCount / pagSz;
             int totalpage = (int)Math.Ceiling(total);
@@ -74,31 +77,35 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
                 this.nav_toNext.Enabled = true;
             }
 
-            List<Student> newListStudent = new List<Student>();
-            if (listStudent.Count > size)
+            List<Faculty> newFaculityList = new List<Faculty>();
+            if (faculityList.Count > size)
             {
                 int skipCount = (page - 1) * size;
-                if ((skipCount + size) > listStudent.Count)
+                if ((skipCount + size) > faculityList.Count)
                 {
-                    for (int i = skipCount; i < listStudent.Count; i++)
+                    for (int i = skipCount; i < faculityList.Count; i++)
                     {
-                        newListStudent.Add(listStudent[i]);
+                        newFaculityList.Add(faculityList[i]);
                     }
                 }
                 else
-                    newListStudent = listStudent.GetRange(skipCount, size);
+                    newFaculityList = faculityList.GetRange(skipCount, size);
             }
             else
             {
-                newListStudent = listStudent;
+                newFaculityList = faculityList;
             }
-
-            List<User> users = userServices.GetAllUsers();
-            List<Class> classes = classServices.GetAll();
-
-            foreach (var student in newListStudent)
+            foreach (var faculty in newFaculityList)
             {
-                this.studentTable.Rows.Add(student.ID, student.Name, student.ClassID, student.ClassRole, student.Address, student.DateOfBirth, student.Religion, student.Phone, student.SchoolProfile, student.Status);
+                string leaderName = "";
+                foreach (var teacher in teachers)
+                {
+                    if (teacher.ID.Equals(faculty.LeaderID))
+                    {
+                        leaderName = teacher.Name;
+                    }
+                }
+                this.classTable.Rows.Add(faculty.ID, faculty.Name, leaderName);
             }
         }
 
@@ -109,7 +116,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             if (this.curPage < this.totalPage)
             {
                 this.curPage++;
-                fillToTable(this.curPage, this.pageSize, this.students);
+                fillToTable(this.curPage, this.pageSize, this.faculties);
             }
         }
 
@@ -118,7 +125,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             if (this.curPage > 1)
             {
                 this.curPage--;
-                fillToTable(this.curPage, this.pageSize, this.students);
+                fillToTable(this.curPage, this.pageSize, this.faculties);
             }
         }
 
@@ -127,7 +134,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             if (this.curPage > 1)
             {
                 this.curPage = 1;
-                fillToTable(this.curPage, this.pageSize, this.students);
+                fillToTable(this.curPage, this.pageSize, this.faculties);
             }
         }
 
@@ -136,41 +143,41 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             if (this.curPage < this.totalPage)
             {
                 this.curPage = this.totalPage;
-                fillToTable(this.curPage, this.pageSize, this.students);
+                fillToTable(this.curPage, this.pageSize, this.faculties);
             }
         }
 
         private void onChangeSize(object sender, EventArgs e)
         {
-            double currSize = this.studentTable.Height - this.studentTable.ColumnHeadersHeight;
-            double size = currSize / this.studentTable.RowTemplate.Height;
+            double currSize = this.classTable.Height - this.classTable.ColumnHeadersHeight;
+            double size = currSize / this.classTable.RowTemplate.Height;
             this.pageSize = (int)Math.Floor(size);
-            fillToTable(this.curPage, this.pageSize, this.students);
+            fillToTable(this.curPage, this.pageSize, this.faculties);
         }
 
         #endregion NavControl
 
-        #region StudentControl
+        #region UserControl
 
-        private string[] getCurrentStudentID()
+        private string[] getCurrentId()
         {
-            int total = this.studentTable.SelectedRows.Count;
+            int total = this.classTable.SelectedRows.Count;
             string[] res = new string[total];
             for (int i = 0; i < total; i++)
             {
-                int index = this.studentTable.SelectedRows[i].Index;
-                res[i] = this.studentTable.Rows[index].Cells[0].Value.ToString();
+                int index = this.classTable.SelectedRows[i].Index;
+                res[i] = this.classTable.Rows[index].Cells[0].Value.ToString();
             }
             return res;
         }
 
-        private void addStudent(object sender, EventArgs e)
+        private void addUser(object sender, EventArgs e)
         {
-            this.Tag = "add-student";
+            this.Tag = "add-faculty";
             this.Close();
         }
 
-        private void removeStudent(object sender, EventArgs e)
+        private void removeUser(object sender, EventArgs e)
         {
             string message = "Bạn có chắc chắn muốn xóa các mục đã chọn?";
             string title = "Xóa";
@@ -179,56 +186,66 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
 
             if (result == DialogResult.Yes)
             {
-                foreach (var id in getCurrentStudentID())
+                foreach (var id in getCurrentId())
                 {
-                    studentServices.DeleteByID(id);
+                    facultyServices.DeleteByID(id);
                 }
-
-                this.students = studentServices.GetAll();
-                fillToTable(curPage, this.pageSize, this.students);
+                this.faculties = facultyServices.GetAll();
+                fillToTable(curPage, this.pageSize, this.faculties);
             }
         }
 
-        private void updateStudent(object sender, EventArgs e)
+        private void updateUser(object sender, EventArgs e)
         {
-            if (getCurrentStudentID().Length < 2)
+            if (getCurrentId().Length < 2)
             {
-                this.Tag = "update-student/" + getCurrentStudentID()[0];
+                this.Tag = "update-faculty/" + getCurrentId()[0];
                 this.Close();
             }
         }
 
-        #endregion StudentControl
+        #endregion UserControl
 
         private void findAndDisplay(object sender, EventArgs e)
         {
-            this.students = studentServices.GetAll();
-            List<Student> res = new List<Student>();
+            this.faculties = facultyServices.GetAll();
+            List<Faculty> res = new List<Faculty>();
             var searchValue = this.inpt_search.Text;
-
             if (this.searchType.Equals("id"))
             {
-                foreach (var student in students)
+                foreach (var faculty in faculties)
                 {
-                    if (student.ID.Contains(searchValue))
+                    if (faculty.ID.Contains(searchValue))
                     {
-                        res.Add(student);
+                        res.Add(faculty);
                     }
                 }
             }
             else if (this.searchType.Equals("name"))
             {
-                foreach (var student in students)
+                foreach (var faculty in faculties)
                 {
-                    if (student.Name.Contains(searchValue))
+                    if (faculty.Name.Contains(searchValue))
                     {
-                        res.Add(student);
+                        res.Add(faculty);
                     }
                 }
             }
-
-            this.students.Clear();
-            this.students = res;
+            else if (this.searchType.Equals("leader"))
+            {
+                foreach (var faculty in faculties)
+                {
+                    foreach (var teacher in teachers)
+                    {
+                        if ( faculty.LeaderID.Equals(teacher.ID) && teacher.Name.Contains(searchValue))
+                        {
+                            res.Add(faculty);
+                        }
+                    }
+                }
+            }
+            this.faculties.Clear();
+            this.faculties = res;
             this.curPage = 1;
             fillToTable(this.curPage, this.pageSize, res);
         }

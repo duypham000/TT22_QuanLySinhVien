@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.panel_sideMenu = new System.Windows.Forms.Panel();
+            this.opt_qlgv = new System.Windows.Forms.Button();
             this.opt_qlsv = new System.Windows.Forms.Button();
             this.opt_qll = new System.Windows.Forms.Button();
             this.otp_qlk = new System.Windows.Forms.Button();
             this.submenu_qltk = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_rolelist = new System.Windows.Forms.Button();
             this.btn_userlist = new System.Windows.Forms.Button();
             this.opt_qltk = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -74,6 +75,7 @@
             // 
             this.panel_sideMenu.AutoScroll = true;
             this.panel_sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel_sideMenu.Controls.Add(this.opt_qlgv);
             this.panel_sideMenu.Controls.Add(this.opt_qlsv);
             this.panel_sideMenu.Controls.Add(this.opt_qll);
             this.panel_sideMenu.Controls.Add(this.otp_qlk);
@@ -86,6 +88,25 @@
             this.panel_sideMenu.Name = "panel_sideMenu";
             this.panel_sideMenu.Size = new System.Drawing.Size(263, 561);
             this.panel_sideMenu.TabIndex = 0;
+            // 
+            // opt_qlgv
+            // 
+            this.opt_qlgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.opt_qlgv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opt_qlgv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.opt_qlgv.FlatAppearance.BorderSize = 0;
+            this.opt_qlgv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opt_qlgv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opt_qlgv.ForeColor = System.Drawing.Color.White;
+            this.opt_qlgv.Location = new System.Drawing.Point(0, 350);
+            this.opt_qlgv.Name = "opt_qlgv";
+            this.opt_qlgv.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.opt_qlgv.Size = new System.Drawing.Size(263, 45);
+            this.opt_qlgv.TabIndex = 9;
+            this.opt_qlgv.Text = "Quản lý giáo viên";
+            this.opt_qlgv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opt_qlgv.UseVisualStyleBackColor = false;
+            this.opt_qlgv.Click += new System.EventHandler(this.button1_Click);
             // 
             // opt_qlsv
             // 
@@ -123,6 +144,7 @@
             this.opt_qll.Text = "Quản lý lớp";
             this.opt_qll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.opt_qll.UseVisualStyleBackColor = false;
+            this.opt_qll.Click += new System.EventHandler(this.opt_qll_Click);
             // 
             // otp_qlk
             // 
@@ -141,11 +163,12 @@
             this.otp_qlk.Text = "Quản lý khoa";
             this.otp_qlk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.otp_qlk.UseVisualStyleBackColor = false;
+            this.otp_qlk.Click += new System.EventHandler(this.otp_qlk_Click);
             // 
             // submenu_qltk
             // 
             this.submenu_qltk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.submenu_qltk.Controls.Add(this.button3);
+            this.submenu_qltk.Controls.Add(this.btn_rolelist);
             this.submenu_qltk.Controls.Add(this.btn_userlist);
             this.submenu_qltk.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenu_qltk.Location = new System.Drawing.Point(0, 135);
@@ -153,22 +176,23 @@
             this.submenu_qltk.Size = new System.Drawing.Size(263, 80);
             this.submenu_qltk.TabIndex = 2;
             // 
-            // button3
+            // btn_rolelist
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 40);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(263, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Danh sách chức vụ";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_rolelist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_rolelist.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_rolelist.FlatAppearance.BorderSize = 0;
+            this.btn_rolelist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_rolelist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rolelist.ForeColor = System.Drawing.Color.White;
+            this.btn_rolelist.Location = new System.Drawing.Point(0, 40);
+            this.btn_rolelist.Name = "btn_rolelist";
+            this.btn_rolelist.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_rolelist.Size = new System.Drawing.Size(263, 40);
+            this.btn_rolelist.TabIndex = 1;
+            this.btn_rolelist.Text = "Danh sách chức vụ";
+            this.btn_rolelist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_rolelist.UseVisualStyleBackColor = true;
+            this.btn_rolelist.Click += new System.EventHandler(this.btn_rolelist_Click);
             // 
             // btn_userlist
             // 
@@ -472,7 +496,6 @@
             this.ClientSize = new System.Drawing.Size(1174, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_sideMenu);
-            this.MaximumSize = new System.Drawing.Size(1940, 800);
             this.MinimumSize = new System.Drawing.Size(1190, 600);
             this.Name = "layout_MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -526,6 +549,7 @@
         private FontAwesome.Sharp.IconPictureBox nav3_icon;
         private FontAwesome.Sharp.IconPictureBox nav2_icon;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_rolelist;
+        private System.Windows.Forms.Button opt_qlgv;
     }
 }

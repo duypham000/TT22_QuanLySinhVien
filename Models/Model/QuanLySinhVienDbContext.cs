@@ -97,7 +97,11 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Student>()
-                .Property(e => e.UserID)
+                .Property(e => e.Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Student>()
+                .Property(e => e.DateOfBirth)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Student>()
@@ -122,7 +126,11 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Teacher>()
-                .Property(e => e.UserID)
+                .Property(e => e.Username)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Teacher>()
+                .Property(e => e.Phone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Teacher>()
@@ -156,10 +164,6 @@ namespace QuanLySinhVien.Models.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .Property(e => e.Phone)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<User>()
                 .Property(e => e.Email)
                 .IsUnicode(false);
 
@@ -170,16 +174,6 @@ namespace QuanLySinhVien.Models.Model
             modelBuilder.Entity<User>()
                 .Property(e => e.UpdatedBy)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<User>()
-                .HasMany(e => e.Students)
-                .WithOptional(e => e.User)
-                .HasForeignKey(e => e.UserID);
-
-            modelBuilder.Entity<User>()
-                .HasMany(e => e.Teachers)
-                .WithOptional(e => e.User)
-                .HasForeignKey(e => e.UserID);
         }
     }
 }

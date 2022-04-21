@@ -19,7 +19,13 @@ namespace QuanLySinhVien.Models.Model
         public string ID { get; set; }
 
         [StringLength(250)]
-        public string UserID { get; set; }
+        public string Name { get; set; }
+
+        [StringLength(250)]
+        public string Username { get; set; }
+
+        [StringLength(50)]
+        public string Phone { get; set; }
 
         [StringLength(50)]
         public string ClassID { get; set; }

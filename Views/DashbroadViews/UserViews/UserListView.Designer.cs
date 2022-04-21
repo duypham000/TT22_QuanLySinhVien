@@ -38,13 +38,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.userTable = new System.Windows.Forms.DataGridView();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -62,6 +55,9 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.nav_display = new System.Windows.Forms.Button();
             this.nav_toPre = new System.Windows.Forms.Button();
             this.nav_toFirst = new System.Windows.Forms.Button();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
@@ -120,12 +116,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.username,
-            this.name,
             this.role,
-            this.age,
-            this.email,
-            this.address,
-            this.phone});
+            this.email});
             this.userTable.Cursor = System.Windows.Forms.Cursors.Arrow;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -158,61 +150,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.Size = new System.Drawing.Size(916, 461);
             this.userTable.TabIndex = 0;
             this.userTable.DoubleClick += new System.EventHandler(this.updateUser);
-            // 
-            // username
-            // 
-            this.username.HeaderText = "Username";
-            this.username.Name = "username";
-            this.username.ReadOnly = true;
-            this.username.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // name
-            // 
-            this.name.FillWeight = 130F;
-            this.name.HeaderText = "Tên người dùng";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // role
-            // 
-            this.role.HeaderText = "Vai trò";
-            this.role.Name = "role";
-            this.role.ReadOnly = true;
-            this.role.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // age
-            // 
-            this.age.FillWeight = 40F;
-            this.age.HeaderText = "Tuổi";
-            this.age.Name = "age";
-            this.age.ReadOnly = true;
-            this.age.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // email
-            // 
-            this.email.FillWeight = 130F;
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // address
-            // 
-            this.address.FillWeight = 130F;
-            this.address.HeaderText = "Địa chỉ";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.FillWeight = 87F;
-            this.phone.HeaderText = "Số điện thoại";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            this.phone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // panel2
             // 
@@ -479,6 +416,28 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.nav_toFirst.UseVisualStyleBackColor = false;
             this.nav_toFirst.Click += new System.EventHandler(this.toFirst);
             // 
+            // username
+            // 
+            this.username.HeaderText = "Username";
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            this.username.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // role
+            // 
+            this.role.HeaderText = "Vai trò";
+            this.role.Name = "role";
+            this.role.ReadOnly = true;
+            this.role.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // email
+            // 
+            this.email.FillWeight = 130F;
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // UserListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,15 +479,11 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button nav_toLast;
         private FontAwesome.Sharp.IconPictureBox btn_search;
-        private DataGridViewTextBoxColumn username;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn role;
-        private DataGridViewTextBoxColumn age;
-        private DataGridViewTextBoxColumn email;
-        private DataGridViewTextBoxColumn address;
-        private DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.TextBox inpt_search;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox type_search;
         private System.Windows.Forms.Label label1;
+        private DataGridViewTextBoxColumn username;
+        private DataGridViewTextBoxColumn role;
+        private DataGridViewTextBoxColumn email;
     }
 }

@@ -96,6 +96,30 @@
     <Compile Include="Views\CommonViews\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DashbroadViews\ClassViews\ClassListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\ClassViews\ClassListView.Designer.cs">
+      <DependentUpon>ClassListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\FacultyViews\FacultyAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\FacultyViews\FacultyAdd.Designer.cs">
+      <DependentUpon>FacultyAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\FacultyViews\FacultyListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\FacultyViews\FacultyListView.Designer.cs">
+      <DependentUpon>FacultyListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\FacultyViews\FacultyUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\FacultyViews\FacultyUpdate.Designer.cs">
+      <DependentUpon>FacultyUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DashbroadViews\layout_MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +192,18 @@
     </Compile>
     <EmbeddedResource Include="Views\CommonViews\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\ClassViews\ClassListView.resx">
+      <DependentUpon>ClassListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\FacultyViews\FacultyAdd.resx">
+      <DependentUpon>FacultyAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\FacultyViews\FacultyListView.resx">
+      <DependentUpon>FacultyListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\FacultyViews\FacultyUpdate.resx">
+      <DependentUpon>FacultyUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\layout_MainScreen.resx">
       <DependentUpon>layout_MainScreen.cs</DependentUpon>

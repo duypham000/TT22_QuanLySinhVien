@@ -89,7 +89,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             foreach (var user in listUsers)
             {
                 Role role = roleServices.GetByID(user.RoleID);
-                this.userTable.Rows.Add(user.Username, user.Name, role.Name, user.Age, user.Email, user.Address, user.Phone);
+                this.userTable.Rows.Add(user.Username, role.Name, user.Email);
             }
         }
 
@@ -192,7 +192,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         private void findAndDisplay(object sender, EventArgs e)
         {
-            if (this.searchType.Equals("username")) ;
             this.users = userServices.GetAllUsers();
             List<User> res = new List<User>();
             var searchValue = this.inpt_search.Text;

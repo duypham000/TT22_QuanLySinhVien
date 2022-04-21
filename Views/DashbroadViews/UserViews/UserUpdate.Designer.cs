@@ -30,18 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.inpt_phone = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.inpt_age = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.inpt_address = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.inpt_name = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.inpt_password = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,11 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inpt_age)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -90,10 +73,6 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.panel11);
-            this.panel3.Controls.Add(this.panel10);
-            this.panel3.Controls.Add(this.panel9);
-            this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
@@ -105,191 +84,12 @@
             this.panel3.Size = new System.Drawing.Size(916, 459);
             this.panel3.TabIndex = 2;
             // 
-            // panel11
-            // 
-            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel11.Controls.Add(this.inpt_phone);
-            this.panel11.Controls.Add(this.label9);
-            this.panel11.Location = new System.Drawing.Point(530, 353);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(280, 58);
-            this.panel11.TabIndex = 9;
-            // 
-            // inpt_phone
-            // 
-            this.inpt_phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_phone.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_phone.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_phone.BorderRadius = 0;
-            this.inpt_phone.BorderSize = 2;
-            this.inpt_phone.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_phone.ForeColor = System.Drawing.Color.White;
-            this.inpt_phone.Location = new System.Drawing.Point(0, 20);
-            this.inpt_phone.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_phone.Multiline = false;
-            this.inpt_phone.Name = "inpt_phone";
-            this.inpt_phone.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_phone.PasswordChar = false;
-            this.inpt_phone.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_phone.PlaceholderText = "";
-            this.inpt_phone.Size = new System.Drawing.Size(280, 31);
-            this.inpt_phone.TabIndex = 8;
-            this.inpt_phone.Texts = "";
-            this.inpt_phone.UnderlinedStyle = false;
-            this.inpt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inpt_phone_KeyPress);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 20);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Số điện thoại";
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel10.Controls.Add(this.inpt_age);
-            this.panel10.Controls.Add(this.label8);
-            this.panel10.Location = new System.Drawing.Point(530, 236);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(280, 65);
-            this.panel10.TabIndex = 8;
-            // 
-            // inpt_age
-            // 
-            this.inpt_age.BackColor = System.Drawing.Color.Transparent;
-            this.inpt_age.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_age.BorderThickness = 2;
-            this.inpt_age.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.inpt_age.DisabledState.Parent = this.inpt_age;
-            this.inpt_age.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_age.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_age.FocusedState.Parent = this.inpt_age;
-            this.inpt_age.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.inpt_age.ForeColor = System.Drawing.Color.Black;
-            this.inpt_age.Location = new System.Drawing.Point(0, 20);
-            this.inpt_age.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.inpt_age.Name = "inpt_age";
-            this.inpt_age.ShadowDecoration.Parent = this.inpt_age;
-            this.inpt_age.Size = new System.Drawing.Size(280, 38);
-            this.inpt_age.TabIndex = 7;
-            this.inpt_age.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_age.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 20);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Tuổi";
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel9.Controls.Add(this.inpt_address);
-            this.panel9.Controls.Add(this.label7);
-            this.panel9.Location = new System.Drawing.Point(530, 133);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(280, 58);
-            this.panel9.TabIndex = 7;
-            // 
-            // inpt_address
-            // 
-            this.inpt_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_address.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_address.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_address.BorderRadius = 0;
-            this.inpt_address.BorderSize = 2;
-            this.inpt_address.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_address.ForeColor = System.Drawing.Color.White;
-            this.inpt_address.Location = new System.Drawing.Point(0, 20);
-            this.inpt_address.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_address.Multiline = false;
-            this.inpt_address.Name = "inpt_address";
-            this.inpt_address.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_address.PasswordChar = false;
-            this.inpt_address.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_address.PlaceholderText = "";
-            this.inpt_address.Size = new System.Drawing.Size(280, 31);
-            this.inpt_address.TabIndex = 6;
-            this.inpt_address.Texts = "";
-            this.inpt_address.UnderlinedStyle = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 20);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Địa chỉ";
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel8.Controls.Add(this.inpt_name);
-            this.panel8.Controls.Add(this.label6);
-            this.panel8.Location = new System.Drawing.Point(530, 23);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(280, 58);
-            this.panel8.TabIndex = 6;
-            // 
-            // inpt_name
-            // 
-            this.inpt_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_name.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_name.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_name.BorderRadius = 0;
-            this.inpt_name.BorderSize = 2;
-            this.inpt_name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_name.ForeColor = System.Drawing.Color.White;
-            this.inpt_name.Location = new System.Drawing.Point(0, 20);
-            this.inpt_name.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_name.Multiline = false;
-            this.inpt_name.Name = "inpt_name";
-            this.inpt_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_name.PasswordChar = false;
-            this.inpt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_name.PlaceholderText = "";
-            this.inpt_name.Size = new System.Drawing.Size(280, 31);
-            this.inpt_name.TabIndex = 5;
-            this.inpt_name.Texts = "";
-            this.inpt_name.UnderlinedStyle = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Họ tên";
-            // 
             // panel7
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.Controls.Add(this.inpt_password);
             this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(116, 133);
+            this.panel7.Location = new System.Drawing.Point(96, 239);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(280, 58);
             this.panel7.TabIndex = 5;
@@ -334,7 +134,7 @@
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.Controls.Add(this.inpt_email);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Location = new System.Drawing.Point(116, 243);
+            this.panel6.Location = new System.Drawing.Point(520, 129);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(280, 58);
             this.panel6.TabIndex = 4;
@@ -379,7 +179,7 @@
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.Controls.Add(this.inpt_role);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(116, 353);
+            this.panel5.Location = new System.Drawing.Point(520, 239);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(280, 58);
             this.panel5.TabIndex = 3;
@@ -424,7 +224,7 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.Controls.Add(this.inpt_username);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(116, 23);
+            this.panel4.Location = new System.Drawing.Point(96, 129);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(280, 58);
             this.panel4.TabIndex = 2;
@@ -536,15 +336,6 @@
             this.Text = "UserAdd";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inpt_age)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -576,21 +367,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel11;
-        private CommonViews.RJTextBox inpt_phone;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel9;
-        private CommonViews.RJTextBox inpt_address;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel8;
-        private CommonViews.RJTextBox inpt_name;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_cancel;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox inpt_role;
-        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown inpt_age;
     }
 }

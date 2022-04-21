@@ -17,16 +17,9 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         {
             InitializeComponent();
 
-            // do không có license của siticone nên phải chỉnh code ở đây
-            changeStyle();
             userServices = new UserServices();
             roleServices = new RoleServices();
             addRoleName();
-        }
-
-        private void changeStyle()
-        {
-            this.inpt_age.ForeColor = Color.White;
         }
 
         private void addRoleName()
@@ -43,10 +36,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             if (
                 this.inpt_username.Texts != "" &&
                 this.inpt_password.Texts != "" &&
-                this.inpt_email.Texts != "" &&
-                this.inpt_address.Texts != "" &&
-                this.inpt_phone.Texts != "" &&
-                this.inpt_age.Value != 0
+                this.inpt_email.Texts != "" 
             )
             {
                 User user = new User();
@@ -54,11 +44,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
                 user.Password = this.inpt_password.Texts;
                 user.Email = this.inpt_email.Texts;
                 user.RoleID = roles[this.inpt_role.SelectedIndex].ID;
-                user.Name = this.inpt_name.Texts;
-                user.Address = this.inpt_address.Texts;
-                user.Phone = this.inpt_phone.Texts;
-                user.Age = (int)this.inpt_age.Value;
-                user.Status = true;
                 user.CreatedBy = Properties.Settings.Default.Username;
                 user.CreatedDate = DateTime.Now;
 

@@ -26,7 +26,6 @@ namespace QuanLySinhVien.Models
                 Role role = new Role();
                 role.Name = "Quản trị viên";
                 role.Description = "Super User";
-                role.Status = true;
                 role.ID = "admin";
 
                 roleServices.Add(role);
@@ -37,7 +36,6 @@ namespace QuanLySinhVien.Models
                 user.Username = "Duyn";
                 user.Email = "duypham05082002@gmail.com";
                 user.Password = "0508";
-                user.Status = true;
                 user.RoleID = "admin";
 
                 userServices.Add(user);

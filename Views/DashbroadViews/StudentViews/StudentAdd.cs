@@ -2,12 +2,6 @@
 using QuanLySinhVien.Models.ModelServices;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
@@ -20,7 +14,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
 
         private List<User> users = null;
         private List<Class> classes = null;
-        private string[] studentStatus = { "Đã thôi học", "Đang học", "Bảo lưu"};
+        private string[] studentStatus = { "Đã thôi học", "Đang học", "Bảo lưu" };
 
         public StudentAdd()
         {
@@ -39,40 +33,52 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
         {
             foreach (var classi in this.classes)
             {
-                this.inpt_class.Items.Add(classi.Name);
+                this.inpt_class.Items.Add(classi.ID);
             }
 
             foreach (var status in studentStatus)
             {
                 this.inpt_status.Items.Add(status);
             }
-            foreach (var user in users)
-            {
-                this.inpt_user.Items.Add(user.Name);
-            }
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            int index;
+            foreach (var user in users)
+            {
+                if (user.Username.Equals(this.inpt_id.Texts))
+                {
+                    MessageBox.Show("Hãy nhập đúng và đủ thông tin!");
+                    return;
+                }
+            }
 
             if (
                 this.inpt_id.Texts != "" &&
-                this.inpt_roles.Texts != ""
+                this.inpt_roles.Texts != "" &&
+                this.inpt_name.Texts != "" &&
+                this.inpt_phone.Texts != "" &&
+                this.inpt_status.Text != "" &&
+                this.inpt_dateb.Texts != "" &&
+                this.inpt_class.Text != "" &&
+                this.inpt_class.SelectedIndex != -1 &&
+                this.inpt_his.Texts != "" &&
+                this.inpt_address.Texts != "" &&
+                this.inpt_re.Texts != ""
             )
             {
                 Student student = new Student();
 
                 student.ID = this.inpt_id.Texts;
+                student.Name = this.inpt_name.Texts;
                 student.ClassRole = this.inpt_roles.Texts;
-
+                student.Phone = this.inpt_phone.Texts;
                 student.Status = this.inpt_status.Text;
-
-                index = this.inpt_class.SelectedIndex;
-                student.ClassID = this.classes[index].ID;
-                
-                index = this.inpt_user.SelectedIndex;
-                student.UserID = users[index].Username;
+                student.DateOfBirth = this.inpt_dateb.Texts;
+                student.ClassID = this.inpt_class.Text;
+                student.SchoolProfile = this.inpt_his.Texts;
+                student.Address = this.inpt_address.Texts;
+                student.Religion = this.inpt_re.Texts;
 
                 studentServices.Add(student);
 

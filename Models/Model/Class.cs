@@ -18,21 +18,14 @@ namespace QuanLySinhVien.Models.Model
         [StringLength(50)]
         public string ID { get; set; }
 
-        [StringLength(250)]
-        public string Name { get; set; }
-
         [StringLength(50)]
         public string FacultyID { get; set; }
-
-        public int? MaxStudent { get; set; }
 
         [StringLength(50)]
         public string LeaderID { get; set; }
 
         [StringLength(50)]
         public string MonitorID { get; set; }
-
-        public bool? Status { get; set; }
 
         [StringLength(250)]
         public string CreatedBy { get; set; }
