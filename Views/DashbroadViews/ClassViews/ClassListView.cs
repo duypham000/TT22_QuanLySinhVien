@@ -41,6 +41,31 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.type_search.SelectedIndex = 0;
 
             fillToTable(this.curPage, this.pageSize, this.classes);
+            permissionCheck();
+        }
+
+        private void permissionCheck()
+        {
+            string[] permis = Properties.Settings.Default.Permission.Split('-');
+            foreach (var per in permis)
+            {
+                char[] p = per.ToCharArray();
+                if (p[0].Equals('C'))
+                {
+                    if (p[2].Equals('0'))
+                    {
+                        this.btn_add.Enabled = false;
+                    }
+                    if (p[3].Equals('0'))
+                    {
+                        this.btn_update.Enabled = false;
+                    }
+                    if (p[4].Equals('0'))
+                    {
+                        this.btn_delete.Enabled = false;
+                    }
+                }
+            }
         }
 
         private void fillToTable(int page, int size, List<Class> classList)
@@ -228,10 +253,13 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            if (getCurrentId().Length < 2)
+            if (this.btn_update.Enabled)
             {
-                this.Tag = "update-class/" + getCurrentId()[0];
-                this.Close();
+                if (getCurrentId().Length < 2)
+                {
+                    this.Tag = "update-class/" + getCurrentId()[0];
+                    this.Close();
+                }
             }
         }
 

@@ -62,16 +62,16 @@
             this.faculty_add = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             this.faculty_view = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.inpt_desc = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.inpt_name = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.inpt_desc = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.inpt_name = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.per_acc.SuspendLayout();
@@ -657,6 +657,29 @@
             this.panel4.Size = new System.Drawing.Size(280, 58);
             this.panel4.TabIndex = 5;
             // 
+            // inpt_desc
+            // 
+            this.inpt_desc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_desc.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_desc.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_desc.BorderRadius = 0;
+            this.inpt_desc.BorderSize = 2;
+            this.inpt_desc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_desc.ForeColor = System.Drawing.Color.White;
+            this.inpt_desc.Location = new System.Drawing.Point(0, 20);
+            this.inpt_desc.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_desc.Multiline = false;
+            this.inpt_desc.Name = "inpt_desc";
+            this.inpt_desc.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_desc.PasswordChar = false;
+            this.inpt_desc.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_desc.PlaceholderText = "";
+            this.inpt_desc.Size = new System.Drawing.Size(280, 31);
+            this.inpt_desc.TabIndex = 3;
+            this.inpt_desc.Texts = "";
+            this.inpt_desc.UnderlinedStyle = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -678,6 +701,29 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(280, 58);
             this.panel6.TabIndex = 4;
+            // 
+            // inpt_name
+            // 
+            this.inpt_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_name.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_name.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_name.BorderRadius = 0;
+            this.inpt_name.BorderSize = 2;
+            this.inpt_name.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_name.ForeColor = System.Drawing.Color.White;
+            this.inpt_name.Location = new System.Drawing.Point(0, 20);
+            this.inpt_name.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_name.Multiline = false;
+            this.inpt_name.Name = "inpt_name";
+            this.inpt_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_name.PasswordChar = false;
+            this.inpt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_name.PlaceholderText = "";
+            this.inpt_name.Size = new System.Drawing.Size(280, 31);
+            this.inpt_name.TabIndex = 3;
+            this.inpt_name.Texts = "";
+            this.inpt_name.UnderlinedStyle = false;
             // 
             // label4
             // 
@@ -753,52 +799,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin cơ bản";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // inpt_desc
-            // 
-            this.inpt_desc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_desc.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_desc.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_desc.BorderRadius = 0;
-            this.inpt_desc.BorderSize = 2;
-            this.inpt_desc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_desc.ForeColor = System.Drawing.Color.White;
-            this.inpt_desc.Location = new System.Drawing.Point(0, 20);
-            this.inpt_desc.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_desc.Multiline = false;
-            this.inpt_desc.Name = "inpt_desc";
-            this.inpt_desc.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_desc.PasswordChar = false;
-            this.inpt_desc.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_desc.PlaceholderText = "";
-            this.inpt_desc.Size = new System.Drawing.Size(280, 31);
-            this.inpt_desc.TabIndex = 3;
-            this.inpt_desc.Texts = "";
-            this.inpt_desc.UnderlinedStyle = false;
-            // 
-            // inpt_name
-            // 
-            this.inpt_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_name.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_name.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_name.BorderRadius = 0;
-            this.inpt_name.BorderSize = 2;
-            this.inpt_name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_name.ForeColor = System.Drawing.Color.White;
-            this.inpt_name.Location = new System.Drawing.Point(0, 20);
-            this.inpt_name.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_name.Multiline = false;
-            this.inpt_name.Name = "inpt_name";
-            this.inpt_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_name.PasswordChar = false;
-            this.inpt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_name.PlaceholderText = "";
-            this.inpt_name.Size = new System.Drawing.Size(280, 31);
-            this.inpt_name.TabIndex = 3;
-            this.inpt_name.Texts = "";
-            this.inpt_name.UnderlinedStyle = false;
             // 
             // RoleAdd
             // 

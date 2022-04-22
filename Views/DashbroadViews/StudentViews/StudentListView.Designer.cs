@@ -351,7 +351,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             this.type_search.Items.AddRange(new object[] {
             "Mã sinh viên",
             "Tên sinh viên",
-            "Lớp"});
+            "Lớp",
+            "Trạng thái"});
             this.type_search.ItemsAppearance.Parent = this.type_search;
             this.type_search.Location = new System.Drawing.Point(84, 0);
             this.type_search.Name = "type_search";

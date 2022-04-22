@@ -28,6 +28,30 @@ namespace QuanLySinhVien.Views.DashbroadViews.RoleViews
             this.type_search.SelectedIndex = 0;
 
             fillToTable(this.curPage, this.pageSize, this.roles);
+            permissionCheck();
+        }
+        private void permissionCheck()
+        {
+            string[] permis = Properties.Settings.Default.Permission.Split('-');
+            foreach (var per in permis)
+            {
+                char[] p = per.ToCharArray();
+                if (p[0].Equals('R'))
+                {
+                    if (p[2].Equals('0'))
+                    {
+                        this.btn_add.Enabled = false;
+                    }
+                    if (p[3].Equals('0'))
+                    {
+                        this.btn_update.Enabled = false;
+                    }
+                    if (p[4].Equals('0'))
+                    {
+                        this.btn_delete.Enabled = false;
+                    }
+                }
+            }
         }
 
         private void fillToTable(int page, int size, List<Role> roleList)
@@ -186,10 +210,13 @@ namespace QuanLySinhVien.Views.DashbroadViews.RoleViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            if (getCurrentId().Length < 2)
+            if (btn_update.Enabled)
             {
-                this.Tag = "update-role/" + getCurrentId()[0];
-                this.Close();
+                if (getCurrentId().Length < 2)
+                {
+                    this.Tag = "update-role/" + getCurrentId()[0];
+                    this.Close();
+                }
             }
         }
 

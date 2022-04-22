@@ -26,6 +26,7 @@ namespace QuanLySinhVien.Models
                 Role role = new Role();
                 role.Name = "Quản trị viên";
                 role.Description = "Super User";
+                role.Permission = "F1111-R1111-T1111-C1111-S1111-A1111";
                 role.ID = 1;
 
                 roleServices.Add(role);

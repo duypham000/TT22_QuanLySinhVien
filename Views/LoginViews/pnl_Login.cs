@@ -1,4 +1,6 @@
 ﻿using QuanLySinhVien.Controllers;
+using QuanLySinhVien.Models.Model;
+using QuanLySinhVien.Models.ModelServices;
 using QuanLySinhVien.Views.LoginView;
 using System;
 using System.Collections.Generic;

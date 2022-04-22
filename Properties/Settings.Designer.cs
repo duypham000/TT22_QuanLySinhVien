@@ -58,5 +58,17 @@ namespace QuanLySinhVien.Properties {
                 this["Authen"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Permission {
+            get {
+                return ((string)(this["Permission"]));
+            }
+            set {
+                this["Permission"] = value;
+            }
+        }
     }
 }

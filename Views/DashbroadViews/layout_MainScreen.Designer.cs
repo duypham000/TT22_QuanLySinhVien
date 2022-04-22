@@ -500,6 +500,7 @@
             this.Name = "layout_MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.layout_MainScreen_Load);
             this.ClientSizeChanged += new System.EventHandler(this.layout_MainScreen_ClientSizeChanged);
             this.panel_sideMenu.ResumeLayout(false);
             this.submenu_qltk.ResumeLayout(false);

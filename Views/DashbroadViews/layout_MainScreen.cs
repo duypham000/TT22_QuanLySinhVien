@@ -20,10 +20,95 @@ namespace QuanLySinhVien.Views.DashbroadViews
             showHome();
         }
 
+        private void permissionCheck()
+        {
+            string[] permis = Properties.Settings.Default.Permission.Split('-');
+            int acc = 0;
+            foreach (string per in permis)
+            {
+                char[] p = per.ToCharArray();
+                if (p[1].Equals('0'))
+                {
+                    if (p[0].Equals('C'))
+                    {
+                        this.opt_qll.Hide();
+                    }
+                    else
+                    if (p[0].Equals('A'))
+                    {
+                        this.btn_userlist.Hide();
+                    }
+                    else
+                    if (p[0].Equals('R'))
+                    {
+                        this.btn_rolelist.Hide();
+                    }
+                    else
+                    if (p[0].Equals('F'))
+                    {
+                        this.otp_qlk.Hide();
+                    }
+                    else
+                    if (p[0].Equals('S'))
+                    {
+                        this.opt_qlsv.Hide();
+                    }
+                    else
+                    if (p[0].Equals('T'))
+                    {
+                        this.opt_qlgv.Hide();
+                    }
+                }
+                else
+                {
+                    if (p[0].Equals('C'))
+                    {
+                        this.opt_qll.Show();
+                    }
+                    else
+                    if (p[0].Equals('A'))
+                    {
+                        acc++;
+                        this.btn_userlist.Show();
+                    }
+                    else
+                    if (p[0].Equals('R'))
+                    {
+                        acc++;
+                        this.btn_rolelist.Show();
+                    }
+                    else
+                    if (p[0].Equals('F'))
+                    {
+                        this.otp_qlk.Show();
+                    }
+                    else
+                    if (p[0].Equals('S'))
+                    {
+                        this.opt_qlsv.Show();
+                    }
+                    else
+                    if (p[0].Equals('T'))
+                    {
+                        this.opt_qlgv.Show();
+                    }
+                }
+            }
+            if (acc == 0)
+            {
+                this.opt_qltk.Hide();
+            }
+            else
+            {
+                this.opt_qltk.Show();
+            }
+        }
+
         private void exitAuthen(object sender, EventArgs e)
         {
             Properties.Settings.Default.Authen = false;
             Properties.Settings.Default.Password = "";
+            Properties.Settings.Default.Permission = "";
             Properties.Settings.Default.Save();
 
             this.Close();
@@ -36,8 +121,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
 
         private void hideSubmenu()
         {
-            //if (this.submenu_qlsv.Visible == true)
-            //    this.submenu_qlsv.Visible = false;
             if (this.submenu_qltk.Visible == true)
                 this.submenu_qltk.Visible = false;
         }
@@ -57,15 +140,11 @@ namespace QuanLySinhVien.Views.DashbroadViews
 
         private void opt_qltk_Click(object sender, EventArgs e)
         {
-            //this.frm_title.Text = "Quản lý tài khoản";
             showSubmenu(this.submenu_qltk);
         }
 
         private void opt_qlsv_Click(object sender, EventArgs e)
         {
-            //this.frm_title.Text = "Quản lý sinh viên";
-            //showSubmenu(this.submenu_qlsv);
-
             StudentListView studentListView = new StudentListView();
             openChildForm(studentListView);
         }
@@ -464,6 +543,11 @@ namespace QuanLySinhVien.Views.DashbroadViews
             ClassListView classListView = new ClassListView();
             changeNav("list-class");
             openChildForm(classListView);
+        }
+
+        private void layout_MainScreen_Load(object sender, EventArgs e)
+        {
+            permissionCheck();
         }
     }
 }

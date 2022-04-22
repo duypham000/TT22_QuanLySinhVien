@@ -289,8 +289,10 @@ namespace QuanLySinhVien.Views.DashbroadViews.TeacherViews
             this.type_search.HoverState.Parent = this.type_search;
             this.type_search.ItemHeight = 30;
             this.type_search.Items.AddRange(new object[] {
-            "Tên khoa",
-            "Trưởng khoa"});
+            "Tên giáo viên",
+            "Username",
+            "Lớp chủ nhiệm",
+            "Trạng thái"});
             this.type_search.ItemsAppearance.Parent = this.type_search;
             this.type_search.Location = new System.Drawing.Point(84, 0);
             this.type_search.Name = "type_search";

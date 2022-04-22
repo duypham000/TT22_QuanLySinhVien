@@ -13,12 +13,14 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
         private StudentServices studentServices = null;
 
         private List<Student> students = null;
+        private List<User> users = null;
+        private List<Class> classes = null;
 
         private int pageSize = 11;
         private int curPage = 1;
         private int totalPage = 1;
         private string searchType = null;
-        private string[] searchOption = { "id", "name", "class" };
+        private string[] searchOption = { "id", "name", "class", "status" };
 
         public StudentListView()
         {
@@ -28,13 +30,38 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             this.studentServices = new StudentServices();
 
             this.students = studentServices.GetAll();
+            this.classes = classServices.GetAll();
+            this.users = userServices.GetAllUsers();
 
             this.searchType = "id";
             this.type_search.SelectedIndex = 0;
 
             fillToTable(this.curPage, this.pageSize, this.students);
+            permissionCheck();
         }
-
+        private void permissionCheck()
+        {
+            string[] permis = Properties.Settings.Default.Permission.Split('-');
+            foreach (var per in permis)
+            {
+                char[] p = per.ToCharArray();
+                if (p[0].Equals('S'))
+                {
+                    if (p[2].Equals('0'))
+                    {
+                        this.btn_add.Enabled = false;
+                    }
+                    if (p[3].Equals('0'))
+                    {
+                        this.btn_update.Enabled = false;
+                    }
+                    if (p[4].Equals('0'))
+                    {
+                        this.btn_delete.Enabled = false;
+                    }
+                }
+            }
+        }
         private void fillToTable(int page, int size, List<Student> listStudent)
         {
             this.studentTable.Rows.Clear();
@@ -93,8 +120,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
                 newListStudent = listStudent;
             }
 
-            List<User> users = userServices.GetAllUsers();
-            List<Class> classes = classServices.GetAll();
             string className = "";
 
             foreach (var student in newListStudent)
@@ -172,7 +197,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             for (int i = 0; i < total; i++)
             {
                 int index = this.studentTable.SelectedRows[i].Index;
-                index += (curPage-1) * pageSize;
+                index += (curPage - 1) * pageSize;
                 res[i] = this.students[index].ID;
             }
             return res;
@@ -205,11 +230,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
 
         private void updateStudent(object sender, EventArgs e)
         {
-            if (getCurrentStudentID().Length < 2)
-            {
-                this.Tag = "update-student/" + getCurrentStudentID()[0];
-                this.Close();
-            }
+            if (this.btn_update.Enabled)
+                if (getCurrentStudentID().Length < 2)
+                {
+                    this.Tag = "update-student/" + getCurrentStudentID()[0];
+                    this.Close();
+                }
         }
 
         #endregion StudentControl
@@ -230,11 +256,34 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
                     }
                 }
             }
+            else if (this.searchType.Equals("class"))
+            {
+                foreach (var student in students)
+                {
+                    foreach (var @class in classes)
+                    {
+                        if (@class.ID.Equals(student.ClassID) && @class.Name.Contains(searchValue))
+                        {
+                            res.Add(student);
+                        }
+                    }
+                }
+            }
             else if (this.searchType.Equals("name"))
             {
                 foreach (var student in students)
                 {
                     if (student.Name.Contains(searchValue))
+                    {
+                        res.Add(student);
+                    }
+                }
+            }
+            else if (this.searchType.Equals("status"))
+            {
+                foreach (var student in students)
+                {
+                    if (student.Status.Contains(searchValue))
                     {
                         res.Add(student);
                     }

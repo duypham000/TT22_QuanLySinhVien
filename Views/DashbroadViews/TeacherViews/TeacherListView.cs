@@ -2,12 +2,6 @@
 using QuanLySinhVien.Models.ModelServices;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLySinhVien.Views.DashbroadViews.TeacherViews
@@ -26,7 +20,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.TeacherViews
         private string searchType = null;
         private string[] searchOption = { "name", "class" };
 
-
         public TeacherListView()
         {
             InitializeComponent();
@@ -41,6 +34,30 @@ namespace QuanLySinhVien.Views.DashbroadViews.TeacherViews
             this.type_search.SelectedIndex = 0;
 
             fillToTable(this.curPage, this.pageSize, this.teachers);
+            permissionCheck();
+        }
+        private void permissionCheck()
+        {
+            string[] permis = Properties.Settings.Default.Permission.Split('-');
+            foreach (var per in permis)
+            {
+                char[] p = per.ToCharArray();
+                if (p[0].Equals('T'))
+                {
+                    if (p[2].Equals('0'))
+                    {
+                        this.btn_add.Enabled = false;
+                    }
+                    if (p[3].Equals('0'))
+                    {
+                        this.btn_update.Enabled = false;
+                    }
+                    if (p[4].Equals('0'))
+                    {
+                        this.btn_delete.Enabled = false;
+                    }
+                }
+            }
         }
 
         private void fillToTable(int page, int size, List<Teacher> teacherList)
@@ -214,11 +231,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.TeacherViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            if (getCurrentId().Length < 2)
-            {
-                this.Tag = "update-teacher/" + getCurrentId()[0];
-                this.Close();
-            }
+            if (this.btn_update.Enabled)
+                if (getCurrentId().Length < 2)
+                {
+                    this.Tag = "update-teacher/" + getCurrentId()[0];
+                    this.Close();
+                }
         }
 
         #endregion UserControl

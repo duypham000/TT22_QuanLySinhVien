@@ -285,7 +285,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.type_search.Items.AddRange(new object[] {
             "Tên lớp",
             "Tên khoa",
-            "Chủ nhiệm"});
+            "Chủ nhiệm",
+            "Lớp trưởng"});
             this.type_search.ItemsAppearance.Parent = this.type_search;
             this.type_search.Location = new System.Drawing.Point(84, 0);
             this.type_search.Name = "type_search";

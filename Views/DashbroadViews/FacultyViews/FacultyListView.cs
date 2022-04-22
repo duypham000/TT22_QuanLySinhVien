@@ -30,6 +30,30 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             this.type_search.SelectedIndex = 0;
 
             fillToTable(this.curPage, this.pageSize, this.faculties);
+            permissionCheck();
+        }
+        private void permissionCheck()
+        {
+            string[] permis = Properties.Settings.Default.Permission.Split('-');
+            foreach (var per in permis)
+            {
+                char[] p = per.ToCharArray();
+                if (p[0].Equals('F'))
+                {
+                    if (p[2].Equals('0'))
+                    {
+                        this.btn_add.Enabled = false;
+                    }
+                    if (p[3].Equals('0'))
+                    {
+                        this.btn_update.Enabled = false;
+                    }
+                    if (p[4].Equals('0'))
+                    {
+                        this.btn_delete.Enabled = false;
+                    }
+                }
+            }
         }
 
         private void fillToTable(int page, int size, List<Faculty> faculityList)
@@ -164,7 +188,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             for (int i = 0; i < total; i++)
             {
                 int index = this.classTable.SelectedRows[i].Index;
-                index += (curPage-1) * pageSize;
+                index += (curPage - 1) * pageSize;
                 res[i] = faculties[index].ID;
             }
             return res;
@@ -196,10 +220,13 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            if (getCurrentId().Length < 2)
+            if (this.btn_update.Enabled)
             {
-                this.Tag = "update-faculty/" + getCurrentId()[0];
-                this.Close();
+                if (getCurrentId().Length < 2)
+                {
+                    this.Tag = "update-faculty/" + getCurrentId()[0];
+                    this.Close();
+                }
             }
         }
 

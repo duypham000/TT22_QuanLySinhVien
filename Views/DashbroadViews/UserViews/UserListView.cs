@@ -27,6 +27,30 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.type_search.SelectedIndex = 0;
 
             fillToTable(this.curPage, this.pageSize, this.users);
+            permissionCheck();
+        }
+        private void permissionCheck()
+        {
+            string[] permis = Properties.Settings.Default.Permission.Split('-');
+            foreach (var per in permis)
+            {
+                char[] p = per.ToCharArray();
+                if (p[0].Equals('A'))
+                {
+                    if (p[2].Equals('0'))
+                    {
+                        this.btn_add.Enabled = false;
+                    }
+                    if (p[3].Equals('0'))
+                    {
+                        this.btn_update.Enabled = false;
+                    }
+                    if (p[4].Equals('0'))
+                    {
+                        this.btn_delete.Enabled = false;
+                    }
+                }
+            }
         }
 
         private void fillToTable(int page, int size, List<User> usersList)
@@ -185,11 +209,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            if (getCurrentUsername().Length < 2)
-            {
-                this.Tag = "update-user/" + getCurrentUsername()[0];
-                this.Close();
-            }
+            if (this.btn_update.Enabled)
+                if (getCurrentUsername().Length < 2)
+                {
+                    this.Tag = "update-user/" + getCurrentUsername()[0];
+                    this.Close();
+                }
         }
 
         #endregion UserControl
@@ -199,7 +224,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.users = userServices.GetAllUsers();
             List<User> res = new List<User>();
             var searchValue = this.inpt_search.Text;
-            if (this.searchType.Equals("username")) {
+            if (this.searchType.Equals("username"))
+            {
                 foreach (var user in users)
                 {
                     if (user.Username.Contains(searchValue))
@@ -207,7 +233,8 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
                         res.Add(user);
                     }
                 }
-            }else if (this.searchType.Equals("email"))
+            }
+            else if (this.searchType.Equals("email"))
             {
                 foreach (var user in users)
                 {
