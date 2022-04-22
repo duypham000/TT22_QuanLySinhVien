@@ -14,14 +14,16 @@ namespace QuanLySinhVien.Models.Model
             Users = new HashSet<User>();
         }
 
-        [StringLength(50)]
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         [StringLength(250)]
         public string Name { get; set; }
 
         [StringLength(500)]
         public string Description { get; set; }
+
+        [StringLength(50)]
+        public string Permission { get; set; }
 
         [StringLength(250)]
         public string CreatedBy { get; set; }

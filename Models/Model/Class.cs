@@ -12,20 +12,18 @@ namespace QuanLySinhVien.Models.Model
         public Class()
         {
             Students = new HashSet<Student>();
-            Teachers = new HashSet<Teacher>();
         }
 
-        [StringLength(50)]
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         [StringLength(50)]
-        public string FacultyID { get; set; }
+        public string Name { get; set; }
 
-        [StringLength(50)]
-        public string LeaderID { get; set; }
+        public int? FacultyID { get; set; }
 
-        [StringLength(50)]
-        public string MonitorID { get; set; }
+        public int? LeaderID { get; set; }
+
+        public int? MonitorID { get; set; }
 
         [StringLength(250)]
         public string CreatedBy { get; set; }
@@ -39,14 +37,13 @@ namespace QuanLySinhVien.Models.Model
 
         public virtual Faculty Faculty { get; set; }
 
+        public virtual Faculty Faculty1 { get; set; }
+
         public virtual Student Student { get; set; }
 
         public virtual Teacher Teacher { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Students { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Teacher> Teachers { get; set; }
     }
 }

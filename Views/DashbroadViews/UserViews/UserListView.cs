@@ -135,8 +135,12 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         {
             double currSize = this.userTable.Height - this.userTable.ColumnHeadersHeight;
             double size = currSize / this.userTable.RowTemplate.Height;
+            int oldSize = this.pageSize;
             this.pageSize = (int)Math.Floor(size);
-            fillToTable(this.curPage, this.pageSize, this.users);
+            if (oldSize != this.pageSize)
+            {
+                fillToTable(this.curPage, this.pageSize, this.users);
+            }
         }
 
         #endregion NavControl

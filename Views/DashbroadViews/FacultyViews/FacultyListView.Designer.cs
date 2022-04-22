@@ -36,7 +36,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.classTable = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leader = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -113,7 +112,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             this.classTable.ColumnHeadersHeight = 50;
             this.classTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.classTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
             this.name,
             this.leader});
             this.classTable.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -148,12 +146,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             this.classTable.Size = new System.Drawing.Size(916, 461);
             this.classTable.TabIndex = 0;
             this.classTable.DoubleClick += new System.EventHandler(this.updateUser);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Mã khoa";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
             // 
             // name
             // 
@@ -275,7 +267,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             this.type_search.HoverState.Parent = this.type_search;
             this.type_search.ItemHeight = 30;
             this.type_search.Items.AddRange(new object[] {
-            "Mã khoa",
             "Tên khoa",
             "Trưởng khoa"});
             this.type_search.ItemsAppearance.Parent = this.type_search;
@@ -477,7 +468,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
         private System.Windows.Forms.TextBox inpt_search;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox type_search;
         private System.Windows.Forms.Label label1;
-        private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn leader;
     }

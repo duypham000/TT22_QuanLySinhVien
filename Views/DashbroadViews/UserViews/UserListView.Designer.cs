@@ -38,6 +38,9 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.userTable = new System.Windows.Forms.DataGridView();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -55,9 +58,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.nav_display = new System.Windows.Forms.Button();
             this.nav_toPre = new System.Windows.Forms.Button();
             this.nav_toFirst = new System.Windows.Forms.Button();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
@@ -150,6 +150,28 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.userTable.Size = new System.Drawing.Size(916, 461);
             this.userTable.TabIndex = 0;
             this.userTable.DoubleClick += new System.EventHandler(this.updateUser);
+            // 
+            // username
+            // 
+            this.username.HeaderText = "Username";
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            this.username.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // role
+            // 
+            this.role.HeaderText = "Vai trò";
+            this.role.Name = "role";
+            this.role.ReadOnly = true;
+            this.role.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // email
+            // 
+            this.email.FillWeight = 130F;
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // panel2
             // 
@@ -415,28 +437,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.nav_toFirst.Text = "<<";
             this.nav_toFirst.UseVisualStyleBackColor = false;
             this.nav_toFirst.Click += new System.EventHandler(this.toFirst);
-            // 
-            // username
-            // 
-            this.username.HeaderText = "Username";
-            this.username.Name = "username";
-            this.username.ReadOnly = true;
-            this.username.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // role
-            // 
-            this.role.HeaderText = "Vai trò";
-            this.role.Name = "role";
-            this.role.ReadOnly = true;
-            this.role.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // email
-            // 
-            this.email.FillWeight = 130F;
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // UserListView
             // 

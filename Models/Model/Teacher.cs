@@ -15,20 +15,17 @@ namespace QuanLySinhVien.Models.Model
             Faculties = new HashSet<Faculty>();
         }
 
-        [StringLength(50)]
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         [StringLength(250)]
         public string Name { get; set; }
 
-        [StringLength(250)]
-        public string Username { get; set; }
+        public int? UserID { get; set; }
 
         [StringLength(50)]
         public string Phone { get; set; }
 
-        [StringLength(50)]
-        public string ClassID { get; set; }
+        public int? ClassID { get; set; }
 
         [StringLength(250)]
         public string CreatedBy { get; set; }
@@ -46,8 +43,6 @@ namespace QuanLySinhVien.Models.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Class> Classes { get; set; }
-
-        public virtual Class Class { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Faculty> Faculties { get; set; }

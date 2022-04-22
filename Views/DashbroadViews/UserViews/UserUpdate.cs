@@ -57,16 +57,23 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
                 this.inpt_email.Texts != ""
             )
             {
-                User user = new User();
-                user.Username = this.inpt_username.Texts;
-                user.Password = this.inpt_password.Texts;
-                user.Email = this.inpt_email.Texts;
-                user.RoleID = roles[this.inpt_role.SelectedIndex].ID;
-                user.UpdatedBy = Properties.Settings.Default.Username;
-                user.UpdatedDate = DateTime.Now;
 
-                userServices.Update(user, this.username);
-                backToList();
+                if (this.inpt_email.Texts.Contains("@gmail.com"))
+                {
+                    User user = userServices.GetByUsername(username);
+                    user.Username = this.inpt_username.Texts;
+                    user.Password = this.inpt_password.Texts;
+                    user.Email = this.inpt_email.Texts;
+                    user.RoleID = roles[this.inpt_role.SelectedIndex].ID;
+                    user.UpdatedBy = Properties.Settings.Default.Username;
+                    user.UpdatedDate = DateTime.Now;
+
+                    userServices.Update(user);
+                    backToList();
+                }else
+                {
+                    MessageBox.Show("Nhập đúng định dạng email!");
+                }
             }
             else
             {

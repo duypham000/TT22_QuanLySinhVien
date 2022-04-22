@@ -14,8 +14,11 @@ namespace QuanLySinhVien.Models.Model
             Classes = new HashSet<Class>();
         }
 
-        [StringLength(50)]
-        public string ID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+
+        [StringLength(250)]
+        public string StudentID { get; set; }
 
         [StringLength(250)]
         public string Name { get; set; }
@@ -37,8 +40,7 @@ namespace QuanLySinhVien.Models.Model
         [StringLength(250)]
         public string ClassRole { get; set; }
 
-        [StringLength(50)]
-        public string ClassID { get; set; }
+        public int? ClassID { get; set; }
 
         [StringLength(250)]
         public string CreatedBy { get; set; }

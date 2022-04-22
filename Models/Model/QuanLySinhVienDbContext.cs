@@ -22,19 +22,7 @@ namespace QuanLySinhVien.Models.Model
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Class>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Class>()
-                .Property(e => e.FacultyID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Class>()
-                .Property(e => e.LeaderID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Class>()
-                .Property(e => e.MonitorID)
+                .Property(e => e.Name)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Class>()
@@ -50,21 +38,8 @@ namespace QuanLySinhVien.Models.Model
                 .WithOptional(e => e.Class)
                 .HasForeignKey(e => e.ClassID);
 
-            modelBuilder.Entity<Class>()
-                .HasMany(e => e.Teachers)
-                .WithOptional(e => e.Class)
-                .HasForeignKey(e => e.ClassID);
-
-            modelBuilder.Entity<Faculty>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
-
             modelBuilder.Entity<Faculty>()
                 .Property(e => e.Name)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Faculty>()
-                .Property(e => e.LeaderID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Faculty>()
@@ -75,8 +50,18 @@ namespace QuanLySinhVien.Models.Model
                 .Property(e => e.UpdatedBy)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Faculty>()
+                .HasMany(e => e.Classes)
+                .WithOptional(e => e.Faculty)
+                .HasForeignKey(e => e.FacultyID);
+
+            modelBuilder.Entity<Faculty>()
+                .HasMany(e => e.Classes1)
+                .WithOptional(e => e.Faculty1)
+                .HasForeignKey(e => e.FacultyID);
+
             modelBuilder.Entity<Role>()
-                .Property(e => e.ID)
+                .Property(e => e.Permission)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Role>()
@@ -93,7 +78,7 @@ namespace QuanLySinhVien.Models.Model
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Student>()
-                .Property(e => e.ID)
+                .Property(e => e.StudentID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Student>()
@@ -102,10 +87,6 @@ namespace QuanLySinhVien.Models.Model
 
             modelBuilder.Entity<Student>()
                 .Property(e => e.DateOfBirth)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Student>()
-                .Property(e => e.ClassID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Student>()
@@ -122,19 +103,7 @@ namespace QuanLySinhVien.Models.Model
                 .HasForeignKey(e => e.MonitorID);
 
             modelBuilder.Entity<Teacher>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Teacher>()
-                .Property(e => e.Username)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Teacher>()
                 .Property(e => e.Phone)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Teacher>()
-                .Property(e => e.ClassID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Teacher>()
@@ -157,10 +126,6 @@ namespace QuanLySinhVien.Models.Model
 
             modelBuilder.Entity<User>()
                 .Property(e => e.Username)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<User>()
-                .Property(e => e.RoleID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()

@@ -33,20 +33,22 @@ namespace QuanLySinhVien.Models.ModelServices
             return dbContext.Users.SingleOrDefault(x => x.Username == username);
         }
 
-        public bool Update(User user, string username)
+        public bool Update(User user)
         {
-            var oldUser = dbContext.Users.Find(username);
-            if (oldUser == null)
+            var oldUser = dbContext.Users.Find(user.ID);
+            if (oldUser != null)
             {
-                return false;
-            }
-            else
-            {
-                dbContext.Users.Remove(oldUser);
-                dbContext.Users.Add(user);
+                dbContext.Users.Find(user.ID).Username = user.Username;
+                dbContext.Users.Find(user.ID).RoleID = user.RoleID;
+                dbContext.Users.Find(user.ID).Password = user.Password;
+                dbContext.Users.Find(user.ID).Email = user.Email;
+                dbContext.Users.Find(user.ID).UpdatedBy = user.UpdatedBy;
+                dbContext.Users.Find(user.ID).UpdatedDate = user.UpdatedDate;
+
                 dbContext.SaveChanges();
                 return true;
             }
+            return false;
         }
 
         public void Add(User user)

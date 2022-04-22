@@ -153,7 +153,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             // 
             // id
             // 
-            this.id.HeaderText = "Mã lớp";
+            this.id.HeaderText = "Tên lớp";
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
@@ -283,9 +283,9 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.type_search.HoverState.Parent = this.type_search;
             this.type_search.ItemHeight = 30;
             this.type_search.Items.AddRange(new object[] {
-            "Mã khoa",
+            "Tên lớp",
             "Tên khoa",
-            "Trưởng khoa"});
+            "Chủ nhiệm"});
             this.type_search.ItemsAppearance.Parent = this.type_search;
             this.type_search.Location = new System.Drawing.Point(84, 0);
             this.type_search.Name = "type_search";

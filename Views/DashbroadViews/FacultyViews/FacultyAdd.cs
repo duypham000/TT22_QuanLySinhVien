@@ -2,12 +2,6 @@
 using QuanLySinhVien.Models.ModelServices;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
@@ -40,21 +34,21 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
         private void btn_add_Click(object sender, EventArgs e)
         {
             if (
-                this.inpt_id.Texts != "" &&
-                this.inpt_name.Texts != "" &&
-                this.inpt_leader.Text != ""
+                this.inpt_name.Texts != ""
             )
             {
                 Faculty faculty = new Faculty();
 
-                faculty.ID = this.inpt_id.Texts;
                 faculty.Name = this.inpt_name.Texts;
 
-                foreach (var teacher in teachers)
+                if (this.inpt_leader.Text != "")
                 {
-                    if (teacher.Name.Equals(this.inpt_leader.Text))
+                    foreach (var teacher in teachers)
                     {
-                        faculty.LeaderID = teacher.ID;
+                        if (teacher.Name.Equals(this.inpt_leader.Text))
+                        {
+                            faculty.LeaderID = teacher.ID;
+                        }
                     }
                 }
 
@@ -66,7 +60,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             }
             else
             {
-                MessageBox.Show("Hãy nhập đúng và đủ thông tin!");
+                MessageBox.Show("Hãy nhập Tên khoa!");
             }
         }
 

@@ -95,10 +95,19 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
 
             List<User> users = userServices.GetAllUsers();
             List<Class> classes = classServices.GetAll();
+            string className = "";
 
             foreach (var student in newListStudent)
             {
-                this.studentTable.Rows.Add(student.ID, student.Name, student.ClassID, student.ClassRole, student.Address, student.DateOfBirth, student.Religion, student.Phone, student.SchoolProfile, student.Status);
+                foreach (var @class in classes)
+                {
+                    if (@class.ID == student.ClassID)
+                    {
+                        className = @class.Name;
+                    }
+                }
+
+                this.studentTable.Rows.Add(student.StudentID, student.Name, className, student.ClassRole, student.Address, student.DateOfBirth, student.Religion, student.Phone, student.SchoolProfile, student.Status);
             }
         }
 
@@ -144,22 +153,27 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
         {
             double currSize = this.studentTable.Height - this.studentTable.ColumnHeadersHeight;
             double size = currSize / this.studentTable.RowTemplate.Height;
+            int oldSize = this.pageSize;
             this.pageSize = (int)Math.Floor(size);
-            fillToTable(this.curPage, this.pageSize, this.students);
+            if (oldSize != this.pageSize)
+            {
+                fillToTable(this.curPage, this.pageSize, this.students);
+            }
         }
 
         #endregion NavControl
 
         #region StudentControl
 
-        private string[] getCurrentStudentID()
+        private int[] getCurrentStudentID()
         {
             int total = this.studentTable.SelectedRows.Count;
-            string[] res = new string[total];
+            int[] res = new int[total];
             for (int i = 0; i < total; i++)
             {
                 int index = this.studentTable.SelectedRows[i].Index;
-                res[i] = this.studentTable.Rows[index].Cells[0].Value.ToString();
+                index += (curPage-1) * pageSize;
+                res[i] = this.students[index].ID;
             }
             return res;
         }
@@ -210,7 +224,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             {
                 foreach (var student in students)
                 {
-                    if (student.ID.Contains(searchValue))
+                    if (student.StudentID.Contains(searchValue))
                     {
                         res.Add(student);
                     }

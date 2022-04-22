@@ -96,11 +96,23 @@
     <Compile Include="Views\CommonViews\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DashbroadViews\ClassViews\ClassAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\ClassViews\ClassAdd.Designer.cs">
+      <DependentUpon>ClassAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DashbroadViews\ClassViews\ClassListView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\DashbroadViews\ClassViews\ClassListView.Designer.cs">
       <DependentUpon>ClassListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\ClassViews\ClassUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\ClassViews\ClassUpdate.Designer.cs">
+      <DependentUpon>ClassUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\DashbroadViews\FacultyViews\FacultyAdd.cs">
       <SubType>Form</SubType>
@@ -126,6 +138,24 @@
     <Compile Include="Views\DashbroadViews\layout_MainScreen.Designer.cs">
       <DependentUpon>layout_MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DashbroadViews\RoleViews\RoleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\RoleViews\RoleAdd.Designer.cs">
+      <DependentUpon>RoleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\RoleViews\RoleListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\RoleViews\RoleListView.Designer.cs">
+      <DependentUpon>RoleListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\RoleViews\RoleUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\RoleViews\RoleUpdate.Designer.cs">
+      <DependentUpon>RoleUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DashbroadViews\StudentViews\StudentAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +173,24 @@
     </Compile>
     <Compile Include="Views\DashbroadViews\StudentViews\StudentUpdateView.Designer.cs">
       <DependentUpon>StudentUpdateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\TeacherViews\TeacherAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\TeacherViews\TeacherAdd.Designer.cs">
+      <DependentUpon>TeacherAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\TeacherViews\TeacherListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\TeacherViews\TeacherListView.Designer.cs">
+      <DependentUpon>TeacherListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\TeacherViews\TeacherUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\TeacherViews\TeacherUpdate.Designer.cs">
+      <DependentUpon>TeacherUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\DashbroadViews\UserViews\UserAdd.cs">
       <SubType>Form</SubType>
@@ -193,8 +241,14 @@
     <EmbeddedResource Include="Views\CommonViews\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\ClassViews\ClassAdd.resx">
+      <DependentUpon>ClassAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\ClassViews\ClassListView.resx">
       <DependentUpon>ClassListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\ClassViews\ClassUpdate.resx">
+      <DependentUpon>ClassUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\FacultyViews\FacultyAdd.resx">
       <DependentUpon>FacultyAdd.cs</DependentUpon>
@@ -208,6 +262,15 @@
     <EmbeddedResource Include="Views\DashbroadViews\layout_MainScreen.resx">
       <DependentUpon>layout_MainScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\RoleViews\RoleAdd.resx">
+      <DependentUpon>RoleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\RoleViews\RoleListView.resx">
+      <DependentUpon>RoleListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\RoleViews\RoleUpdate.resx">
+      <DependentUpon>RoleUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\StudentViews\StudentAdd.resx">
       <DependentUpon>StudentAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +279,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\StudentViews\StudentUpdateView.resx">
       <DependentUpon>StudentUpdateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\TeacherViews\TeacherAdd.resx">
+      <DependentUpon>TeacherAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\TeacherViews\TeacherListView.resx">
+      <DependentUpon>TeacherListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\TeacherViews\TeacherUpdate.resx">
+      <DependentUpon>TeacherUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\UserViews\UserAdd.resx">
       <DependentUpon>UserAdd.cs</DependentUpon>

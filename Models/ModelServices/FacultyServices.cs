@@ -21,7 +21,7 @@ namespace QuanLySinhVien.Models.ModelServices
             return dbContext.Faculties.OrderByDescending(x => x.ID).ToList();
         }
 
-        public Faculty GetById(string id)
+        public Faculty GetById(int id)
         {
             return dbContext.Faculties.Find(id);
         }
@@ -32,13 +32,16 @@ namespace QuanLySinhVien.Models.ModelServices
             dbContext.SaveChanges();
         }
 
-        public bool Update(Faculty faculty, string id)
+        public bool Update(Faculty faculty)
         {
-            var oldFaculty = dbContext.Faculties.Find(id);
+            var oldFaculty = dbContext.Faculties.Find(faculty.ID);
             if (oldFaculty != null)
             {
-                dbContext.Faculties.Remove(oldFaculty);
-                dbContext.Faculties.Add(faculty);
+                dbContext.Faculties.Find(faculty.ID).Name = faculty.Name;
+                dbContext.Faculties.Find(faculty.ID).LeaderID = faculty.LeaderID;
+                dbContext.Faculties.Find(faculty.ID).UpdatedBy = faculty.UpdatedBy;
+                dbContext.Faculties.Find(faculty.ID).UpdatedDate = faculty.UpdatedDate;
+
                 dbContext.SaveChanges();
                 return true;
             }
@@ -55,7 +58,7 @@ namespace QuanLySinhVien.Models.ModelServices
             return false;
         }
 
-        public bool DeleteByID(string id)
+        public bool DeleteByID(int id)
         {
             Faculty faculty = dbContext.Faculties.Find(id);
             if ( faculty != null)

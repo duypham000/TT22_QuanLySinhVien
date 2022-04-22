@@ -22,7 +22,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
         private int curPage = 1;
         private int totalPage = 1;
         private string searchType = null;
-        private string[] searchOption = { "id", "leader", "monitor" };
+        private string[] searchOption = { "name", "faculty", "leader", "monitor" };
 
         public ClassListView()
         {
@@ -37,7 +37,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.teachers = teacherServices.GetAll();
             this.faculties = facultyServices.GetAll();
 
-            this.searchType = "id";
+            this.searchType = "name";
             this.type_search.SelectedIndex = 0;
 
             fillToTable(this.curPage, this.pageSize, this.classes);
@@ -112,11 +112,14 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
                     }
                 }
 
-                foreach (var student in students)
+                if (classi.MonitorID != null)
                 {
-                    if (classi.MonitorID.Equals(student.ID))
+                    foreach (var student in students)
                     {
-                        monitorName = student.Name;
+                        if (classi.MonitorID.Equals(student.ID))
+                        {
+                            monitorName = student.Name;
+                        }
                     }
                 }
 
@@ -128,7 +131,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
                     }
                 }
 
-                this.classTable.Rows.Add(classi.ID, facultyName, leaderName, monitorName);
+                this.classTable.Rows.Add(classi.Name, facultyName, leaderName, monitorName);
             }
         }
 
@@ -174,22 +177,27 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
         {
             double currSize = this.classTable.Height - this.classTable.ColumnHeadersHeight;
             double size = currSize / this.classTable.RowTemplate.Height;
+            int oldSize = this.pageSize;
             this.pageSize = (int)Math.Floor(size);
-            fillToTable(this.curPage, this.pageSize, this.classes);
+            if (oldSize != this.pageSize)
+            {
+                fillToTable(this.curPage, this.pageSize, this.classes);
+            }
         }
 
         #endregion NavControl
 
         #region UserControl
 
-        private string[] getCurrentId()
+        private int[] getCurrentId()
         {
             int total = this.classTable.SelectedRows.Count;
-            string[] res = new string[total];
+            int[] res = new int[total];
             for (int i = 0; i < total; i++)
             {
                 int index = this.classTable.SelectedRows[i].Index;
-                res[i] = this.classTable.Rows[index].Cells[0].Value.ToString();
+                index += (curPage - 1) * pageSize;
+                res[i] = this.classes[index].ID;
             }
             return res;
         }
@@ -234,11 +242,11 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.classes = classServices.GetAll();
             List<Class> res = new List<Class>();
             var searchValue = this.inpt_search.Text;
-            if (this.searchType.Equals("id"))
+            if (this.searchType.Equals("name"))
             {
                 foreach (var @class in classes)
                 {
-                    if (@class.ID.Contains(searchValue))
+                    if (@class.Name.Contains(searchValue))
                     {
                         res.Add(@class);
                     }
@@ -251,6 +259,19 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
                     foreach (var teacher in teachers)
                     {
                         if (teacher.ID.Equals(@class.LeaderID) && teacher.Name.Contains(searchValue))
+                        {
+                            res.Add(@class);
+                        }
+                    }
+                }
+            }
+            else if (this.searchType.Equals("faculty"))
+            {
+                foreach (var @class in classes)
+                {
+                    foreach (var faculty in faculties)
+                    {
+                        if (faculty.ID.Equals(@class.LeaderID) && faculty.Name.Contains(searchValue))
                         {
                             res.Add(@class);
                         }

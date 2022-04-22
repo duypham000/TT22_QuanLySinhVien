@@ -36,6 +36,16 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.studentTable = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.re = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -53,16 +63,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             this.nav_display = new System.Windows.Forms.Button();
             this.nav_toPre = new System.Windows.Forms.Button();
             this.nav_toFirst = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.re = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentTable)).BeginInit();
@@ -160,6 +160,86 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             this.studentTable.Size = new System.Drawing.Size(916, 461);
             this.studentTable.TabIndex = 0;
             this.studentTable.DoubleClick += new System.EventHandler(this.updateStudent);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ID.HeaderText = "Mã sinh viên";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 119;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.name.HeaderText = "Tên sinh viên";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 124;
+            // 
+            // clas
+            // 
+            this.clas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clas.FillWeight = 50F;
+            this.clas.HeaderText = "Lớp";
+            this.clas.Name = "clas";
+            this.clas.ReadOnly = true;
+            this.clas.Width = 59;
+            // 
+            // role
+            // 
+            this.role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.role.HeaderText = "Chức vụ";
+            this.role.Name = "role";
+            this.role.ReadOnly = true;
+            this.role.Width = 89;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.address.HeaderText = "Địa chỉ";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            this.address.Width = 80;
+            // 
+            // dob
+            // 
+            this.dob.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dob.HeaderText = "Ngày sinh";
+            this.dob.Name = "dob";
+            this.dob.ReadOnly = true;
+            this.dob.Width = 101;
+            // 
+            // re
+            // 
+            this.re.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.re.HeaderText = "Tôn giáo";
+            this.re.Name = "re";
+            this.re.ReadOnly = true;
+            this.re.Width = 93;
+            // 
+            // phone
+            // 
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.phone.HeaderText = "Số điện thoại ";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            this.phone.Width = 129;
+            // 
+            // prof
+            // 
+            this.prof.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.prof.HeaderText = "Học vấn";
+            this.prof.Name = "prof";
+            this.prof.ReadOnly = true;
+            this.prof.Width = 90;
+            // 
+            // status
+            // 
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status.HeaderText = "Tình trạng học tập";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
             // 
             // panel2
             // 
@@ -426,86 +506,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             this.nav_toFirst.Text = "<<";
             this.nav_toFirst.UseVisualStyleBackColor = false;
             this.nav_toFirst.Click += new System.EventHandler(this.toFirst);
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ID.HeaderText = "Mã sinh viên";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 119;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.name.HeaderText = "Tên sinh viên";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 124;
-            // 
-            // clas
-            // 
-            this.clas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clas.FillWeight = 50F;
-            this.clas.HeaderText = "Lớp";
-            this.clas.Name = "clas";
-            this.clas.ReadOnly = true;
-            this.clas.Width = 59;
-            // 
-            // role
-            // 
-            this.role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.role.HeaderText = "Chức vụ";
-            this.role.Name = "role";
-            this.role.ReadOnly = true;
-            this.role.Width = 89;
-            // 
-            // address
-            // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.address.HeaderText = "Địa chỉ";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.Width = 80;
-            // 
-            // dob
-            // 
-            this.dob.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dob.HeaderText = "Ngày sinh";
-            this.dob.Name = "dob";
-            this.dob.ReadOnly = true;
-            this.dob.Width = 101;
-            // 
-            // re
-            // 
-            this.re.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.re.HeaderText = "Tôn giáo";
-            this.re.Name = "re";
-            this.re.ReadOnly = true;
-            this.re.Width = 93;
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.phone.HeaderText = "Số điện thoại ";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            this.phone.Width = 129;
-            // 
-            // prof
-            // 
-            this.prof.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.prof.HeaderText = "Học vấn";
-            this.prof.Name = "prof";
-            this.prof.ReadOnly = true;
-            this.prof.Width = 90;
-            // 
-            // status
-            // 
-            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status.HeaderText = "Tình trạng học tập";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
             // 
             // StudentListView
             // 

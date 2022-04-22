@@ -1,6 +1,8 @@
 ﻿using QuanLySinhVien.Views.DashbroadViews.ClassViews;
 using QuanLySinhVien.Views.DashbroadViews.FacultyViews;
+using QuanLySinhVien.Views.DashbroadViews.RoleViews;
 using QuanLySinhVien.Views.DashbroadViews.StudentViews;
+using QuanLySinhVien.Views.DashbroadViews.TeacherViews;
 using QuanLySinhVien.Views.DashbroadViews.UserViews;
 using System;
 using System.Windows.Forms;
@@ -115,7 +117,7 @@ namespace QuanLySinhVien.Views.DashbroadViews
             }
             else if (nav[0].Equals("update-student"))
             {
-                StudentUpdateView studentUpdateView = new StudentUpdateView(nav[1]);
+                StudentUpdateView studentUpdateView = new StudentUpdateView(Int32.Parse(nav[1]));
                 openChildForm(studentUpdateView);
             }
             else if (nav[0].Equals("add-student"))
@@ -135,13 +137,53 @@ namespace QuanLySinhVien.Views.DashbroadViews
             }
             else if (nav[0].Equals("update-faculty"))
             {
-                FacultyUpdate facultyUpdate = new FacultyUpdate(nav[1]);
+                FacultyUpdate facultyUpdate = new FacultyUpdate(Int32.Parse(nav[1]));
                 openChildForm(facultyUpdate);
             }
             else if (nav[0].Equals("list-class"))
             {
                 ClassListView classListView = new ClassListView();
                 openChildForm(classListView);
+            }
+            else if (nav[0].Equals("add-class"))
+            {
+                ClassAdd classAdd = new ClassAdd();
+                openChildForm(classAdd);
+            }
+            else if (nav[0].Equals("update-class"))
+            {
+                ClassUpdate classUpdate = new ClassUpdate(Int32.Parse(nav[1]));
+                openChildForm(classUpdate);
+            }
+            else if (nav[0].Equals("list-role"))
+            {
+                RoleListView roleListView = new RoleListView();
+                openChildForm(roleListView);
+            }
+            else if (nav[0].Equals("add-role"))
+            {
+                RoleAdd roleAdd = new RoleAdd();
+                openChildForm(roleAdd);
+            }
+            else if (nav[0].Equals("update-role"))
+            {
+                RoleUpdate roleUpdate = new RoleUpdate(Int32.Parse(nav[1]));
+                openChildForm(roleUpdate);
+            }
+            else if (nav[0].Equals("list-teacher"))
+            {
+                TeacherListView teacherListView = new TeacherListView();
+                openChildForm(teacherListView);
+            }
+            else if (nav[0].Equals("add-teacher"))
+            {
+                TeacherAdd teacherAdd = new TeacherAdd();
+                openChildForm(teacherAdd);
+            }
+            else if (nav[0].Equals("update-teacher"))
+            {
+                TeacherUpdate teacherUpdate = new TeacherUpdate(Int32.Parse(nav[1]));
+                openChildForm(teacherUpdate);
             }
         }
 
@@ -269,7 +311,7 @@ namespace QuanLySinhVien.Views.DashbroadViews
                 this.nav2.Show();
                 this.nav12.Show();
                 this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
-                this.nav2_txt.Text = "Danh sách khoa";
+                this.nav2_txt.Text = "Danh sách lớp";
                 this.nav2_txt.Width = 120;
 
                 this.nav3.Show();
@@ -277,6 +319,118 @@ namespace QuanLySinhVien.Views.DashbroadViews
                 this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
                 this.nav3_txt.Text = "Quản lý lớp";
                 this.nav3_txt.Width = 120;
+            }
+            else if (nav.Equals("add-class"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+                this.nav2_txt.Text = "Thêm lớp";
+                this.nav2_txt.Width = 120;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Quản lý lớp";
+                this.nav3_txt.Width = 120;
+            }
+            else if (nav.Equals("update-class"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+                this.nav2_txt.Text = "Sửa lớp";
+                this.nav2_txt.Width = 120;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Quản lý lớp";
+                this.nav3_txt.Width = 120;
+            }
+            else if (nav.Equals("list-role"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+                this.nav2_txt.Text = "Danh sách vai trò";
+                this.nav2_txt.Width = 149;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Quản lý vai trò";
+                this.nav3_txt.Width = 149;
+            }
+            else if (nav.Equals("add-role"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+                this.nav2_txt.Text = "Thêm vai trò";
+                this.nav2_txt.Width = 149;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Quản lý vai trò";
+                this.nav3_txt.Width = 149;
+            }
+            else if (nav.Equals("update-role"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+                this.nav2_txt.Text = "Sửa vai trò";
+                this.nav2_txt.Width = 149;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Quản lý vai trò";
+                this.nav3_txt.Width = 149;
+            }
+            else if (nav.Equals("list-teacher"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+                this.nav2_txt.Text = "Danh sách giáo viên";
+                this.nav2_txt.Width = 149;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Quản lý giáo viên";
+                this.nav3_txt.Width = 149;
+            }
+            else if (nav.Equals("add-teacher"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+                this.nav2_txt.Text = "Thêm giáo viên";
+                this.nav2_txt.Width = 149;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Quản lý giáo viên";
+                this.nav3_txt.Width = 149;
+            }
+            else if (nav.Equals("update-teacher"))
+            {
+                this.nav2.Show();
+                this.nav12.Show();
+                this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+                this.nav2_txt.Text = "Sửa giáo viên";
+                this.nav2_txt.Width = 149;
+
+                this.nav3.Show();
+                this.nav23.Show();
+                this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
+                this.nav3_txt.Text = "Quản lý giáo viên";
+                this.nav3_txt.Width = 149;
             }
         }
 
@@ -293,10 +447,16 @@ namespace QuanLySinhVien.Views.DashbroadViews
 
         private void button1_Click(object sender, EventArgs e)
         {
+            changeNav("list-teacher");
+            TeacherListView teacherListView = new TeacherListView();
+            openChildForm(teacherListView);
         }
 
         private void btn_rolelist_Click(object sender, EventArgs e)
         {
+            RoleListView roleListView = new RoleListView();
+            changeNav("list-role");
+            openChildForm(roleListView);
         }
 
         private void opt_qll_Click(object sender, EventArgs e)

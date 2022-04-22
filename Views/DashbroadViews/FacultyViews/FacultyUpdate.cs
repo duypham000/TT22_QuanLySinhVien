@@ -2,26 +2,19 @@
 using QuanLySinhVien.Models.ModelServices;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
 {
     public partial class FacultyUpdate : Form
     {
-        private string oldId = null;
+        private int oldId = -1;
         private FacultyServices facultyServices = null;
         private TeacherServices teacherServices = null;
         private List<Teacher> teachers = null;
 
-        public FacultyUpdate(string id)
+        public FacultyUpdate(int id)
         {
-
             InitializeComponent();
 
             this.oldId = id;
@@ -36,11 +29,16 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
         {
             teachers = teacherServices.GetAll();
             Faculty faculty = facultyServices.GetById(oldId);
-            this.inpt_id.Texts = faculty.ID;
             this.inpt_name.Texts = faculty.Name;
-            foreach (var teacher in teachers)
+            if (faculty.LeaderID != null)
             {
-                this.inpt_leader.Text = teacher.Name;
+                foreach (var teacher in teachers)
+                {
+                    if (teacher.ID == faculty.LeaderID)
+                    {
+                        this.inpt_leader.Text = teacher.Name;
+                    }
+                }
             }
         }
 
@@ -56,33 +54,33 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
         private void btn_update_Click(object sender, EventArgs e)
         {
             if (
-                this.inpt_id.Texts != "" &&
-                this.inpt_name.Texts != "" &&
-                this.inpt_leader.Text != ""
+                this.inpt_name.Texts != ""
             )
             {
-                Faculty faculty = new Faculty();
+                Faculty faculty = facultyServices.GetById(oldId);
 
-                faculty.ID = this.inpt_id.Texts;
                 faculty.Name = this.inpt_name.Texts;
 
-                foreach (var teacher in teachers)
+                if (this.inpt_leader.Text != "")
                 {
-                    if (teacher.Name.Equals(this.inpt_leader.Text))
+                    foreach (var teacher in teachers)
                     {
-                        faculty.LeaderID = teacher.ID;
+                        if (teacher.Name.Equals(this.inpt_leader.Text))
+                        {
+                            faculty.LeaderID = teacher.ID;
+                        }
                     }
                 }
 
                 faculty.CreatedBy = Properties.Settings.Default.Username;
                 faculty.CreatedDate = DateTime.Now;
 
-                facultyServices.Update(faculty, oldId);
+                facultyServices.Update(faculty);
                 backToList();
             }
             else
             {
-                MessageBox.Show("Hãy nhập đúng và đủ thông tin!");
+                MessageBox.Show("Hãy nhập tên khoa!");
             }
         }
 

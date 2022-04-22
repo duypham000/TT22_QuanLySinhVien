@@ -24,18 +24,29 @@ namespace QuanLySinhVien.Models.ModelServices
             dbContext.SaveChanges();
         }
 
-        public Student GetByID(string id)
+        public Student GetByID(int id)
         {
             return dbContext.Students.Find(id);
         }
 
-        public bool Update(Student student, string id)
+        public bool Update(Student student)
         {
+            int id = student.ID;
             var oldStudent = dbContext.Students.Find(id);
             if (oldStudent != null)
             {
-                dbContext.Students.Remove(oldStudent);
-                dbContext.Students.Add(student);
+                dbContext.Students.Find(id).StudentID = student.StudentID;
+                dbContext.Students.Find(id).Address = student.Address;
+                dbContext.Students.Find(id).Name = student.Name;
+                dbContext.Students.Find(id).Phone = student.Phone;
+                dbContext.Students.Find(id).DateOfBirth = student.DateOfBirth;
+                dbContext.Students.Find(id).SchoolProfile = student.SchoolProfile;
+                dbContext.Students.Find(id).Religion = student.Religion;
+                dbContext.Students.Find(id).ClassRole = student.ClassRole;
+                dbContext.Students.Find(id).ClassID = student.ClassID;
+                dbContext.Students.Find(id).UpdatedDate = student.UpdatedDate;
+                dbContext.Students.Find(id).UpdatedBy = student.UpdatedBy;
+                dbContext.Students.Find(id).Status = student.Status;
                 dbContext.SaveChanges();
                 return true;
             }
@@ -53,9 +64,9 @@ namespace QuanLySinhVien.Models.ModelServices
             return false;
         }
 
-        public void DeleteByID(string id)
+        public void DeleteByID(int id)
         {
-            Student student = dbContext.Students.Single(x=>x.ID == id);
+            Student student = dbContext.Students.Find(id);
 
             dbContext.Students.Remove(student);
             dbContext.SaveChanges();

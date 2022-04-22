@@ -324,6 +324,7 @@
             this.inpt_phone.TabIndex = 5;
             this.inpt_phone.Texts = "";
             this.inpt_phone.UnderlinedStyle = true;
+            this.inpt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inpt_phone_KeyPress);
             // 
             // label7
             // 
@@ -573,6 +574,7 @@
             // 
             // panel12
             // 
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel12.Controls.Add(this.btn_cancel);
             this.panel12.Controls.Add(this.btn_add);
             this.panel12.Location = new System.Drawing.Point(355, 3);

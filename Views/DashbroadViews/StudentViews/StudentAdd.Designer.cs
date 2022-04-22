@@ -29,55 +29,55 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.inpt_re = new QuanLySinhVien.Views.CommonViews.RJTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.inpt_his = new QuanLySinhVien.Views.CommonViews.RJTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.inpt_address = new QuanLySinhVien.Views.CommonViews.RJTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.inpt_dateb = new QuanLySinhVien.Views.CommonViews.RJTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.inpt_phone = new QuanLySinhVien.Views.CommonViews.RJTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.inpt_name = new QuanLySinhVien.Views.CommonViews.RJTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.inpt_class = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.inpt_roles = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.inpt_status = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.inpt_id = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.inpt_re = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.inpt_his = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.inpt_address = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.inpt_dateb = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.inpt_phone = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.inpt_name = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.inpt_roles = new QuanLySinhVien.Views.CommonViews.RJTextBox();
-            this.inpt_id = new QuanLySinhVien.Views.CommonViews.RJTextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -113,6 +113,277 @@
             this.panel3.Size = new System.Drawing.Size(916, 729);
             this.panel3.TabIndex = 2;
             // 
+            // panel14
+            // 
+            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel14.Controls.Add(this.inpt_re);
+            this.panel14.Controls.Add(this.label11);
+            this.panel14.Location = new System.Drawing.Point(538, 634);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(280, 58);
+            this.panel14.TabIndex = 12;
+            // 
+            // inpt_re
+            // 
+            this.inpt_re.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_re.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_re.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_re.BorderRadius = 0;
+            this.inpt_re.BorderSize = 2;
+            this.inpt_re.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_re.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_re.ForeColor = System.Drawing.Color.White;
+            this.inpt_re.Location = new System.Drawing.Point(0, 20);
+            this.inpt_re.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_re.Multiline = false;
+            this.inpt_re.Name = "inpt_re";
+            this.inpt_re.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_re.PasswordChar = false;
+            this.inpt_re.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_re.PlaceholderText = "";
+            this.inpt_re.Size = new System.Drawing.Size(280, 31);
+            this.inpt_re.TabIndex = 5;
+            this.inpt_re.Texts = "";
+            this.inpt_re.UnderlinedStyle = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 20);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Tôn giáo";
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel13.Controls.Add(this.inpt_his);
+            this.panel13.Controls.Add(this.label10);
+            this.panel13.Location = new System.Drawing.Point(538, 459);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(280, 110);
+            this.panel13.TabIndex = 11;
+            // 
+            // inpt_his
+            // 
+            this.inpt_his.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_his.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_his.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_his.BorderRadius = 0;
+            this.inpt_his.BorderSize = 2;
+            this.inpt_his.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_his.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_his.ForeColor = System.Drawing.Color.White;
+            this.inpt_his.Location = new System.Drawing.Point(0, 20);
+            this.inpt_his.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_his.Multiline = true;
+            this.inpt_his.Name = "inpt_his";
+            this.inpt_his.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_his.PasswordChar = false;
+            this.inpt_his.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_his.PlaceholderText = "";
+            this.inpt_his.Size = new System.Drawing.Size(280, 86);
+            this.inpt_his.TabIndex = 5;
+            this.inpt_his.Texts = "";
+            this.inpt_his.UnderlinedStyle = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(123, 20);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Lịch sử học vụ";
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel11.Controls.Add(this.inpt_address);
+            this.panel11.Controls.Add(this.label9);
+            this.panel11.Location = new System.Drawing.Point(80, 634);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(280, 58);
+            this.panel11.TabIndex = 10;
+            // 
+            // inpt_address
+            // 
+            this.inpt_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_address.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_address.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_address.BorderRadius = 0;
+            this.inpt_address.BorderSize = 2;
+            this.inpt_address.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_address.ForeColor = System.Drawing.Color.White;
+            this.inpt_address.Location = new System.Drawing.Point(0, 20);
+            this.inpt_address.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_address.Multiline = false;
+            this.inpt_address.Name = "inpt_address";
+            this.inpt_address.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_address.PasswordChar = false;
+            this.inpt_address.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_address.PlaceholderText = "";
+            this.inpt_address.Size = new System.Drawing.Size(280, 31);
+            this.inpt_address.TabIndex = 5;
+            this.inpt_address.Texts = "";
+            this.inpt_address.UnderlinedStyle = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Địa chỉ";
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel10.Controls.Add(this.inpt_dateb);
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Location = new System.Drawing.Point(538, 334);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(280, 58);
+            this.panel10.TabIndex = 9;
+            // 
+            // inpt_dateb
+            // 
+            this.inpt_dateb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_dateb.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_dateb.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_dateb.BorderRadius = 0;
+            this.inpt_dateb.BorderSize = 2;
+            this.inpt_dateb.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_dateb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_dateb.ForeColor = System.Drawing.Color.White;
+            this.inpt_dateb.Location = new System.Drawing.Point(0, 20);
+            this.inpt_dateb.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_dateb.Multiline = false;
+            this.inpt_dateb.Name = "inpt_dateb";
+            this.inpt_dateb.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_dateb.PasswordChar = false;
+            this.inpt_dateb.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_dateb.PlaceholderText = "";
+            this.inpt_dateb.Size = new System.Drawing.Size(280, 31);
+            this.inpt_dateb.TabIndex = 5;
+            this.inpt_dateb.Texts = "";
+            this.inpt_dateb.UnderlinedStyle = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(181, 20);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Ngày sinh(dd/mm/yyy)";
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel9.Controls.Add(this.inpt_phone);
+            this.panel9.Controls.Add(this.label7);
+            this.panel9.Location = new System.Drawing.Point(538, 184);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(280, 58);
+            this.panel9.TabIndex = 8;
+            // 
+            // inpt_phone
+            // 
+            this.inpt_phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_phone.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_phone.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_phone.BorderRadius = 0;
+            this.inpt_phone.BorderSize = 2;
+            this.inpt_phone.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_phone.ForeColor = System.Drawing.Color.White;
+            this.inpt_phone.Location = new System.Drawing.Point(0, 20);
+            this.inpt_phone.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_phone.Multiline = false;
+            this.inpt_phone.Name = "inpt_phone";
+            this.inpt_phone.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_phone.PasswordChar = false;
+            this.inpt_phone.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_phone.PlaceholderText = "";
+            this.inpt_phone.Size = new System.Drawing.Size(280, 31);
+            this.inpt_phone.TabIndex = 5;
+            this.inpt_phone.Texts = "";
+            this.inpt_phone.UnderlinedStyle = true;
+            this.inpt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inpt_phone_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 20);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Số điện thoại";
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel7.Controls.Add(this.inpt_name);
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Location = new System.Drawing.Point(538, 34);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(280, 58);
+            this.panel7.TabIndex = 7;
+            // 
+            // inpt_name
+            // 
+            this.inpt_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_name.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_name.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_name.BorderRadius = 0;
+            this.inpt_name.BorderSize = 2;
+            this.inpt_name.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_name.ForeColor = System.Drawing.Color.White;
+            this.inpt_name.Location = new System.Drawing.Point(0, 20);
+            this.inpt_name.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_name.Multiline = false;
+            this.inpt_name.Name = "inpt_name";
+            this.inpt_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_name.PasswordChar = false;
+            this.inpt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_name.PlaceholderText = "";
+            this.inpt_name.Size = new System.Drawing.Size(280, 31);
+            this.inpt_name.TabIndex = 5;
+            this.inpt_name.Texts = "";
+            this.inpt_name.UnderlinedStyle = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Tên sinh viên";
+            // 
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -139,6 +410,8 @@
             this.inpt_class.ForeColor = System.Drawing.Color.White;
             this.inpt_class.HoverState.Parent = this.inpt_class;
             this.inpt_class.ItemHeight = 30;
+            this.inpt_class.Items.AddRange(new object[] {
+            " "});
             this.inpt_class.ItemsAppearance.Parent = this.inpt_class;
             this.inpt_class.Location = new System.Drawing.Point(0, 20);
             this.inpt_class.Name = "inpt_class";
@@ -167,6 +440,29 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(280, 58);
             this.panel8.TabIndex = 6;
+            // 
+            // inpt_roles
+            // 
+            this.inpt_roles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_roles.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_roles.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_roles.BorderRadius = 0;
+            this.inpt_roles.BorderSize = 2;
+            this.inpt_roles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_roles.ForeColor = System.Drawing.Color.White;
+            this.inpt_roles.Location = new System.Drawing.Point(0, 20);
+            this.inpt_roles.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_roles.Multiline = false;
+            this.inpt_roles.Name = "inpt_roles";
+            this.inpt_roles.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_roles.PasswordChar = false;
+            this.inpt_roles.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_roles.PlaceholderText = "";
+            this.inpt_roles.Size = new System.Drawing.Size(280, 31);
+            this.inpt_roles.TabIndex = 5;
+            this.inpt_roles.Texts = "";
+            this.inpt_roles.UnderlinedStyle = true;
             // 
             // label6
             // 
@@ -234,6 +530,29 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(280, 58);
             this.panel4.TabIndex = 2;
+            // 
+            // inpt_id
+            // 
+            this.inpt_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.inpt_id.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.inpt_id.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.inpt_id.BorderRadius = 0;
+            this.inpt_id.BorderSize = 2;
+            this.inpt_id.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inpt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inpt_id.ForeColor = System.Drawing.Color.White;
+            this.inpt_id.Location = new System.Drawing.Point(0, 20);
+            this.inpt_id.Margin = new System.Windows.Forms.Padding(4);
+            this.inpt_id.Multiline = false;
+            this.inpt_id.Name = "inpt_id";
+            this.inpt_id.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inpt_id.PasswordChar = false;
+            this.inpt_id.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.inpt_id.PlaceholderText = "";
+            this.inpt_id.Size = new System.Drawing.Size(280, 31);
+            this.inpt_id.TabIndex = 1;
+            this.inpt_id.Texts = "";
+            this.inpt_id.UnderlinedStyle = true;
             // 
             // label2
             // 
@@ -310,322 +629,6 @@
             this.label1.Text = "Sơ yếu lý lịch";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel7
-            // 
-            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel7.Controls.Add(this.inpt_name);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(538, 34);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(280, 58);
-            this.panel7.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 20);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Tên sinh viên";
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel9.Controls.Add(this.inpt_phone);
-            this.panel9.Controls.Add(this.label7);
-            this.panel9.Location = new System.Drawing.Point(538, 184);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(280, 58);
-            this.panel9.TabIndex = 8;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 20);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Số điện thoại";
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel10.Controls.Add(this.inpt_dateb);
-            this.panel10.Controls.Add(this.label8);
-            this.panel10.Location = new System.Drawing.Point(538, 334);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(280, 58);
-            this.panel10.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(181, 20);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Ngày sinh(dd/mm/yyy)";
-            // 
-            // panel11
-            // 
-            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel11.Controls.Add(this.inpt_address);
-            this.panel11.Controls.Add(this.label9);
-            this.panel11.Location = new System.Drawing.Point(80, 634);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(280, 58);
-            this.panel11.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 20);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Địa chỉ";
-            // 
-            // panel13
-            // 
-            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel13.Controls.Add(this.inpt_his);
-            this.panel13.Controls.Add(this.label10);
-            this.panel13.Location = new System.Drawing.Point(538, 459);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(280, 110);
-            this.panel13.TabIndex = 11;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 20);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Lịch sử học vụ";
-            // 
-            // panel14
-            // 
-            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel14.Controls.Add(this.inpt_re);
-            this.panel14.Controls.Add(this.label11);
-            this.panel14.Location = new System.Drawing.Point(538, 634);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(280, 58);
-            this.panel14.TabIndex = 12;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(0, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 20);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Tôn giáo";
-            // 
-            // inpt_re
-            // 
-            this.inpt_re.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_re.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_re.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_re.BorderRadius = 0;
-            this.inpt_re.BorderSize = 2;
-            this.inpt_re.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_re.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_re.ForeColor = System.Drawing.Color.White;
-            this.inpt_re.Location = new System.Drawing.Point(0, 20);
-            this.inpt_re.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_re.Multiline = false;
-            this.inpt_re.Name = "inpt_re";
-            this.inpt_re.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_re.PasswordChar = false;
-            this.inpt_re.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_re.PlaceholderText = "";
-            this.inpt_re.Size = new System.Drawing.Size(280, 31);
-            this.inpt_re.TabIndex = 5;
-            this.inpt_re.Texts = "";
-            this.inpt_re.UnderlinedStyle = true;
-            // 
-            // inpt_his
-            // 
-            this.inpt_his.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_his.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_his.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_his.BorderRadius = 0;
-            this.inpt_his.BorderSize = 2;
-            this.inpt_his.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_his.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_his.ForeColor = System.Drawing.Color.White;
-            this.inpt_his.Location = new System.Drawing.Point(0, 20);
-            this.inpt_his.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_his.Multiline = true;
-            this.inpt_his.Name = "inpt_his";
-            this.inpt_his.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_his.PasswordChar = false;
-            this.inpt_his.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_his.PlaceholderText = "";
-            this.inpt_his.Size = new System.Drawing.Size(280, 86);
-            this.inpt_his.TabIndex = 5;
-            this.inpt_his.Texts = "";
-            this.inpt_his.UnderlinedStyle = false;
-            // 
-            // inpt_address
-            // 
-            this.inpt_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_address.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_address.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_address.BorderRadius = 0;
-            this.inpt_address.BorderSize = 2;
-            this.inpt_address.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_address.ForeColor = System.Drawing.Color.White;
-            this.inpt_address.Location = new System.Drawing.Point(0, 20);
-            this.inpt_address.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_address.Multiline = false;
-            this.inpt_address.Name = "inpt_address";
-            this.inpt_address.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_address.PasswordChar = false;
-            this.inpt_address.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_address.PlaceholderText = "";
-            this.inpt_address.Size = new System.Drawing.Size(280, 31);
-            this.inpt_address.TabIndex = 5;
-            this.inpt_address.Texts = "";
-            this.inpt_address.UnderlinedStyle = true;
-            // 
-            // inpt_dateb
-            // 
-            this.inpt_dateb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_dateb.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_dateb.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_dateb.BorderRadius = 0;
-            this.inpt_dateb.BorderSize = 2;
-            this.inpt_dateb.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_dateb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_dateb.ForeColor = System.Drawing.Color.White;
-            this.inpt_dateb.Location = new System.Drawing.Point(0, 20);
-            this.inpt_dateb.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_dateb.Multiline = false;
-            this.inpt_dateb.Name = "inpt_dateb";
-            this.inpt_dateb.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_dateb.PasswordChar = false;
-            this.inpt_dateb.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_dateb.PlaceholderText = "";
-            this.inpt_dateb.Size = new System.Drawing.Size(280, 31);
-            this.inpt_dateb.TabIndex = 5;
-            this.inpt_dateb.Texts = "";
-            this.inpt_dateb.UnderlinedStyle = true;
-            // 
-            // inpt_phone
-            // 
-            this.inpt_phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_phone.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_phone.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_phone.BorderRadius = 0;
-            this.inpt_phone.BorderSize = 2;
-            this.inpt_phone.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_phone.ForeColor = System.Drawing.Color.White;
-            this.inpt_phone.Location = new System.Drawing.Point(0, 20);
-            this.inpt_phone.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_phone.Multiline = false;
-            this.inpt_phone.Name = "inpt_phone";
-            this.inpt_phone.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_phone.PasswordChar = false;
-            this.inpt_phone.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_phone.PlaceholderText = "";
-            this.inpt_phone.Size = new System.Drawing.Size(280, 31);
-            this.inpt_phone.TabIndex = 5;
-            this.inpt_phone.Texts = "";
-            this.inpt_phone.UnderlinedStyle = true;
-            // 
-            // inpt_name
-            // 
-            this.inpt_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_name.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_name.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_name.BorderRadius = 0;
-            this.inpt_name.BorderSize = 2;
-            this.inpt_name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_name.ForeColor = System.Drawing.Color.White;
-            this.inpt_name.Location = new System.Drawing.Point(0, 20);
-            this.inpt_name.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_name.Multiline = false;
-            this.inpt_name.Name = "inpt_name";
-            this.inpt_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_name.PasswordChar = false;
-            this.inpt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_name.PlaceholderText = "";
-            this.inpt_name.Size = new System.Drawing.Size(280, 31);
-            this.inpt_name.TabIndex = 5;
-            this.inpt_name.Texts = "";
-            this.inpt_name.UnderlinedStyle = true;
-            // 
-            // inpt_roles
-            // 
-            this.inpt_roles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_roles.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_roles.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_roles.BorderRadius = 0;
-            this.inpt_roles.BorderSize = 2;
-            this.inpt_roles.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_roles.ForeColor = System.Drawing.Color.White;
-            this.inpt_roles.Location = new System.Drawing.Point(0, 20);
-            this.inpt_roles.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_roles.Multiline = false;
-            this.inpt_roles.Name = "inpt_roles";
-            this.inpt_roles.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_roles.PasswordChar = false;
-            this.inpt_roles.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_roles.PlaceholderText = "";
-            this.inpt_roles.Size = new System.Drawing.Size(280, 31);
-            this.inpt_roles.TabIndex = 5;
-            this.inpt_roles.Texts = "";
-            this.inpt_roles.UnderlinedStyle = true;
-            // 
-            // inpt_id
-            // 
-            this.inpt_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.inpt_id.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.inpt_id.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.inpt_id.BorderRadius = 0;
-            this.inpt_id.BorderSize = 2;
-            this.inpt_id.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inpt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inpt_id.ForeColor = System.Drawing.Color.White;
-            this.inpt_id.Location = new System.Drawing.Point(0, 20);
-            this.inpt_id.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_id.Multiline = false;
-            this.inpt_id.Name = "inpt_id";
-            this.inpt_id.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.inpt_id.PasswordChar = false;
-            this.inpt_id.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.inpt_id.PlaceholderText = "";
-            this.inpt_id.Size = new System.Drawing.Size(280, 31);
-            this.inpt_id.TabIndex = 1;
-            this.inpt_id.Texts = "";
-            this.inpt_id.UnderlinedStyle = true;
-            // 
             // StudentAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,6 +640,18 @@
             this.Text = "UserAdd";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -647,18 +662,6 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             this.ResumeLayout(false);
 
         }

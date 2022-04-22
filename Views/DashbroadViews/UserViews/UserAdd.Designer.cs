@@ -275,6 +275,7 @@
             // 
             // panel12
             // 
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel12.Controls.Add(this.btn_cancel);
             this.panel12.Controls.Add(this.btn_add);
             this.panel12.Location = new System.Drawing.Point(355, 3);

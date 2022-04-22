@@ -2,12 +2,6 @@
 using QuanLySinhVien.Models.ModelServices;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
@@ -22,7 +16,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
         private int curPage = 1;
         private int totalPage = 1;
         private string searchType = null;
-        private string[] searchOption = { "id", "name", "leader" };
+        private string[] searchOption = { "name", "leader" };
 
         public FacultyListView()
         {
@@ -32,7 +26,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             this.teachers = teacherServices.GetAll();
             this.faculties = facultyServices.GetAll();
 
-            this.searchType = "id";
+            this.searchType = "name";
             this.type_search.SelectedIndex = 0;
 
             fillToTable(this.curPage, this.pageSize, this.faculties);
@@ -105,7 +99,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
                         leaderName = teacher.Name;
                     }
                 }
-                this.classTable.Rows.Add(faculty.ID, faculty.Name, leaderName);
+                this.classTable.Rows.Add(faculty.Name, leaderName);
             }
         }
 
@@ -151,22 +145,27 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
         {
             double currSize = this.classTable.Height - this.classTable.ColumnHeadersHeight;
             double size = currSize / this.classTable.RowTemplate.Height;
+            int oldSize = this.pageSize;
             this.pageSize = (int)Math.Floor(size);
-            fillToTable(this.curPage, this.pageSize, this.faculties);
+            if (oldSize != this.pageSize)
+            {
+                fillToTable(this.curPage, this.pageSize, this.faculties);
+            }
         }
 
         #endregion NavControl
 
         #region UserControl
 
-        private string[] getCurrentId()
+        private int[] getCurrentId()
         {
             int total = this.classTable.SelectedRows.Count;
-            string[] res = new string[total];
+            int[] res = new int[total];
             for (int i = 0; i < total; i++)
             {
                 int index = this.classTable.SelectedRows[i].Index;
-                res[i] = this.classTable.Rows[index].Cells[0].Value.ToString();
+                index += (curPage-1) * pageSize;
+                res[i] = faculties[index].ID;
             }
             return res;
         }
@@ -211,17 +210,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             this.faculties = facultyServices.GetAll();
             List<Faculty> res = new List<Faculty>();
             var searchValue = this.inpt_search.Text;
-            if (this.searchType.Equals("id"))
-            {
-                foreach (var faculty in faculties)
-                {
-                    if (faculty.ID.Contains(searchValue))
-                    {
-                        res.Add(faculty);
-                    }
-                }
-            }
-            else if (this.searchType.Equals("name"))
+            if (this.searchType.Equals("name"))
             {
                 foreach (var faculty in faculties)
                 {
@@ -237,7 +226,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
                 {
                     foreach (var teacher in teachers)
                     {
-                        if ( faculty.LeaderID.Equals(teacher.ID) && teacher.Name.Contains(searchValue))
+                        if (faculty.LeaderID.Equals(teacher.ID) && teacher.Name.Contains(searchValue))
                         {
                             res.Add(faculty);
                         }

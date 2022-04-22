@@ -14,13 +14,13 @@ namespace QuanLySinhVien.Models.Model
             Teachers = new HashSet<Teacher>();
         }
 
-        [Key]
+        public int ID { get; set; }
+
+        [Required]
         [StringLength(250)]
         public string Username { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string RoleID { get; set; }
+        public int RoleID { get; set; }
 
         [Required]
         [StringLength(250)]

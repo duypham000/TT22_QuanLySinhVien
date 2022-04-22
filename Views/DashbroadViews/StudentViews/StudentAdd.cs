@@ -14,6 +14,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
 
         private List<User> users = null;
         private List<Class> classes = null;
+        private List<Student> students = null;
         private string[] studentStatus = { "Đã thôi học", "Đang học", "Bảo lưu" };
 
         public StudentAdd()
@@ -25,7 +26,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             userServices = new UserServices();
             classes = classServices.GetAll();
             users = userServices.GetAllUsers();
-
+            students = studentServices.GetAll();
             addDropdownName();
         }
 
@@ -44,41 +45,58 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            foreach (var user in users)
-            {
-                if (user.Username.Equals(this.inpt_id.Texts))
-                {
-                    MessageBox.Show("Hãy nhập đúng và đủ thông tin!");
-                    return;
-                }
-            }
-
             if (
                 this.inpt_id.Texts != "" &&
-                this.inpt_roles.Texts != "" &&
                 this.inpt_name.Texts != "" &&
                 this.inpt_phone.Texts != "" &&
                 this.inpt_status.Text != "" &&
                 this.inpt_dateb.Texts != "" &&
-                this.inpt_class.Text != "" &&
-                this.inpt_class.SelectedIndex != -1 &&
-                this.inpt_his.Texts != "" &&
                 this.inpt_address.Texts != "" &&
                 this.inpt_re.Texts != ""
             )
             {
+                foreach (var student1 in students)
+                {
+                    if (student1.StudentID.Equals(this.inpt_id.Texts))
+                    {
+                        MessageBox.Show("Mã sinh viên đã tồn tại!");
+                        return;
+                    }
+                }
+
                 Student student = new Student();
 
-                student.ID = this.inpt_id.Texts;
+                student.StudentID = this.inpt_id.Texts;
                 student.Name = this.inpt_name.Texts;
-                student.ClassRole = this.inpt_roles.Texts;
+                if (this.inpt_roles.Texts != "")
+                {
+                    student.ClassRole = this.inpt_roles.Texts;
+                }
                 student.Phone = this.inpt_phone.Texts;
                 student.Status = this.inpt_status.Text;
                 student.DateOfBirth = this.inpt_dateb.Texts;
-                student.ClassID = this.inpt_class.Text;
-                student.SchoolProfile = this.inpt_his.Texts;
+
+                if (this.inpt_class.Text != "")
+                {
+                    foreach (var @class in classes)
+                    {
+                        if (@class.Name.Equals(this.inpt_class.Text))
+                        {
+                            student.ClassID = @class.ID;
+                        }
+                    }
+                }
+
+                if (this.inpt_his.Texts != "")
+                {
+                    student.SchoolProfile = this.inpt_his.Texts;
+                }
+
                 student.Address = this.inpt_address.Texts;
                 student.Religion = this.inpt_re.Texts;
+
+                student.CreatedBy = Properties.Settings.Default.Username;
+                student.CreatedDate = DateTime.Now;
 
                 studentServices.Add(student);
 
@@ -99,6 +117,14 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             backToList();
+        }
+
+        private void inpt_phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '+'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
