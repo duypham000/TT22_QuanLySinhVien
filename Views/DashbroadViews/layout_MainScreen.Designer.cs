@@ -39,7 +39,6 @@
             this.opt_qltk = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.link_logout = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.user_username = new System.Windows.Forms.Label();
             this.user_avt = new System.Windows.Forms.Button();
             this.frm_body = new System.Windows.Forms.Panel();
@@ -234,7 +233,6 @@
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.link_logout);
-            this.panelLogo.Controls.Add(this.linkLabel1);
             this.panelLogo.Controls.Add(this.user_username);
             this.panelLogo.Controls.Add(this.user_avt);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -251,27 +249,13 @@
             this.link_logout.AutoSize = true;
             this.link_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_logout.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
-            this.link_logout.Location = new System.Drawing.Point(195, 46);
+            this.link_logout.Location = new System.Drawing.Point(65, 47);
             this.link_logout.Name = "link_logout";
             this.link_logout.Size = new System.Drawing.Size(63, 15);
             this.link_logout.TabIndex = 2;
             this.link_logout.TabStop = true;
             this.link_logout.Text = "Đăng xuất";
             this.link_logout.Click += new System.EventHandler(this.exitAuthen);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
-            this.linkLabel1.Location = new System.Drawing.Point(65, 46);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(112, 15);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Chỉnh sửa thông tin";
             // 
             // user_username
             // 
@@ -528,7 +512,6 @@
         private System.Windows.Forms.Panel submenu_qltk;
         private System.Windows.Forms.Button user_avt;
         private System.Windows.Forms.Label user_username;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel link_logout;
         public System.Windows.Forms.Panel frm_body;
         private System.Windows.Forms.Panel panel1;

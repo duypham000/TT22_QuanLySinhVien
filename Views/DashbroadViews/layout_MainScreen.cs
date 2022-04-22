@@ -1,4 +1,6 @@
-﻿using QuanLySinhVien.Views.DashbroadViews.ClassViews;
+﻿using QuanLySinhVien.Models.Model;
+using QuanLySinhVien.Models.ModelServices;
+using QuanLySinhVien.Views.DashbroadViews.ClassViews;
 using QuanLySinhVien.Views.DashbroadViews.FacultyViews;
 using QuanLySinhVien.Views.DashbroadViews.RoleViews;
 using QuanLySinhVien.Views.DashbroadViews.StudentViews;
@@ -549,5 +551,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
         {
             permissionCheck();
         }
+
     }
 }
