@@ -18,7 +18,7 @@ namespace QuanLySinhVien.Views.DashbroadViews
             InitializeComponent();
             this.user_username.Text = Properties.Settings.Default.Username;
             customizeDesing();
-
+            this.role_name.Text = Properties.Settings.Default.Role;
             showHome();
         }
 
@@ -552,5 +552,9 @@ namespace QuanLySinhVien.Views.DashbroadViews
             permissionCheck();
         }
 
+        private void role_name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

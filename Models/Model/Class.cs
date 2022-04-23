@@ -37,8 +37,6 @@ namespace QuanLySinhVien.Models.Model
 
         public virtual Faculty Faculty { get; set; }
 
-        public virtual Faculty Faculty1 { get; set; }
-
         public virtual Student Student { get; set; }
 
         public virtual Teacher Teacher { get; set; }

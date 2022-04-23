@@ -62,7 +62,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
         {
             foreach (var classi in this.classes)
             {
-                this.inpt_class.Items.Add(classi.ID);
+                this.inpt_class.Items.Add(classi.Name);
             }
 
             foreach (var status in studentStatus)
@@ -83,16 +83,15 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
                this.inpt_re.Texts != ""
            )
             {
+                Student student = studentServices.GetByID(this.oldID);
                 foreach (var student1 in students)
                 {
-                    if (student1.StudentID.Equals(this.inpt_id.Texts))
+                    if (student1.StudentID.Equals(this.inpt_id.Texts) && !student1.StudentID.Equals(student.StudentID))
                     {
                         MessageBox.Show("Mã sinh viên đã tồn tại!");
                         return;
                     }
                 }
-
-                Student student = studentServices.GetByID(this.oldID);
 
                 student.StudentID = this.inpt_id.Texts;
                 student.Name = this.inpt_name.Texts;

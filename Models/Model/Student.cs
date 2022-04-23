@@ -14,7 +14,6 @@ namespace QuanLySinhVien.Models.Model
             Classes = new HashSet<Class>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [StringLength(250)]

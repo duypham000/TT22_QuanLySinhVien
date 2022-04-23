@@ -652,9 +652,9 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.Controls.Add(this.inpt_desc);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(524, 42);
+            this.panel4.Location = new System.Drawing.Point(507, 26);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(280, 58);
+            this.panel4.Size = new System.Drawing.Size(280, 103);
             this.panel4.TabIndex = 5;
             // 
             // inpt_desc
@@ -669,13 +669,13 @@
             this.inpt_desc.ForeColor = System.Drawing.Color.White;
             this.inpt_desc.Location = new System.Drawing.Point(0, 20);
             this.inpt_desc.Margin = new System.Windows.Forms.Padding(4);
-            this.inpt_desc.Multiline = false;
+            this.inpt_desc.Multiline = true;
             this.inpt_desc.Name = "inpt_desc";
             this.inpt_desc.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.inpt_desc.PasswordChar = false;
             this.inpt_desc.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.inpt_desc.PlaceholderText = "";
-            this.inpt_desc.Size = new System.Drawing.Size(280, 31);
+            this.inpt_desc.Size = new System.Drawing.Size(280, 83);
             this.inpt_desc.TabIndex = 3;
             this.inpt_desc.Texts = "";
             this.inpt_desc.UnderlinedStyle = false;
@@ -697,7 +697,7 @@
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.Controls.Add(this.inpt_name);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Location = new System.Drawing.Point(92, 42);
+            this.panel6.Location = new System.Drawing.Point(92, 57);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(280, 58);
             this.panel6.TabIndex = 4;

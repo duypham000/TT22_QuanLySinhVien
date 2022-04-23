@@ -104,7 +104,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
         {
             if (
                 this.inpt_name.Texts != "" &&
-                this.inpt_leader.Text != "" &&
                 this.inpt_faculty.Text != ""
                 )
             {
@@ -120,11 +119,14 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
                     }
                 }
 
-                foreach (var teacher in teachers)
+                if (inpt_leader.Text != "")
                 {
-                    if (this.inpt_leader.Text.Equals(teacher.Name))
+                    foreach (var teacher in teachers)
                     {
-                        @class.LeaderID = teacher.ID;
+                        if (this.inpt_leader.Text.Equals(teacher.Name))
+                        {
+                            @class.LeaderID = teacher.ID;
+                        }
                     }
                 }
 

@@ -56,6 +56,7 @@
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.nav1_txt = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.role_name = new System.Windows.Forms.Label();
             this.panel_sideMenu.SuspendLayout();
             this.submenu_qltk.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -232,6 +233,7 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.role_name);
             this.panelLogo.Controls.Add(this.link_logout);
             this.panelLogo.Controls.Add(this.user_username);
             this.panelLogo.Controls.Add(this.user_avt);
@@ -249,7 +251,7 @@
             this.link_logout.AutoSize = true;
             this.link_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_logout.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
-            this.link_logout.Location = new System.Drawing.Point(65, 47);
+            this.link_logout.Location = new System.Drawing.Point(194, 24);
             this.link_logout.Name = "link_logout";
             this.link_logout.Size = new System.Drawing.Size(63, 15);
             this.link_logout.TabIndex = 2;
@@ -472,6 +474,18 @@
             this.panel2.Size = new System.Drawing.Size(911, 561);
             this.panel2.TabIndex = 2;
             // 
+            // role_name
+            // 
+            this.role_name.AutoSize = true;
+            this.role_name.BackColor = System.Drawing.Color.Transparent;
+            this.role_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.role_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
+            this.role_name.Location = new System.Drawing.Point(65, 47);
+            this.role_name.Name = "role_name";
+            this.role_name.Size = new System.Drawing.Size(46, 17);
+            this.role_name.TabIndex = 0;
+            this.role_name.Text = "label1";
+            // 
             // layout_MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -535,5 +549,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private System.Windows.Forms.Button btn_rolelist;
         private System.Windows.Forms.Button opt_qlgv;
+        private System.Windows.Forms.Label role_name;
     }
 }

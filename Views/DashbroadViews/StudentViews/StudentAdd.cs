@@ -34,7 +34,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
         {
             foreach (var classi in this.classes)
             {
-                this.inpt_class.Items.Add(classi.ID);
+                this.inpt_class.Items.Add(classi.Name);
             }
 
             foreach (var status in studentStatus)
@@ -65,13 +65,9 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
                 }
 
                 Student student = new Student();
-
                 student.StudentID = this.inpt_id.Texts;
                 student.Name = this.inpt_name.Texts;
-                if (this.inpt_roles.Texts != "")
-                {
-                    student.ClassRole = this.inpt_roles.Texts;
-                }
+                student.ClassRole = this.inpt_roles.Texts;
                 student.Phone = this.inpt_phone.Texts;
                 student.Status = this.inpt_status.Text;
                 student.DateOfBirth = this.inpt_dateb.Texts;

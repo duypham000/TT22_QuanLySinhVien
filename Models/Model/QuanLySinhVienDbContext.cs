@@ -50,16 +50,6 @@ namespace QuanLySinhVien.Models.Model
                 .Property(e => e.UpdatedBy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Faculty>()
-                .HasMany(e => e.Classes)
-                .WithOptional(e => e.Faculty)
-                .HasForeignKey(e => e.FacultyID);
-
-            modelBuilder.Entity<Faculty>()
-                .HasMany(e => e.Classes1)
-                .WithOptional(e => e.Faculty1)
-                .HasForeignKey(e => e.FacultyID);
-
             modelBuilder.Entity<Role>()
                 .Property(e => e.Permission)
                 .IsUnicode(false);

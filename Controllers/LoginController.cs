@@ -19,6 +19,7 @@ namespace QuanLySinhVien.Controllers
                         if (role.ID.Equals(item.RoleID))
                         {
                             Properties.Settings.Default.Permission = role.Permission;
+                            Properties.Settings.Default.Role = role.Name;
                             Properties.Settings.Default.Save();
                         }
                     }
