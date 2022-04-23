@@ -149,7 +149,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.classTable.ShowRowErrors = false;
             this.classTable.Size = new System.Drawing.Size(916, 461);
             this.classTable.TabIndex = 0;
-            this.classTable.DoubleClick += new System.EventHandler(this.updateUser);
+            this.classTable.DoubleClick += new System.EventHandler(this.btn_update_Click);
             // 
             // id
             // 
@@ -225,7 +225,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.btn_update.TabIndex = 1;
             this.btn_update.Text = "Sửa";
             this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.updateUser);
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_add
             // 
@@ -240,7 +240,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.btn_add.TabIndex = 0;
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.addUser);
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // panel3
             // 

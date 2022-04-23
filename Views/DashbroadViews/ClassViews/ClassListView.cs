@@ -227,12 +227,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             return res;
         }
 
-        private void addUser(object sender, EventArgs e)
-        {
-            this.Tag = "add-class";
-            this.Close();
-        }
-
         private void removeUser(object sender, EventArgs e)
         {
             string message = "Bạn có chắc chắn muốn xóa các mục đã chọn?";
@@ -248,18 +242,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
                 }
                 this.classes = classServices.GetAll();
                 fillToTable(curPage, this.pageSize, this.classes);
-            }
-        }
-
-        private void updateUser(object sender, EventArgs e)
-        {
-            if (this.btn_update.Enabled)
-            {
-                if (getCurrentId().Length < 2)
-                {
-                    this.Tag = "update-class/" + getCurrentId()[0];
-                    this.Close();
-                }
             }
         }
 
@@ -334,6 +316,25 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
         private void inpt_search_KeyDown(object sender, KeyEventArgs e)
         {
             findAndDisplay(null, null);
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
+            this.Tag = "add-class";
+            this.Close();
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            if (this.btn_update.Enabled)
+            {
+                if (getCurrentId().Length < 2)
+                {
+                    this.Tag = "update-class/" + getCurrentId()[0];
+                    this.Close();
+                }
+            }
         }
     }
 }

@@ -276,10 +276,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
             this.nav3.Hide();
         }
 
-        private void link_home_Click(object sender, EventArgs e)
-        {
-        }
-
         private void userList_Show(object sender, EventArgs e)
         {
             UserListView user = new UserListView();
@@ -294,13 +290,13 @@ namespace QuanLySinhVien.Views.DashbroadViews
                 this.nav2.Show();
                 this.nav12.Show();
                 this.nav2_icon.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
-                this.nav2_txt.Text = "Quản lý danh sách tài khoản";
+                this.nav2_txt.Text = "Danh sách tài khoản";
                 this.nav2_txt.Width = 202;
 
                 this.nav3.Show();
                 this.nav23.Show();
                 this.nav3_icon.IconChar = FontAwesome.Sharp.IconChar.List;
-                this.nav3_txt.Text = "Danh sách tài khoản";
+                this.nav3_txt.Text = "Quản lý tài khoản";
                 this.nav3_txt.Width = 149;
             }
             else if (nav.Equals("add-user"))
@@ -515,10 +511,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
             }
         }
 
-        private void layout_MainScreen_ClientSizeChanged(object sender, EventArgs e)
-        {
-        }
-
         private void otp_qlk_Click(object sender, EventArgs e)
         {
             FacultyListView facultyListView = new FacultyListView();
@@ -550,11 +542,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
         private void layout_MainScreen_Load(object sender, EventArgs e)
         {
             permissionCheck();
-        }
-
-        private void role_name_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

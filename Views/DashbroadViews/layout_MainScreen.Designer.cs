@@ -436,7 +436,6 @@
             this.nav1.Name = "nav1";
             this.nav1.Size = new System.Drawing.Size(88, 38);
             this.nav1.TabIndex = 2;
-            this.nav1.Click += new System.EventHandler(this.link_home_Click);
             // 
             // iconPictureBox3
             // 
@@ -499,7 +498,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.layout_MainScreen_Load);
-            this.ClientSizeChanged += new System.EventHandler(this.layout_MainScreen_ClientSizeChanged);
             this.panel_sideMenu.ResumeLayout(false);
             this.submenu_qltk.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
