@@ -327,7 +327,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if (this.btn_update.Enabled)
+            if (this.btn_update.Enabled && this.classes.Count > 0)
             {
                 if (getCurrentId().Length < 2)
                 {

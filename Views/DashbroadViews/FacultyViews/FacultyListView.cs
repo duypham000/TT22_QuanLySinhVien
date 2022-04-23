@@ -220,7 +220,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            if (this.btn_update.Enabled)
+            if (this.btn_update.Enabled && this.faculties.Count > 0)
             {
                 if (getCurrentId().Length < 2)
                 {

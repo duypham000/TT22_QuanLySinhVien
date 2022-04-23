@@ -295,7 +295,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.RoleViews
             this.inpt_search.Name = "inpt_search";
             this.inpt_search.Size = new System.Drawing.Size(287, 31);
             this.inpt_search.TabIndex = 4;
-            this.inpt_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inpt_search_KeyDown);
+            this.inpt_search.KeyUp += new System.Windows.Forms.KeyEventHandler(this.inpt_search_KeyDown);
             // 
             // btn_search
             // 

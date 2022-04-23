@@ -209,7 +209,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            if (this.btn_update.Enabled)
+            if (this.btn_update.Enabled && this.users.Count > 0)
                 if (getCurrentUsername().Length < 2)
                 {
                     this.Tag = "update-user/" + getCurrentUsername()[0];

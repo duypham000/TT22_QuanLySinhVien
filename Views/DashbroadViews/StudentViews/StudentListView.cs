@@ -230,7 +230,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
 
         private void updateStudent(object sender, EventArgs e)
         {
-            if (this.btn_update.Enabled)
+            if (this.btn_update.Enabled && this.students.Count > 0)
                 if (getCurrentStudentID().Length < 2)
                 {
                     this.Tag = "update-student/" + getCurrentStudentID()[0];

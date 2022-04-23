@@ -231,7 +231,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.TeacherViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            if (this.btn_update.Enabled)
+            if (this.btn_update.Enabled && this.teachers.Count > 0)
                 if (getCurrentId().Length < 2)
                 {
                     this.Tag = "update-teacher/" + getCurrentId()[0];

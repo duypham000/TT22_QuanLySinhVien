@@ -57,7 +57,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.RoleViews
         private void fillToTable(int page, int size, List<Role> roleList)
         {
             this.roleTable.Rows.Clear();
-
             // đoạn này cần chuyển sang double để không bị tự làm tròn xuống
             double userCount = roleList.Count;
             double pagSz = pageSize;
@@ -210,7 +209,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.RoleViews
 
         private void updateUser(object sender, EventArgs e)
         {
-            if (btn_update.Enabled)
+            if (btn_update.Enabled && this.roles.Count > 0)
             {
                 if (getCurrentId().Length < 2)
                 {
