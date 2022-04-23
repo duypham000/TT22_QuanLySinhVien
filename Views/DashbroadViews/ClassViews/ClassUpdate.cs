@@ -134,7 +134,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
                 {
                     foreach (var student in students)
                     {
-                        if (this.inpt_monitor.Text.Equals(student.ID))
+                        if (this.inpt_monitor.Text.Equals(student.Name))
                         {
                             @class.MonitorID = student.ID;
                         }
