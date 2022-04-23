@@ -109,7 +109,6 @@ namespace QuanLySinhVien.Views.DashbroadViews
         private void exitAuthen(object sender, EventArgs e)
         {
             Properties.Settings.Default.Authen = false;
-            Properties.Settings.Default.Password = "";
             Properties.Settings.Default.Permission = "";
             Properties.Settings.Default.Save();
 

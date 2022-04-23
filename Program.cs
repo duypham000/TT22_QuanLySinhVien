@@ -34,6 +34,9 @@ namespace QuanLySinhVien
                     if (!Properties.Settings.Default.Authen) goto login_frm;
                 }
             }
+
+            Properties.Settings.Default.Authen = false;
+            Properties.Settings.Default.Save();
         }
     }
 }

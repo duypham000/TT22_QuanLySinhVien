@@ -38,6 +38,7 @@
             this.btn_userlist = new System.Windows.Forms.Button();
             this.opt_qltk = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.role_name = new System.Windows.Forms.Label();
             this.link_logout = new System.Windows.Forms.LinkLabel();
             this.user_username = new System.Windows.Forms.Label();
             this.user_avt = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.nav1_txt = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.role_name = new System.Windows.Forms.Label();
             this.panel_sideMenu.SuspendLayout();
             this.submenu_qltk.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -243,6 +243,18 @@
             this.panelLogo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.panelLogo.Size = new System.Drawing.Size(263, 90);
             this.panelLogo.TabIndex = 0;
+            // 
+            // role_name
+            // 
+            this.role_name.AutoSize = true;
+            this.role_name.BackColor = System.Drawing.Color.Transparent;
+            this.role_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.role_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
+            this.role_name.Location = new System.Drawing.Point(65, 47);
+            this.role_name.Name = "role_name";
+            this.role_name.Size = new System.Drawing.Size(46, 17);
+            this.role_name.TabIndex = 0;
+            this.role_name.Text = "label1";
             // 
             // link_logout
             // 
@@ -472,18 +484,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(911, 561);
             this.panel2.TabIndex = 2;
-            // 
-            // role_name
-            // 
-            this.role_name.AutoSize = true;
-            this.role_name.BackColor = System.Drawing.Color.Transparent;
-            this.role_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.role_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
-            this.role_name.Location = new System.Drawing.Point(65, 47);
-            this.role_name.Name = "role_name";
-            this.role_name.Size = new System.Drawing.Size(46, 17);
-            this.role_name.TabIndex = 0;
-            this.role_name.Text = "label1";
             // 
             // layout_MainScreen
             // 
