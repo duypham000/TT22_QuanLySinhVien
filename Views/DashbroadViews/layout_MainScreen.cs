@@ -541,6 +541,8 @@ namespace QuanLySinhVien.Views.DashbroadViews
         private void layout_MainScreen_Load(object sender, EventArgs e)
         {
             permissionCheck();
+            Detail detail = new Detail();
+            openChildForm(detail);
         }
     }
 }

@@ -115,6 +115,12 @@
     <Compile Include="Views\DashbroadViews\ClassViews\ClassUpdate.Designer.cs">
       <DependentUpon>ClassUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DashbroadViews\Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashbroadViews\Detail.Designer.cs">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DashbroadViews\FacultyViews\FacultyAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\ClassViews\ClassUpdate.resx">
       <DependentUpon>ClassUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashbroadViews\Detail.resx">
+      <DependentUpon>Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashbroadViews\FacultyViews\FacultyAdd.resx">
       <DependentUpon>FacultyAdd.cs</DependentUpon>
