@@ -27,7 +27,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.RoleViews
             this.searchType = "name";
             this.type_search.SelectedIndex = 0;
 
-            fillToTable(this.curPage, this.pageSize, this.roles);
             permissionCheck();
         }
         private void permissionCheck()
@@ -263,6 +262,11 @@ namespace QuanLySinhVien.Views.DashbroadViews.RoleViews
         private void inpt_search_KeyDown(object sender, KeyEventArgs e)
         {
             findAndDisplay(null, null);
+        }
+
+        private void RoleListView_Load(object sender, EventArgs e)
+        {
+            fillToTable(this.curPage, this.pageSize, this.roles);
         }
     }
 }

@@ -53,6 +53,7 @@ namespace QuanLySinhVien.Models.ModelServices
             if (dbContext.Faculties.Find(faculty.ID) != null)
             {
                 dbContext.Faculties.Remove(faculty);
+                dbContext.SaveChanges();
                 return true;
             }
             return false;
@@ -64,6 +65,7 @@ namespace QuanLySinhVien.Models.ModelServices
             if ( faculty != null)
             {
                 dbContext.Faculties.Remove(faculty);
+                dbContext.SaveChanges();
                 return true;
             }
             return false;

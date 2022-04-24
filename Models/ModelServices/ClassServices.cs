@@ -15,7 +15,7 @@ namespace QuanLySinhVien.Models.ModelServices
 
         public List<Class> GetAll()
         {
-            return dbContext.Classes.OrderByDescending(x=>x.ID).ToList();
+            return dbContext.Classes.OrderByDescending(x => x.ID).ToList();
         }
 
         public Class GetById(int id)
@@ -51,6 +51,7 @@ namespace QuanLySinhVien.Models.ModelServices
             if (dbContext.Classes.Find(@class.ID) != null)
             {
                 dbContext.Classes.Remove(@class);
+                dbContext.SaveChanges();
                 return true;
             }
             return false;

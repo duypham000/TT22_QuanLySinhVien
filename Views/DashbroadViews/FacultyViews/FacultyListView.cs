@@ -29,7 +29,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
             this.searchType = "name";
             this.type_search.SelectedIndex = 0;
 
-            fillToTable(this.curPage, this.pageSize, this.faculties);
             permissionCheck();
         }
         private void permissionCheck()
@@ -275,6 +274,11 @@ namespace QuanLySinhVien.Views.DashbroadViews.FacultyViews
         private void inpt_search_KeyDown(object sender, KeyEventArgs e)
         {
             findAndDisplay(null, null);
+        }
+
+        private void FacultyListView_Load(object sender, EventArgs e)
+        {
+            fillToTable(this.curPage, this.pageSize, this.faculties);
         }
     }
 }

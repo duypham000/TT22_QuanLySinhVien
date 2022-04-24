@@ -449,6 +449,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.ClientSize = new System.Drawing.Size(916, 561);
             this.Controls.Add(this.panel1);
             this.Name = "ClassListView";
+            this.Load += new System.EventHandler(this.ClassListView_Load);
             this.ClientSizeChanged += new System.EventHandler(this.onChangeSize);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

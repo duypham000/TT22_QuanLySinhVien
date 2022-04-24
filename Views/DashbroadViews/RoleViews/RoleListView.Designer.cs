@@ -439,6 +439,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.RoleViews
             this.ClientSize = new System.Drawing.Size(916, 561);
             this.Controls.Add(this.panel1);
             this.Name = "RoleListView";
+            this.Load += new System.EventHandler(this.RoleListView_Load);
             this.ClientSizeChanged += new System.EventHandler(this.onChangeSize);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

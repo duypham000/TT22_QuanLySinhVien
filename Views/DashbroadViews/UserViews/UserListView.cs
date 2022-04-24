@@ -26,7 +26,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.searchType = "username";
             this.type_search.SelectedIndex = 0;
 
-            fillToTable(this.curPage, this.pageSize, this.users);
             permissionCheck();
         }
         private void permissionCheck()
@@ -259,6 +258,11 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
         private void inpt_search_KeyDown(object sender, KeyEventArgs e)
         {
             findAndDisplay(null, null);
+        }
+
+        private void UserListView_Load(object sender, EventArgs e)
+        {
+            fillToTable(this.curPage, this.pageSize, this.users);
         }
     }
 }
