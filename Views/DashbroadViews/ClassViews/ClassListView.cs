@@ -40,7 +40,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
             this.searchType = "name";
             this.type_search.SelectedIndex = 0;
 
-            fillToTable(this.curPage, this.pageSize, this.classes);
             permissionCheck();
         }
 
@@ -335,6 +334,11 @@ namespace QuanLySinhVien.Views.DashbroadViews.ClassViews
                     this.Close();
                 }
             }
+        }
+
+        private void ClassListView_Load(object sender, EventArgs e)
+        {
+            fillToTable(this.curPage, this.pageSize, this.classes);
         }
     }
 }

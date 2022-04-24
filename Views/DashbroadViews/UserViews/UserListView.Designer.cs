@@ -445,6 +445,7 @@ namespace QuanLySinhVien.Views.DashbroadViews.UserViews
             this.ClientSize = new System.Drawing.Size(916, 561);
             this.Controls.Add(this.panel1);
             this.Name = "UserListView";
+            this.Load += new System.EventHandler(this.UserListView_Load);
             this.ClientSizeChanged += new System.EventHandler(this.onChangeSize);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

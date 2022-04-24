@@ -36,7 +36,6 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
             this.searchType = "id";
             this.type_search.SelectedIndex = 0;
 
-            fillToTable(this.curPage, this.pageSize, this.students);
             permissionCheck();
         }
         private void permissionCheck()
@@ -305,6 +304,11 @@ namespace QuanLySinhVien.Views.DashbroadViews.StudentViews
         private void inpt_search_KeyDown(object sender, KeyEventArgs e)
         {
             findAndDisplay(null, null);
+        }
+
+        private void StudentListView_Load(object sender, EventArgs e)
+        {
+            fillToTable(this.curPage, this.pageSize, this.students);
         }
     }
 }
